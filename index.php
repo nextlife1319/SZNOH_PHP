@@ -100,7 +100,7 @@
       echo "$name: ";*/
 
 
-      $sth = $dbh->prepare("SELECT * FROM Platnosci_SZNOH");
+      $sth = $conn->prepare("SELECT * FROM Platnosci_SZNOH");
       $sth->execute();
       /* Fetch all of the remaining rows in the result set */
       print("Fetch all of the remaining rows in the result set:\n");
