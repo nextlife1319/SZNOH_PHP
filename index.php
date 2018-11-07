@@ -99,7 +99,7 @@
 
       ?>
       <table border="0">
-        <tr COLSPAN=2 BGCOLOR="#6D8FFF">
+        <tr COLSPAN=10 BGCOLOR="#6D8FFF">
             <td>ID</td>
             <td>Name</td>
             <td>Age</td>
