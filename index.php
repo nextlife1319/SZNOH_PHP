@@ -22,6 +22,12 @@ else
 {
     echo "fail";
 }
+
+$sql="SELECT * FROM Platnosci_SZNOH";
+$stmt = sqlsrv_query( $conn, $sql );
+sqlsrv_fetch( $stmt );
+$name = sqlsrv_get_field( $stmt, 0 );
+echo "$name: ";
 #$result=$conn->query('SELECT * FROM Platnosci_SZNOH');
 #$cols = $result->columnCount();
 #echo 'Number of returned columns: '. $cols. '<br />';
