@@ -24,10 +24,10 @@
     <table class="table">
       <thead>
         <tr BGCOLOR="#6D8FFF">
-            <td>ID</td>
-            <td>Name</td>
-            <td>Age</td>
-            <td>Price</td>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Price</th>
         </tr>
       </thead>
     <?php
