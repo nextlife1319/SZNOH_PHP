@@ -23,7 +23,7 @@
     ?>
     <table class="table">
       <thead>
-        <tr BGCOLOR="#6D8FFF">
+        <tr>
             <th>ID</th>
             <th>Name</th>
             <th>Age</th>
