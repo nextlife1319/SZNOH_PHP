@@ -64,9 +64,9 @@ function newSite(string) {
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li class="active"><a class="btn btn-dark" href="/index.php">Home</a></li>
-        <li><input type="button" value="Table" onClick="newSite(`/Table.php`)" class="btn btn-dark" /></li>
-        <li><a href="#" onClick="newSite(`/Table.php`)">Projects</a></li>
-        <li><a class="btn btn-dark" href="#">Contact</a></li>
+        <li><a href="#" onClick="newSite(`/Table.php`)"/>Tabela Pierwsza</li>
+        <li><a href="#" onClick="newSite(`/Table.php`)">Tabela Druga</a></li>
+        <li><a href="#" onClick="newSite(`/Table.php`)">Tabela Trzecia</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="/login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
@@ -83,7 +83,7 @@ function newSite(string) {
       <p><a href="#">Link</a></p>
     </div>
     <div class="col-sm-8 text-left">
-      <iframe id="myFrame" src="/Welcome.html" style="height:1000px;width:100%" frameBorder="0"></iframe>
+      <iframe id="myFrame" src="/Home.html" style="height:1000px;width:100%" frameBorder="0"></iframe>
       <?php/*
       // PHP Data Objects(PDO) Sample Code:
       try {
