@@ -110,6 +110,7 @@
       ?>
       </table>
 
+      <?php
       /*sqlsrv_fetch( $stmt );
       $name = sqlsrv_get_field( $stmt, 3 );
       echo "$name: ";*/
@@ -117,7 +118,7 @@
       #echo "Helloo World!";
 
       #echo "New world!New phppppppppp";
-
+      ?>
       <hr>
       <h3>Test</h3>
       <p>Lorem ipsum...</p>
