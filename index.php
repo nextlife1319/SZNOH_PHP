@@ -14,7 +14,7 @@ $connectionInfo = array("UID" => "ServerAdmin@sznoh", "pwd" => "WCYwcy123", "Dat
 $serverName = "tcp:sznoh.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
 
-$sql='SELECT * FROM Platnosci_SZNOH';
+$sql='SELECT * FROM `Platnosci_SZNOH`';
 $result=$conn->query($sql);
 if($result !== false) {
     $cols = $result->columnCount();           // Number of returned columns
