@@ -55,9 +55,9 @@ function newSite(string) {
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar">Raz</span>
-        <span class="icon-bar">Dwa</span>
-        <span class="icon-bar">Trzy</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="#">Logo</a>
     </div>
@@ -76,9 +76,11 @@ function newSite(string) {
 </nav>
 
 <div class="container-fluid text-center">
-  <div class="col-sm-2 sidenav">
-    <div  class="well">
-      <img src="sznoh_logo.PNG"/>
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+      <p><a href="#">Link</a></p>
+      <p><a href="#">Link</a></p>
+      <p><a href="#">Link</a></p>
     </div>
     <div class="col-sm-8 text-left">
       <iframe id="myFrame" src="/Home.html" style="height:1000px;width:100%" frameBorder="0"></iframe>
