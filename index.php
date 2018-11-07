@@ -98,8 +98,8 @@
       $stmt = sqlsrv_query( $conn, $sql );
 
       ?>
-      <table border="0">
-        <tr COLSPAN=10 BGCOLOR="#6D8FFF">
+      <table border="1" style="width:100%">
+        <tr BGCOLOR="#6D8FFF">
             <td>ID</td>
             <td>Name</td>
             <td>Age</td>
