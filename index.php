@@ -23,6 +23,11 @@ function getFruit($conn) {
         print "kkkkksk";
     }
 }
+$sql='SELECT * FROM Platnosci_SZNOH';
+$result=$conn->query($sql);
+if($result !== false) {
+    $cols = $result->columnCount();           // Number of returned columns
 
-getFruit($conn);
+    echo 'Number of returned columns: '. $cols. '<br />';
+}
 echo "Helloo World!";
