@@ -32,3 +32,5 @@ echo "$name: ";
 #$cols = $result->columnCount();
 #echo 'Number of returned columns: '. $cols. '<br />';
 echo "Helloo World!";
+
+echo "New world!";
