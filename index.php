@@ -93,19 +93,17 @@
       $serverName = "tcp:sznoh.database.windows.net,1433";
       $conn = sqlsrv_connect($serverName, $connectionInfo);
 
-      /*$sql="SELECT * FROM Platnosci_SZNOH";
+      $sql="SELECT * FROM Platnosci_SZNOH";
       $stmt = sqlsrv_query( $conn, $sql );
-      sqlsrv_fetch( $stmt );
+
+      while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC) ) {
+      echo $row[0].", ".$row[1]."<br />";
+      }
+
+      /*sqlsrv_fetch( $stmt );
       $name = sqlsrv_get_field( $stmt, 3 );
       echo "$name: ";*/
 
-
-      $sth = $conn->prepare("SELECT * FROM Platnosci_SZNOH");
-      $sth->execute();
-      /* Fetch all of the remaining rows in the result set */
-      print("Fetch all of the remaining rows in the result set:\n");
-      $result = $sth->fetchAll();
-      print_r($result);
       #echo "Helloo World!";
 
       #echo "New world!New phppppppppp";
