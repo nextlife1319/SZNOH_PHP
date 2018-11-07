@@ -97,9 +97,17 @@
       $sql="SELECT * FROM Platnosci_SZNOH";
       $stmt = sqlsrv_query( $conn, $sql );
 
+      ?>
+      <table border="0">
+        <tr COLSPAN=2 BGCOLOR="#6D8FFF">
+            <td>ID</td>
+            <td>Name</td>
+            <td>Age</td>
+            <td>Price</td>
+        </tr>
+      <?php
       while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC) ) {
       ?>
-      <table>
         <tr>
           <td><?php echo $row[0]; ?></td>
           <td><?php echo $row[1]; ?></td>
