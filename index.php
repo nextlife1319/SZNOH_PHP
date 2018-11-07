@@ -113,10 +113,7 @@
     </div>
     <div class="col-sm-2 sidenav">
       <div class="well">
-        <p>ADS</p>
-      </div>
-      <div class="well">
-        <p>ADS</p>
+        <img src="sznoh_logo.PNG"/>
       </div>
     </div>
   </div>
