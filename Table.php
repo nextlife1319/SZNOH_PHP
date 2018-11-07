@@ -1,5 +1,6 @@
 <html>
   <body>
+    <h1>Pierwsza Tabela</h1>
     <?php
     // PHP Data Objects(PDO) Sample Code:
     try {
