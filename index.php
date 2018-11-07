@@ -64,7 +64,7 @@ function newSite(string) {
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li class="active"><a class="btn btn-dark" href="/index.php">Home</a></li>
-        <li><a class="btn btn-dark" href="#" onClick="newSite(`/Table.php`)"/>Tabela1</li>
+        <li><a class="btn btn-dark" href="#" onClick="newSite(`/Table.php`)">Tabela1</a></li>
         <li><a class="btn btn-dark" href="#" onClick="newSite(`/Table.php`)">Tabela2</a></li>
         <li><a class="btn btn-dark" href="#" onClick="newSite(`/Table.php`)">Tabela3</a></li>
       </ul>
