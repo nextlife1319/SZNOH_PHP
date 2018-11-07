@@ -14,15 +14,6 @@ $connectionInfo = array("UID" => "ServerAdmin@sznoh", "pwd" => "WCYwcy123", "Dat
 $serverName = "tcp:sznoh.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
 
-
-
-function getFruit($conn) {
-    $sql='SELECT * FROM Platnosci_SZNOH';
-    foreach ($conn->query($sql) as $row) {
-        print $row;
-        print "kkkkksk";
-    }
-}
 $sql='SELECT * FROM Platnosci_SZNOH';
 $result=$conn->query($sql);
 if($result !== false) {
