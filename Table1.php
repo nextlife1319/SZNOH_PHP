@@ -30,7 +30,7 @@
       $stmt = sqlsrv_query( $conn, $sql );
 
       ?>
-      <table class="table" style="width:100%">
+      <table class="table table-hover">
         <thead>
           <tr>
               <th>ID</th>
