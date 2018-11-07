@@ -65,8 +65,8 @@ function newSite(string) {
       <ul class="nav navbar-nav">
         <li class="active"><a class="btn btn-dark" href="/index.php">Home</a></li>
         <li><a class="btn btn-dark" onClick="newSite(`/Table1.php`)">Tabela1</a></li>
-        <li><a class="btn btn-dark" onClick="newSite(`/Table1.php`)">Tabela2</a></li>
-        <li><a class="btn btn-dark" onClick="newSite(`/Table1.php`)">Tabela3</a></li>
+        <li><a class="btn btn-dark" onClick="newSite(`/Table2.php`)">Tabela2</a></li>
+        <li><a class="btn btn-dark" onClick="newSite(`/Table3.php`)">Tabela3</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="/login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
