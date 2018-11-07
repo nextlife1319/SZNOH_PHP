@@ -43,6 +43,14 @@
 </head>
 <body>
 
+<script>
+
+function newSite(string) {
+
+    document.getElementById('myFrame').src =string ;
+}
+</script>
+
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -56,7 +64,7 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
+        <li><input type="button" value="Table" onClick="newSite(`/Table.php`)" /></li>
         <li><a href="#">Projects</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
@@ -75,10 +83,8 @@
       <p><a href="#">Link</a></p>
     </div>
     <div class="col-sm-8 text-left">
-      <h1>Welcome</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-
-      <?php
+      <iframe id="myFrame" src="/Welcome.html" style="height:1000px;width:100%" frameBorder="0"></iframe>
+      <?php/*
       // PHP Data Objects(PDO) Sample Code:
       try {
           $conn = new PDO("sqlsrv:server = tcp:sznoh.database.windows.net,1433; Database = SZNOH_DB", "ServerAdmin", "WCYwcy123");
@@ -115,19 +121,10 @@
           <td><?php echo $row[3]; ?></td>
         </tr>
       <?php
-      }
+    }*/
       ?>
-      </table>
+      <?php//</table>?>
 
-      <?php
-      /*sqlsrv_fetch( $stmt );
-      $name = sqlsrv_get_field( $stmt, 3 );
-      echo "$name: ";*/
-
-      #echo "Helloo World!";
-
-      #echo "New world!New phppppppppp";
-      ?>
     </div>
     <div class="col-sm-2 sidenav">
       <div class="well">
