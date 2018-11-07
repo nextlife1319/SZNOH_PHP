@@ -24,4 +24,6 @@ echo "$name: ";
 #echo 'Number of returned columns: '. $cols. '<br />';
 echo "Helloo World!";
 echo "<br> New"
+
+echo "LOOOOL"
 ?>
