@@ -23,5 +23,5 @@ function getFruit($conn) {
     }
 }
 
-getFruit(conn);
+getFruit($conn);
 echo "Helloo World!";
