@@ -69,7 +69,7 @@ function newSite(string) {
         <li><a class="btn btn-dark" onClick="newSite(`/Table3.php`)">Tabela3</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="/login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
       </ul>
     </div>
   </div>
