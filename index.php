@@ -105,7 +105,7 @@
       /* Fetch all of the remaining rows in the result set */
       print("Fetch all of the remaining rows in the result set:\n");
       $result = $sth->fetchAll();
-
+      print_r($result);
       #echo "Helloo World!";
 
       #echo "New world!New phppppppppp";
