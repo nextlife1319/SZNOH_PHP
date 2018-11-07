@@ -96,11 +96,19 @@
       $sql="SELECT * FROM Platnosci_SZNOH";
       $stmt = sqlsrv_query( $conn, $sql );
 
-      echo "<table>";
       while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC) ) {
-      echo "<tr><td>" . $row[0]."</td><td>" . $row[1] . "</td><td>".$row[2] . "</td><td>" . $row[3] . "</td></tr>";
+      ?>
+      <table>
+        <tr>
+          <td><?php echo $row[0]; ?></td>
+          <td><?php echo $row[1]; ?></td>
+          <td><?php echo $row[2]; ?></td>
+          <td><?php echo $row[3]; ?></td>
+        </tr>
+      <?php
       }
-      echo "</table>";
+      ?>
+      </table>
 
       /*sqlsrv_fetch( $stmt );
       $name = sqlsrv_get_field( $stmt, 3 );
@@ -110,8 +118,6 @@
 
       #echo "New world!New phppppppppp";
 
-
-      ?>
       <hr>
       <h3>Test</h3>
       <p>Lorem ipsum...</p>
