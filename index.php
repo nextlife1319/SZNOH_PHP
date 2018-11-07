@@ -96,9 +96,11 @@
       $sql="SELECT * FROM Platnosci_SZNOH";
       $stmt = sqlsrv_query( $conn, $sql );
 
+      echo "<table>";
       while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC) ) {
       echo "<tr><td>".$row[0]."</td><td>".$row[1]."</td><td>".$row[2]."</td><td>".$row[3]."</td></tr>";
       }
+      echo "</table>";
 
       /*sqlsrv_fetch( $stmt );
       $name = sqlsrv_get_field( $stmt, 3 );
