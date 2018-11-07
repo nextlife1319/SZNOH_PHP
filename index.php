@@ -103,7 +103,7 @@
       #echo 'Number of returned columns: '. $cols. '<br />';
       echo "Helloo World!";
 
-      echo "New world!New phppppp";
+      echo "New world!New phppppppppp";
 
 
       ?>
