@@ -97,7 +97,7 @@
       $stmt = sqlsrv_query( $conn, $sql );
 
       while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC) ) {
-      echo $row[0].", ".$row[1]."<br />";
+      echo $row[0].", ".$row[1].", ".$row[2].", ".$row[3]."<br />";
       }
 
       /*sqlsrv_fetch( $stmt );
