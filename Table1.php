@@ -21,7 +21,7 @@
     $stmt = sqlsrv_query( $conn, $sql );
 
     ?>
-    <table border="1" style="width:100%">
+    <table class="table" border="1" style="width:100%">
       <tr BGCOLOR="#6D8FFF">
           <td>ID</td>
           <td>Name</td>
