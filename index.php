@@ -14,6 +14,15 @@ $connectionInfo = array("UID" => "ServerAdmin@sznoh", "pwd" => "WCYwcy123", "Dat
 $serverName = "tcp:sznoh.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
 
+if($conn)
+{
+    echo "established2";
+}
+else
+{
+    echo "fail";
+}
+
 $sql="SELECT * FROM Platnosci_SZNOH";
 $stmt = sqlsrv_query( $conn, $sql );
 sqlsrv_fetch( $stmt );
@@ -23,7 +32,5 @@ echo "$name: ";
 #$cols = $result->columnCount();
 #echo 'Number of returned columns: '. $cols. '<br />';
 echo "Helloo World!";
-echo "<br> New"
 
-echo "LOOOOL"
-?>
+echo "New world!";
