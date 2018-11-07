@@ -15,4 +15,12 @@ $serverName = "tcp:sznoh.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
 
 
+
+function getFruit($conn) {
+    $sql='SELECT * FROM Platnosci_SZNOH';
+    foreach ($conn->query($sql) as $row) {
+        print $row . "\t";
+    }
+}
+
 echo "Hello World!";
