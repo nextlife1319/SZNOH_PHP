@@ -22,21 +22,25 @@
 
     ?>
     <table class="table" border="1" style="width:100%">
-      <tr BGCOLOR="#6D8FFF">
-          <td>ID</td>
-          <td>Name</td>
-          <td>Age</td>
-          <td>Price</td>
-      </tr>
+      <thead>
+        <tr BGCOLOR="#6D8FFF">
+            <td>ID</td>
+            <td>Name</td>
+            <td>Age</td>
+            <td>Price</td>
+        </tr>
+      </thead>
     <?php
     while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC) ) {
     ?>
-      <tr>
-        <td><?php echo $row[0]; ?></td>
-        <td><?php echo $row[1]; ?></td>
-        <td><?php echo $row[2]; ?></td>
-        <td><?php echo $row[3]; ?></td>
-      </tr>
+      <tbody>
+        <tr>
+          <td><?php echo $row[0]; ?></td>
+          <td><?php echo $row[1]; ?></td>
+          <td><?php echo $row[2]; ?></td>
+          <td><?php echo $row[3]; ?></td>
+        </tr>
+      </tbody>
     <?php
     }
     ?>
