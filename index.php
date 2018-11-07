@@ -55,9 +55,9 @@ function newSite(string) {
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
+        <span class="icon-bar">Raz</span>
+        <span class="icon-bar">Dwa</span>
+        <span class="icon-bar">Trzy</span>
       </button>
       <a class="navbar-brand" href="#">Logo</a>
     </div>
