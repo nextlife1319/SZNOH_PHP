@@ -27,7 +27,7 @@
       $conn = sqlsrv_connect($serverName, $connectionInfo);
 
       //Add row to Database
-      echo ("Inserting a new row into table" . PHP_EOL);
+      /*echo ("Inserting a new row into table" . PHP_EOL);
       $addsql= "INSERT INTO Platnosci_SZNOH VALUES (?,?,?,?);";
       $params = array(2,'Nie', 100.0, 600.0);
       $getResults= sqlsrv_query($conn, $addsql, $params);
@@ -35,7 +35,7 @@
       if ($getResults == FALSE or $rowsAffected == FALSE)
           die(FormatErrors(sqlsrv_errors()));
       echo ($rowsAffected. " row(s) inserted: " . PHP_EOL);
-      sqlsrv_free_stmt($getResults);
+      sqlsrv_free_stmt($getResults);*/
 
       //Display table
       $sql="SELECT * FROM Platnosci_SZNOH";
@@ -61,7 +61,7 @@
             <td><?php echo $row[1]; ?></td>
             <td><?php echo $row[2]; ?></td>
             <td><?php echo $row[3]; ?></td>
-            <td><a href="update-single.php?id=<?php echo escape($row[0]); ?>">Edit</a></td>
+            <td><a href="update-single.php?id=<?php echo $row[0]; ?>">Edit</a></td>
           </tr>
         </tbody>
       <?php
