@@ -27,7 +27,7 @@
       $conn = sqlsrv_connect($serverName, $connectionInfo);
 
       //Add row to Database
-      //echo ("Inserting a new row into table" . PHP_EOL);
+      echo ("Inserting a new row into table" . PHP_EOL);
       $addsql= "INSERT INTO Platnosci_SZNOH VALUES (?,?,?,?);";
       $params = array('Dwa','Nie', 100.0, 600.0);
       $getResults= sqlsrv_query($conn, $addsql, $params);
