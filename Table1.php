@@ -49,6 +49,7 @@
               <th>Name</th>
               <th>Age</th>
               <th>Price</th>
+              <th>Edit</th>
           </tr>
         </thead>
       <?php
@@ -60,6 +61,7 @@
             <td><?php echo $row[1]; ?></td>
             <td><?php echo $row[2]; ?></td>
             <td><?php echo $row[3]; ?></td>
+            <td><a href="update-single.php?id=<?php echo escape($row[0]); ?>">Edit</a></td>
           </tr>
         </tbody>
       <?php
