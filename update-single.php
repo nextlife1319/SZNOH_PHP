@@ -21,6 +21,7 @@ if (isset($_GET['id'])) {
     $statement = $connection->prepare($sql);
     $statement->bindValue(':id', $id);
     $statement->execute();
+    echo 1;
 
     $user = $statement->fetch(PDO::FETCH_ASSOC);
   } catch(PDOException $error) {
