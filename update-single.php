@@ -6,7 +6,7 @@
  *
  */
 
-require_once('Table1.php');
+require_once('Table.php');
 
  if (isset($_POST['ID'])) {
 
