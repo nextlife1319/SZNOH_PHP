@@ -39,8 +39,8 @@
       // }
 
       foreach( sqlsrv_field_metadata( $stmt ) as $fieldMetadata ) {
-        $fieldMetadata as $name => $value;
-        echo "$name: $value<br />";
+        // $fieldMetadata as $name => $value;
+        echo var_dump($fieldMetadata);
 
       }
 
