@@ -11,7 +11,7 @@
     <div class="container">
       <h1>Pierwsza Tabela</h1>
       <?php
-      if (include('functions.php') == TRUE) {
+      if (require_once('functions.php') == TRUE) {
         echo 'OK';
       }
       $nazwaTabeli="Platnosci_SZNOH";
