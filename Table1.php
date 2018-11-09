@@ -17,6 +17,16 @@
       $serverName = "tcp:sznoh.database.windows.net,1433";
       $conn = sqlsrv_connect($serverName, $connectionInfo);
 
+
+      $sql = "SELECT * FROM Table_1";
+      $stmt = sqlsrv_prepare( $conn, $sql );
+
+      foreach( sqlsrv_field_metadata( $stmt ) as $fieldMetadata ) {
+          foreach( $fieldMetadata as $name => $value) {
+             echo "$name: $value<br />";
+          }
+            echo "<br />";
+      }
       //Add row to Database
       /*echo ("Inserting a new row into table" . PHP_EOL);
       $addsql= "INSERT INTO Platnosci_SZNOH VALUES (?,?,?,?);";
