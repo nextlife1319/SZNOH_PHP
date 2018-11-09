@@ -58,12 +58,8 @@
           <?php while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC) ) { ?>
           <tbody>
 
-            <tr>
-              <td>LOL</td>
-              <td>LOL</td>
-              <td>LOL</td>
-              <td>LOL</td>
-              <td>LOL</td>
+            <tr><?php foreach($row as $element){
+            echo  "<td>LOL</td>";} ?>
             </tr>
           </tbody><?php } ?>
         </table>
