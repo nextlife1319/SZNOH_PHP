@@ -51,13 +51,14 @@
             </tr>
           </thead>
           <tbody>
+            <?php while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC) ) { ?>
             <tr>
               <td>LOL</td>
               <td>LOL</td>
               <td>LOL</td>
               <td>LOL</td>
               <td>LOL</td>
-            </tr>
+            </tr> <?php } ?>
           </tbody>
         </table>
 
