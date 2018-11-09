@@ -12,8 +12,6 @@
       <h1>Pierwsza Tabela</h1>
       <?php
       require_once('functions.php');
-      $nazwaTabeli="Platnosci_SZNOH";
-      display_table($nazwaTabeli);
       // echo $var;
       //$nazwaTabeli="Platnosci_SZNOH";
       //echo display_table($nazwaTabeli);
