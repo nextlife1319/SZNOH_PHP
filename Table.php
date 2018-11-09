@@ -55,7 +55,9 @@
           ?>
             <tbody>
               <tr>
-                <?php foreach($row as $element){
+                <?php
+                echo $row;
+                 foreach($row as $element){
                   echo "<td>".$element."</td>";
                 }?>
                 <td><a href="update-single.php?id=<?php echo $element; ?>">Edit</a></td>
