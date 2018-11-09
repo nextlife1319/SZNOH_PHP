@@ -3,14 +3,10 @@
 
 
 function display_table($nazwaTabeli, $conn){
-$var="dziala";
-echo $var;
-
 
 $sql="SELECT * FROM $nazwaTabeli";
 $stmt = sqlsrv_query( $conn, $sql );
 
-echo $var;
    echo "<table class='table table-hover'>";
      echo "<thead>";
       echo "<tr>";
@@ -29,4 +25,7 @@ echo $var;
     }
   echo "</table>";
  }
+
+
+ 
 ?>
