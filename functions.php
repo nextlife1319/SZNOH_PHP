@@ -11,7 +11,7 @@ $sql="SELECT * FROM $nazwaTabeli";
 $stmt = sqlsrv_query( $conn, $sql );
 
 echo $var;
-//   echo "<table class="table table-hover">";
+   echo "<table class="table table-hover">";
 //     echo "<thead>";
 //       echo "<tr>";
 //         foreach( sqlsrv_field_metadata( $stmt ) as $fieldMetadata ) {
