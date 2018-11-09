@@ -56,7 +56,7 @@
             <tbody>
               <tr>
                 <?php
-                echo "lol".$row;
+                echo "lol".$row[0];
                  foreach($row as $element){
                   echo "<td>".$element."</td>";
                 }?>
@@ -69,7 +69,7 @@
         </table>
 
 <?php
-echo "lol".$row;
+echo "lol".$row[0];
       ////Add row to Database
 
       // echo ("Inserting a new row into table" . PHP_EOL);
