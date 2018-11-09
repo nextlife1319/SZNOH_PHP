@@ -56,7 +56,7 @@
             <tbody>
               <tr>
                 <?php
-                echo $row;
+                echo "lol".$row;
                  foreach($row as $element){
                   echo "<td>".$element."</td>";
                 }?>
