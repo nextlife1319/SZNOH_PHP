@@ -55,16 +55,17 @@
                     <th>Edit</th>
             </tr>
           </thead>
+          <?php while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC) ) { ?>
           <tbody>
-            <?php while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC) ) { ?>
+
             <tr>
               <td>LOL</td>
               <td>LOL</td>
               <td>LOL</td>
               <td>LOL</td>
               <td>LOL</td>
-            </tr> <?php } ?>
-          </tbody>
+            </tr>
+          </tbody><?php } ?>
         </table>
 
 <?php
