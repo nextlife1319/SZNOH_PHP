@@ -25,7 +25,7 @@ $row=find_row_by_id($_GET['id']);
 
 <?php
 
-if (isset($_POST['submit'])) {
+if (isset($_POST['Submit'])) {
   echo "dupa";
 
   $rowToUpdate = $_POST['ID'];
