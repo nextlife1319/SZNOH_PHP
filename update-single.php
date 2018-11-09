@@ -11,6 +11,10 @@ if (isset($_GET['id'])) {
     $connection = new PDO("sqlsrv:server = tcp:sznoh.database.windows.net,1433; Database = SZNOH_DB", "ServerAdmin", "WCYwcy123");
     $id = $_GET['id'];
 
+    $connection = $dbh->prepare("DESCRIBE Platnosci_SZNOH");
+    $connection->execute();
+    $table_fields = $connection->fetchAll(PDO::FETCH_COLUMN);
+
     $sql = "SELECT * FROM Platnosci_SZNOH WHERE id = :id";
     $statement = $connection->prepare($sql);
     $statement->bindValue(':id', $id);
