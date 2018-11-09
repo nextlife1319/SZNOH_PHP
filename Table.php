@@ -12,7 +12,7 @@
       <h1>Pierwsza Tabela</h1>
       <?php
       echo __DIR__;
-      include __DIR__.'/functions.php';
+      include __DIR__.'\functions.php';
 
       // SQL Server Extension Sample Code:
       $connectionInfo = array("UID" => "ServerAdmin@sznoh", "pwd" => "WCYwcy123", "Database" => "SZNOH_DB", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
