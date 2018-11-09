@@ -7,7 +7,7 @@
  */
 
 require_once('Table1.php');
-require_once('functions.php');
+
  if (isset($_POST['ID'])) {
 
    $rowToUpdate = $_POST['ID'];

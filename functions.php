@@ -1,7 +1,6 @@
 
 <?php
 
-
 function display_table($nazwaTabeli, $conn){
 
 $sql="SELECT * FROM $nazwaTabeli";
@@ -26,6 +25,4 @@ $stmt = sqlsrv_query( $conn, $sql );
   echo "</table>";
  }
 
-
- 
 ?>
