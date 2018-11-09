@@ -9,7 +9,6 @@
  require_once('Table1.php');
 
  if (isset($_POST['ID'])) {
-   echo "dupa";
 
    $rowToUpdate = $_POST['ID'];
    $tsql= "UPDATE Platnosci_SZNOH SET IDPlatnosci = ?, Zaplacono = ?, Zaliczka = ?, CalaKwota = ?  WHERE IDPlatnosci = ?";
