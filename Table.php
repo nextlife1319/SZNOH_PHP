@@ -13,7 +13,10 @@
       <?php
       if (include('functions.php') == TRUE) {
         echo 'OK';
-      }else{ echo "chuj";}
+      }else{
+        echo "chuj";
+        echo getcwd();
+      }
       $nazwaTabeli="Platnosci_SZNOH";
       display_table($nazwaTabeli);
       // SQL Server Extension Sample Code:
