@@ -69,6 +69,7 @@
         </table>
 
 <?php
+echo "lol".$row;
       ////Add row to Database
 
       // echo ("Inserting a new row into table" . PHP_EOL);
