@@ -20,13 +20,11 @@ $serverName = "tcp:sznoh.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
 
 $row=find_row_by_id($_GET['id']);
-echo "$row \n\n";
-
 ?>
 
 <form>
   IDPlatnosci:<br>
-  <input type="text" name="ID" value="kupa"><br>
+  <input type="text" name="ID" value="<?php echo $row[0]; ?>"><br>
   Zaplacono:<br>
   <input type="text" name="Zap" value="<?php echo $row[1]; ?>"><br>
   Zaliczka:<br>
