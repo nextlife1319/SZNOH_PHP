@@ -11,7 +11,6 @@
     <div class="container">
       <h1>Pierwsza Tabela</h1>
       <?php
-      require_once('functions.php');
       // SQL Server Extension Sample Code:
       $connectionInfo = array("UID" => "ServerAdmin@sznoh", "pwd" => "WCYwcy123", "Database" => "SZNOH_DB", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
       $serverName = "tcp:sznoh.database.windows.net,1433";
@@ -65,7 +64,8 @@
 
 
 <?php
-      //display_table($nazwaTabeli)
+require_once('functions.php');
+display_table($nazwaTabeli)
       ////Add row to Database
 
       // echo ("Inserting a new row into table" . PHP_EOL);
