@@ -11,7 +11,7 @@
     <div class="container">
       <h1>Pierwsza Tabela</h1>
       <?php
-      require_once('functions.php');
+      include 'functions.php';
       display_table($nazwaTabeli);
       // SQL Server Extension Sample Code:
       $connectionInfo = array("UID" => "ServerAdmin@sznoh", "pwd" => "WCYwcy123", "Database" => "SZNOH_DB", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
