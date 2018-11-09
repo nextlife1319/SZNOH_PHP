@@ -59,7 +59,7 @@
           <tbody>
 
             <tr><?php foreach($row as $element){
-            echo  "<td>LOL</td>";} ?>
+            echo  "<td>".$element."</td>";} ?>
             </tr>
           </tbody><?php } ?>
         </table>
