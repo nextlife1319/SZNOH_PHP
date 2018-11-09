@@ -60,6 +60,7 @@
 
             <tr><?php foreach($row as $element){
             echo  "<td>".$element."</td>";} ?>
+            <td><a href="update-single.php?id=<?php echo $row[0]; ?>">Edit</a></td>
             </tr>
           </tbody><?php } ?>
         </table>
