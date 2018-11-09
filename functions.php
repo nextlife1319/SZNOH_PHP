@@ -21,7 +21,7 @@ $stmt = sqlsrv_query( $conn, $sql );
         echo  "<td>".$element."</td>";
       }
       //echo "<td><a href=update-single.php?id=".$row[0].">Edit</a></td></tr></tbody>";
-      echo "<td><a onclick=='newSite(`/Table.php?id=".$row[0]."`)'>Edit</a></td></tr></tbody>";
+      echo "<td><a onclick=='newSite(`update-single.php?id=".$row[0]."`)'>Edit</a></td></tr></tbody>";
     }
   echo "</table>";
  }
