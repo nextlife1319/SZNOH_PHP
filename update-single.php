@@ -26,6 +26,7 @@ $row=find_row_by_id($_GET['id']);
 <?php
 
 if (isset($_POST['submit'])) {
+  echo "dupa";
 
   $rowToUpdate = $_POST['ID'];
   $tsql= "UPDATE Platnosci_SZNOH SET IDPlatnosci = ?, Zaplacono = ?, Zaliczka = ?, CalaKwota = ?  WHERE IDPlatnosci = ?";
