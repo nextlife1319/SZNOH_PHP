@@ -47,6 +47,7 @@
                       $col=$fieldMetadata["Name"];
                       echo "<th>".$col."</th>";
                     }?>
+                    <th>Edit</th>
             </tr>
           </thead>
           <?php
