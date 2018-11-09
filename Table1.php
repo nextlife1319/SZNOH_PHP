@@ -22,7 +22,7 @@
 
         $sql="SELECT * FROM Platnosci_SZNOH WHERE IDPlatnosci = $id";
         $stmt = sqlsrv_query( $conn, $sql );
-        $row = sqlsrv_fetch( $stmt, SQLSRV_FETCH_NUMERIC);
+        $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC);
         echo "$row[0] \n";
         echo "$row[1] \n";
         echo "$row[2] \n";
