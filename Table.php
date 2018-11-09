@@ -49,6 +49,7 @@
                     }?>
             </tr>
           </thead>
+
         </table>
 
 <?php
@@ -82,7 +83,7 @@
           </tr>
         </thead>
       <?php
-      while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC) ) {
+      $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC);
       ?>
         <tbody>
           <tr>
@@ -93,9 +94,6 @@
             <td><a href="update-single.php?id=<?php echo $row[0]; ?>">Edit</a></td>
           </tr>
         </tbody>
-      <?php
-      }
-      ?>
       </table>
     </div>
   </body>
