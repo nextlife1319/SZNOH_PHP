@@ -15,7 +15,7 @@ if (isset($_GET['id'])) {
     $connection->execute();
     $table_fields = $connection->fetchAll(PDO::FETCH_COLUMN);
 
-    print $table_fields;
+    print_r($table_fields);
 
     $sql = "SELECT * FROM Platnosci_SZNOH WHERE id = :id";
     $statement = $connection->prepare($sql);
