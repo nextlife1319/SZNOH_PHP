@@ -20,10 +20,19 @@ $stmt = sqlsrv_query( $conn, $sql );
       foreach($row as $element){
         echo  "<td>".$element."</td>";
       }
-      //echo "<td><a href=update-single.php?id=".$row[0].">Edit</a></td></tr></tbody>";
-      echo "<td><a onclick='newSite(`/update-single.php?id=".$row[0]."`)'>Edit</a></td></tr></tbody>";
+      echo "<td><a href=update-single.php?id=".$row[0].">Edit</a></td></tr></tbody>";
+      //echo "<td><a onclick='newSite(`/update-single.php?id=".$row[0]."`)'>Edit</a></td></tr></tbody>";
     }
   echo "</table>";
+ }
+
+
+ function find_row_by_id($id, $conn){
+
+   $sql="SELECT * FROM Platnosci_SZNOH WHERE IDPlatnosci = $id";
+   $stmt = sqlsrv_query( $conn, $sql );
+   $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC);
+   return $row;
  }
 
 ?>

@@ -44,14 +44,6 @@
 </head>
 <body>
 
-<script>
-
-// function newSite(string) {
-//
-//     document.getElementById('myFrame').src =string ;
-// }
-</script>
-
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">

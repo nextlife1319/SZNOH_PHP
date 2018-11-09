@@ -6,7 +6,7 @@
  *
  */
 
-require_once('Table.php');
+require_once('functions.php');
 
  if (isset($_POST['ID'])) {
 
@@ -22,7 +22,7 @@ require_once('Table.php');
    sqlsrv_free_stmt($getResults);
  }
 
-$row=find_row_by_id($_GET['id']);
+$row=find_row_by_id($_GET['id'], $conn);
 ?>
 <form method="post">
   IDPlatnosci:<br>

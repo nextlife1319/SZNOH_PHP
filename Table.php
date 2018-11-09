@@ -21,15 +21,6 @@
       $nazwaTabeli="Platnosci_SZNOH";
       display_table($nazwaTabeli,$conn);
 
-      function find_row_by_id($id){
-        global $conn;
-
-        $sql="SELECT * FROM Platnosci_SZNOH WHERE IDPlatnosci = $id";
-        $stmt = sqlsrv_query( $conn, $sql );
-        $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC);
-        return $row;
-      }
-
       //Display metadata of the chosen table
 
       // $sql = "SELECT * FROM Platnosci_SZNOH";
