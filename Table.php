@@ -11,7 +11,7 @@
     <div class="container">
       <h1>Pierwsza Tabela</h1>
       <?php
-      if (require_once('functions.php') == TRUE) {
+      if (require('functions.php') == TRUE) {
         echo 'OK';
       }else{
         echo "chuj";
