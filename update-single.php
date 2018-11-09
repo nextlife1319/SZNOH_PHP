@@ -23,7 +23,8 @@ require_once('functions.php');
  }
 
 $row=find_row_by_id($_GET['id']);
-display_table()
+$var=display_table();
+echo $var;
 ?>
 
 <form method="post">
