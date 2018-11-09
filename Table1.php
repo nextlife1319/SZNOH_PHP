@@ -18,7 +18,7 @@
       $conn = sqlsrv_connect($serverName, $connectionInfo);
 
 
-      $sql = "SELECT * FROM Table_1";
+      $sql = "SELECT * FROM Platnosci_SZNOH";
       $stmt = sqlsrv_prepare( $conn, $sql );
 
       foreach( sqlsrv_field_metadata( $stmt ) as $fieldMetadata ) {
