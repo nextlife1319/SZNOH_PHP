@@ -8,7 +8,7 @@
 
  require_once('Table1.php');
 
- if (isset($_POST['Submit'])) {
+ if (isset($_POST['ID'])) {
    echo "dupa";
 
    $rowToUpdate = $_POST['ID'];
