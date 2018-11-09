@@ -14,8 +14,7 @@
       echo __DIR__;
       include __DIR__.'/../functions.php';
       $nazwaTabeli="Platnosci_SZNOH";
-      $var=display_table($nazwaTabeli);
-      echo $var;
+      echo display_table($nazwaTabeli);
       // SQL Server Extension Sample Code:
       $connectionInfo = array("UID" => "ServerAdmin@sznoh", "pwd" => "WCYwcy123", "Database" => "SZNOH_DB", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
       $serverName = "tcp:sznoh.database.windows.net,1433";
