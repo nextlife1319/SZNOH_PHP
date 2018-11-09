@@ -13,6 +13,7 @@
       <?php
       echo __DIR__;
       include(__DIR__.'/../functions.php');
+      require_once('functions.php');
       //$nazwaTabeli="Platnosci_SZNOH";
       //echo display_table($nazwaTabeli);
       // SQL Server Extension Sample Code:
