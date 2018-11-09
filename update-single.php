@@ -8,17 +8,6 @@
 
  require_once('Table1.php');
 
-// if (isset($_GET['id'])) {
-//   echo $_GET['id']; // for testing purposes
-// } else {
-//     echo "Something went wrong!";
-//     exit;
-// }
-
-// $connectionInfo = array("UID" => "ServerAdmin@sznoh", "pwd" => "WCYwcy123", "Database" => "SZNOH_DB", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
-// $serverName = "tcp:sznoh.database.windows.net,1433";
-// $conn = sqlsrv_connect($serverName, $connectionInfo);
-
 $row=find_row_by_id($_GET['id']);
 ?>
 
@@ -31,10 +20,12 @@ $row=find_row_by_id($_GET['id']);
   <input type="text" name="Zal" value="<?php echo $row[2]; ?>"><br>
   CalaKwota:<br>
   <input type="text" name="Cal" value="<?php echo $row[3]; ?>"><br>
+  <input type="submit" value="Submit">
 </form>
 
 
 <?php
+  echo $_POST["ID"];
 // $rowToUpdate = $_GET['id'];
 // $tsql= "UPDATE Platnosci_SZNOH SET IDPlatnosci = ?, Zaplacono = ?, Zaliczka = ?, CalaKwota = ?  WHERE IDPlatnosci = ?";
 // $params = array('Sweden', $userToUpdate);
