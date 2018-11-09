@@ -11,7 +11,9 @@
     <div class="container">
       <h1>Pierwsza Tabela</h1>
       <?php
-      include 'functions.php';
+      if (include('functions.php') == TRUE) {
+        echo 'OK';
+      }
       $nazwaTabeli="Platnosci_SZNOH";
       display_table($nazwaTabeli);
       // SQL Server Extension Sample Code:
