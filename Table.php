@@ -39,8 +39,8 @@
       // }
 
       foreach( sqlsrv_field_metadata( $stmt ) as $fieldMetadata ) {
-        $nazwaKolumny=$fieldMetadata[0]=> $value;
-            echo "$nazwaKolumny <br />";
+        $fieldMetadata as $name => $value;
+        echo "$name: $value<br />";
 
       }
 
