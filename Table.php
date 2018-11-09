@@ -12,6 +12,7 @@
       <h1>Pierwsza Tabela</h1>
       <?php
       include 'functions.php';
+      $nazwaTabeli="Platnosci_SZNOH";
       display_table($nazwaTabeli);
       // SQL Server Extension Sample Code:
       $connectionInfo = array("UID" => "ServerAdmin@sznoh", "pwd" => "WCYwcy123", "Database" => "SZNOH_DB", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
