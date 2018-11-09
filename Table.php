@@ -12,7 +12,7 @@
       <h1>Pierwsza Tabela</h1>
       <?php
       echo __DIR__;
-      require_once(__DIR__.'/../functions.php');
+      include(__DIR__.'/../functions.php');
       //$nazwaTabeli="Platnosci_SZNOH";
       //echo display_table($nazwaTabeli);
       // SQL Server Extension Sample Code:
