@@ -13,8 +13,8 @@
       <?php
       require_once('functions.php');
       $nazwaTabeli="Platnosci_SZNOH";
-      $var=display_table($nazwaTabeli);
-      echo $var;
+      display_table($nazwaTabeli);
+      // echo $var;
       //$nazwaTabeli="Platnosci_SZNOH";
       //echo display_table($nazwaTabeli);
       // SQL Server Extension Sample Code:
