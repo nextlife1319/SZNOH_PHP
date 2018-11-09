@@ -6,6 +6,8 @@
  *
  */
 
+ require_once('Table1.php');
+
 if (isset($_GET['id'])) {
   echo $_GET['id']; // for testing purposes
 } else {
@@ -17,9 +19,7 @@ $connectionInfo = array("UID" => "ServerAdmin@sznoh", "pwd" => "WCYwcy123", "Dat
 $serverName = "tcp:sznoh.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
 
-$sql="SELECT * FROM Platnosci_SZNOH WHERE IDPlatnosci = $_GET['id']";
-$stmt = sqlsrv_query( $conn, $sql );
-$row = sqlsrv_fetch( $stmt, SQLSRV_FETCH_NUMERIC);
+$row=find_row_by_id($_GET['id']);
 
 ?>
 
