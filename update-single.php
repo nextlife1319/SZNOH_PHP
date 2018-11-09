@@ -25,7 +25,7 @@ $row=find_row_by_id($_GET['id']);
 
 <form>
   IDPlatnosci:<br>
-  <input type="text" name="ID" value="<?php echo $row[0]; ?>"><br>
+  <input type="text" name="ID" value="kupa"><br>
   Zaplacono:<br>
   <input type="text" name="Zap" value="<?php echo $row[1]; ?>"><br>
   Zaliczka:<br>
