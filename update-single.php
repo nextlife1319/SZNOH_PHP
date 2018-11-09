@@ -7,7 +7,7 @@
  */
 
  require_once('Table1.php');
-
+require_once('functions.php');
  if (isset($_POST['ID'])) {
 
    $rowToUpdate = $_POST['ID'];
@@ -23,6 +23,7 @@
  }
 
 $row=find_row_by_id($_GET['id']);
+display_table()
 ?>
 
 <form method="post">
