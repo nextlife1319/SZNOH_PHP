@@ -24,7 +24,6 @@ require_once('Table1.php');
 
 $row=find_row_by_id($_GET['id']);
 ?>
-<h1>Pierwsza Tabela</h1>
 <form method="post">
   IDPlatnosci:<br>
   <input type="text" name="ID" value="<?php echo $row[0]; ?>"><br>
