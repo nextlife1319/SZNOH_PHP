@@ -11,6 +11,7 @@
     <div class="container">
       <h1>Pierwsza Tabela</h1>
       <?php
+      echo __DIR__;
       include __DIR__.'/functions.php';
 
       // SQL Server Extension Sample Code:
