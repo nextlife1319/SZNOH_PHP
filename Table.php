@@ -58,7 +58,7 @@
                 <?php
                 echo "lol".$row[0];
                  foreach($row as $element){
-                  echo "<td>".$element."</td>";
+                  echo "<td>kupa</td>";
                 }?>
                 <td><a href="update-single.php?id=<?php echo $element; ?>">Edit</a></td>
               </tr>
