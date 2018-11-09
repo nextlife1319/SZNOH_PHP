@@ -38,12 +38,20 @@
       //       echo "<br />";
       // }
 
-      foreach( sqlsrv_field_metadata( $stmt ) as $fieldMetadata ) {
-        $col=$fieldMetadata["Name"];
-        echo $col;
 
-      }
+        ?>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <?php foreach( sqlsrv_field_metadata( $stmt ) as $fieldMetadata ) {
+                      $col=$fieldMetadata["Name"];
+                      echo "<th>".$col."</th>";
+                    }?>
+            </tr>
+          </thead>
+        </table>
 
+<?php
       ////Add row to Database
 
       // echo ("Inserting a new row into table" . PHP_EOL);
