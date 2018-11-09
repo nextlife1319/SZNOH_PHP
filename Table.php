@@ -75,7 +75,7 @@
       //     die(FormatErrors(sqlsrv_errors()));
       // echo ($rowsAffected. " row(s) inserted: " . PHP_EOL);
       // sqlsrv_free_stmt($getResults);
-
+?>
     </div>
   </body>
 </html>
