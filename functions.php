@@ -2,14 +2,10 @@
 <?php
 
 
-function display_table($nazwaTabeli){
+function display_table($nazwaTabeli, $conn){
 // $var="dziala";
 // return $var;
 // }
-echo "dziala";
-$connectionInfo = array("UID" => "ServerAdmin@sznoh", "pwd" => "WCYwcy123", "Database" => "SZNOH_DB", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
-$serverName = "tcp:sznoh.database.windows.net,1433";
-$conn = sqlsrv_connect($serverName, $connectionInfo);
 
 $sql="SELECT * FROM $nazwaTabeli";
 $stmt = sqlsrv_query( $conn, $sql );

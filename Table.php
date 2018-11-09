@@ -22,6 +22,10 @@
       $serverName = "tcp:sznoh.database.windows.net,1433";
       $conn = sqlsrv_connect($serverName, $connectionInfo);
 
+
+      $nazwaTabeli="Platnosci_SZNOH";
+      display_table($nazwaTabeli,$conn);
+
       function find_row_by_id($id){
         global $conn;
 
