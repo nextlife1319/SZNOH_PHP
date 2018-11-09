@@ -20,22 +20,22 @@ $row=find_row_by_id($_GET['id']);
   <input type="text" name="Zal" value="<?php echo $row[2]; ?>"><br>
   CalaKwota:<br>
   <input type="text" name="Cal" value="<?php echo $row[3]; ?>"><br>
-  <input type="submit" value="Submit">
+  <input type="submit" value="submit">
 </form>
 
-
 <?php
-  echo $_POST["ID"];
-// $rowToUpdate = $_GET['id'];
-// $tsql= "UPDATE Platnosci_SZNOH SET IDPlatnosci = ?, Zaplacono = ?, Zaliczka = ?, CalaKwota = ?  WHERE IDPlatnosci = ?";
-// $params = array('Sweden', $userToUpdate);
-// echo("Updating Location for user " . $userToUpdate . PHP_EOL);
-//
-// $getResults= sqlsrv_query($conn, $tsql, $params);
-// $rowsAffected = sqlsrv_rows_affected($getResults);
-// if ($getResults == FALSE or $rowsAffected == FALSE)
-//     die(FormatErrors(sqlsrv_errors()));
-// echo ($rowsAffected. " row(s) updated: " . PHP_EOL);
-// sqlsrv_free_stmt($getResults);
 
+if (isset($_POST['submit'])) {
+
+  $rowToUpdate = $_POST['ID'];
+  $tsql= "UPDATE Platnosci_SZNOH SET IDPlatnosci = ?, Zaplacono = ?, Zaliczka = ?, CalaKwota = ?  WHERE IDPlatnosci = ?";
+  $params = array($_POST['ID'], $_POST['Zap'], $_POST['Zal'], $_POST['Cal'], $rowToUpdate);
+
+  $getResults= sqlsrv_query($conn, $tsql, $params);
+  $rowsAffected = sqlsrv_rows_affected($getResults);
+  if ($getResults == FALSE or $rowsAffected == FALSE)
+      die(FormatErrors(sqlsrv_errors()));
+  echo ($rowsAffected. " row(s) updated: " . PHP_EOL);
+  sqlsrv_free_stmt($getResults);
+}
 ?>
