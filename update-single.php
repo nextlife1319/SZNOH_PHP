@@ -17,17 +17,21 @@ $connectionInfo = array("UID" => "ServerAdmin@sznoh", "pwd" => "WCYwcy123", "Dat
 $serverName = "tcp:sznoh.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
 
+$sql="SELECT * FROM Platnosci_SZNOH WHERE IDPlatnosci = $_GET['id']";
+$stmt = sqlsrv_query( $conn, $sql );
+$row = sqlsrv_fetch( $stmt, SQLSRV_FETCH_NUMERIC);
+
 ?>
 
 <form>
   IDPlatnosci:<br>
-  <input type="text" name="firstname"><br>
+  <input type="text" name="ID" value="<?php echo $row[0]; ?>"><br>
   Zaplacono:<br>
-  <input type="text" name="lastname"><br>
+  <input type="text" name="Zap" value="<?php echo $row[1]; ?>"><br>
   Zaliczka:<br>
-  <input type="text" name="lastname"><br>
+  <input type="text" name="Zal" value="<?php echo $row[2]; ?>"><br>
   CalaKwota:<br>
-  <input type="text" name="lastname"><br>
+  <input type="text" name="Cal" value="<?php echo $row[3]; ?>"><br>
 </form>
 
 
