@@ -24,7 +24,10 @@ echo "$row[0] \n";
 echo "$row[1] \n";
 echo "$row[2] \n";
 echo "$row[3] \n";
-print_r($row);
+print_r($row[0]);
+print_r($row[1]);
+print_r($row[2]);
+print_r($row[3]);
 ?>
 
 <form>
