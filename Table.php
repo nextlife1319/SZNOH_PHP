@@ -28,8 +28,13 @@
 
       //Display metadata of the chosen table
 
-      $sql = "SELECT * FROM Platnosci_SZNOH";
-      $stmt = sqlsrv_prepare( $conn, $sql );
+      // $sql = "SELECT * FROM Platnosci_SZNOH";
+      // $stmt = sqlsrv_prepare( $conn, $sql );
+
+      $nazwaTabeli="Platnosci_SZNOH";
+
+      $sql="SELECT * FROM $nazwaTabeli";
+      $stmt = sqlsrv_query( $conn, $sql );
 
       // foreach( sqlsrv_field_metadata( $stmt ) as $fieldMetadata ) {
       //     foreach( $fieldMetadata as $name => $value) {
