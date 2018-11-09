@@ -20,14 +20,8 @@ $serverName = "tcp:sznoh.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
 
 $row=find_row_by_id($_GET['id']);
-echo "$row[0] \n";
-echo "$row[1] \n";
-echo "$row[2] \n";
-echo "$row[3] \n";
-print_r($row[0]);
-print_r($row[1]);
-print_r($row[2]);
-print_r($row[3]);
+echo "$row \n";
+
 ?>
 
 <form>

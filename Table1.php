@@ -11,7 +11,7 @@
     <div class="container">
       <h1>Pierwsza Tabela</h1>
       <?php
-      
+
       // SQL Server Extension Sample Code:
       $connectionInfo = array("UID" => "ServerAdmin@sznoh", "pwd" => "WCYwcy123", "Database" => "SZNOH_DB", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
       $serverName = "tcp:sznoh.database.windows.net,1433";
@@ -23,6 +23,10 @@
         $sql="SELECT * FROM Platnosci_SZNOH WHERE IDPlatnosci = $id";
         $stmt = sqlsrv_query( $conn, $sql );
         $row = sqlsrv_fetch( $stmt, SQLSRV_FETCH_NUMERIC);
+        echo "$row[0] \n";
+        echo "$row[1] \n";
+        echo "$row[2] \n";
+        echo "$row[3] \n";
         return $row;
       }
 
