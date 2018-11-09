@@ -5,12 +5,12 @@
 function display_table($nazwaTabeli, $conn){
 $var="dziala";
 echo $var;
-}
 
-// $sql="SELECT * FROM $nazwaTabeli";
-// $stmt = sqlsrv_query( $conn, $sql );
-//
-//
+
+$sql="SELECT * FROM $nazwaTabeli";
+$stmt = sqlsrv_query( $conn, $sql );
+
+echo $var;
 //   echo "<table class="table table-hover">";
 //     echo "<thead>";
 //       echo "<tr>";
@@ -28,5 +28,5 @@ echo $var;
 //       echo "<td><a href=update-single.php?id=".$row[0].">Edit</a></td></tr></tbody>";
 //     }
 //   echo "</table>";
-// }
+ }
 ?>
