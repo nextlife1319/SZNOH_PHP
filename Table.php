@@ -30,12 +30,6 @@
 
       // $sql = "SELECT * FROM Platnosci_SZNOH";
       // $stmt = sqlsrv_prepare( $conn, $sql );
-
-      $nazwaTabeli="Platnosci_SZNOH";
-
-      $sql="SELECT * FROM $nazwaTabeli";
-      $stmt = sqlsrv_query( $conn, $sql );
-
       // foreach( sqlsrv_field_metadata( $stmt ) as $fieldMetadata ) {
       //     foreach( $fieldMetadata as $name => $value) {
       //        echo "$name: $value<br />";
@@ -43,6 +37,9 @@
       //       echo "<br />";
       // }
 
+      $nazwaTabeli="Platnosci_SZNOH";
+      $sql="SELECT * FROM $nazwaTabeli";
+      $stmt = sqlsrv_query( $conn, $sql );
 
         ?>
         <table class="table table-hover">
@@ -66,7 +63,7 @@
         </table>
 
 <?php
-echo "lol".$row[0];
+
       ////Add row to Database
 
       // echo ("Inserting a new row into table" . PHP_EOL);
@@ -79,39 +76,6 @@ echo "lol".$row[0];
       // echo ($rowsAffected. " row(s) inserted: " . PHP_EOL);
       // sqlsrv_free_stmt($getResults);
 
-      //Display table
-      $nazwaTabeli="Platnosci_SZNOH";
-
-      $sql="SELECT * FROM $nazwaTabeli";
-      $stmt = sqlsrv_query( $conn, $sql );
-
-      ?>
-      <table class="table table-hover">
-        <thead>
-          <tr>
-              <th>ID</th>
-              <th>Name</th>
-              <th>Age</th>
-              <th>Price</th>
-              <th>Edit</th>
-          </tr>
-        </thead>
-      <?php
-      while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC) ) {
-      ?>
-        <tbody>
-          <tr>
-            <td><?php echo $row[0]; ?></td>
-            <td><?php echo $row[1]; ?></td>
-            <td><?php echo $row[2]; ?></td>
-            <td><?php echo $row[3]; ?></td>
-            <td><a href="update-single.php?id=<?php echo $row[0]; ?>">Edit</a></td>
-          </tr>
-        </tbody>
-      <?php
-      }
-      ?>
-      </table>
     </div>
   </body>
 </html>
