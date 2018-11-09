@@ -55,11 +55,14 @@
           ?>
             <tbody>
               <tr>
-                <?php
-                echo "lol".$row[0];
-                 foreach($row as $element){
-                  echo "<td>kupa</td>";
-                }?>
+
+                <td><?php echo $row[0]; ?></td>
+                <td><?php echo $row[1]; ?></td>
+                <td><?php echo $row[2]; ?></td>
+                <td><?php echo $row[3]; ?></td><?php
+                 // foreach($row as $element){
+                 //  echo "<td>kupa</td>";
+                //}?>
                 <td><a href="update-single.php?id=<?php echo $element; ?>">Edit</a></td>
               </tr>
             </tbody>
