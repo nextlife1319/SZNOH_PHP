@@ -11,12 +11,13 @@
     <div class="container">
       <h1>Pierwsza Tabela</h1>
       <?php
-      if (require('functions.php') == TRUE) {
-        echo 'OK';
-      }else{
-        echo "chuj";
-        echo getcwd();
-      }
+      include 'functions.php';
+      // if (require('functions.php') == TRUE) {
+      //   echo 'OK';
+      // }else{
+      //   echo "chuj";
+      //   echo getcwd();
+      // }
       $nazwaTabeli="Platnosci_SZNOH";
       display_table($nazwaTabeli);
       // SQL Server Extension Sample Code:
