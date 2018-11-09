@@ -35,7 +35,7 @@ $row=find_row_by_id($_GET['id']);
 </form>
 
 
-
+<?php
 // $rowToUpdate = $_GET['id'];
 // $tsql= "UPDATE Platnosci_SZNOH SET IDPlatnosci = ?, Zaplacono = ?, Zaliczka = ?, CalaKwota = ?  WHERE IDPlatnosci = ?";
 // $params = array('Sweden', $userToUpdate);
