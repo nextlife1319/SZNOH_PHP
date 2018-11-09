@@ -12,43 +12,22 @@ $sql="SELECT * FROM $nazwaTabeli";
 $stmt = sqlsrv_query( $conn, $sql );
 
 
-  // echo "<table class="table table-hover">";
-  //   echo "<thead>";
-  //     echo "<tr>";
-  //       foreach( sqlsrv_field_metadata( $stmt ) as $fieldMetadata ) {
-  //               $col=$fieldMetadata["Name"];
-  //               echo "<th>".$col."</th>";
-  //             }
-  //             echo "<th>Edit</th></tr></thead><tbody>";
-  //   while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC) ) {
-  //
-  //     echo "<tr>";
-  //     foreach($row as $element){
-  //       echo  "<td>".$element."</td>";
-  //     }
-  //     echo "<td><a href=update-single.php?id=".$row[0].">Edit</a></td></tr></tbody>";
-  //   }
-  // echo "</table>";
+  echo "<table class="table table-hover">";
+    echo "<thead>";
+      echo "<tr>";
+        foreach( sqlsrv_field_metadata( $stmt ) as $fieldMetadata ) {
+                $col=$fieldMetadata["Name"];
+                echo "<th>".$col."</th>";
+              }
+              echo "<th>Edit</th></tr></thead><tbody>";
+    while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC) ) {
 
-return <<<HTML
-<table class="table table-hover">
-  <thead>
-    <tr>
-      <?php foreach( sqlsrv_field_metadata( $stmt ) as $fieldMetadata ) {
-              $col=$fieldMetadata["Name"];
-              echo "<th>".$col."</th>";
-            }?>
-            <th>Edit</th>
-    </tr>
-  </thead>
-  <?php while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC) ) { ?>
-  <tbody>
-
-    <tr><?php foreach($row as $element){
-    echo  "<td>".$element."</td>";} ?>
-    <td><a href="update-single.php?id=<?php echo $row[0]; ?>">Edit</a></td>
-    </tr>
-  </tbody><?php } ?>
-</table>
-HTML;
-}?>
+      echo "<tr>";
+      foreach($row as $element){
+        echo  "<td>".$element."</td>";
+      }
+      echo "<td><a href=update-single.php?id=".$row[0].">Edit</a></td></tr></tbody>";
+    }
+  echo "</table>";
+}
+?>
