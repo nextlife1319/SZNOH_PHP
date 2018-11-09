@@ -50,25 +50,15 @@
                     <th>Edit</th>
             </tr>
           </thead>
-          <?php
-          while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC) ) {
-          ?>
-            <tbody>
-              <tr>
-
-                <td><?php echo $row[0]; ?></td>
-                <td><?php echo $row[1]; ?></td>
-                <td><?php echo $row[2]; ?></td>
-                <td><?php echo $row[3]; ?></td><?php
-                 // foreach($row as $element){
-                 //  echo "<td>kupa</td>";
-                //}?>
-                <td><a href="update-single.php?id=<?php echo $element; ?>">Edit</a></td>
-              </tr>
-            </tbody>
-          <?php
-          }
-          ?>
+          <tbody>
+            <tr>
+              <td>LOL</td>
+              <td>LOL</td>
+              <td>LOL</td>
+              <td>LOL</td>
+              <td>LOL</td>
+            </tr>
+          </tbody>
         </table>
 
 <?php
