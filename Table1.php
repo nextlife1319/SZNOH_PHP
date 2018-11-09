@@ -17,26 +17,29 @@
       $serverName = "tcp:sznoh.database.windows.net,1433";
       $conn = sqlsrv_connect($serverName, $connectionInfo);
 
+      // //Display metadata of the chosen table
 
-      $sql = "SELECT * FROM Platnosci_SZNOH";
-      $stmt = sqlsrv_prepare( $conn, $sql );
+      // $sql = "SELECT * FROM Platnosci_SZNOH";
+      // $stmt = sqlsrv_prepare( $conn, $sql );
+      //
+      // foreach( sqlsrv_field_metadata( $stmt ) as $fieldMetadata ) {
+      //     foreach( $fieldMetadata as $name => $value) {
+      //        echo "$name: $value<br />";
+      //     }
+      //       echo "<br />";
+      // }
 
-      foreach( sqlsrv_field_metadata( $stmt ) as $fieldMetadata ) {
-          foreach( $fieldMetadata as $name => $value) {
-             echo "$name: $value<br />";
-          }
-            echo "<br />";
-      }
-      //Add row to Database
-      /*echo ("Inserting a new row into table" . PHP_EOL);
-      $addsql= "INSERT INTO Platnosci_SZNOH VALUES (?,?,?,?);";
-      $params = array(2,'Nie', 100.0, 600.0);
-      $getResults= sqlsrv_query($conn, $addsql, $params);
-      $rowsAffected = sqlsrv_rows_affected($getResults);
-      if ($getResults == FALSE or $rowsAffected == FALSE)
-          die(FormatErrors(sqlsrv_errors()));
-      echo ($rowsAffected. " row(s) inserted: " . PHP_EOL);
-      sqlsrv_free_stmt($getResults);*/
+      ////Add row to Database
+
+      // echo ("Inserting a new row into table" . PHP_EOL);
+      // $addsql= "INSERT INTO Platnosci_SZNOH VALUES (?,?,?,?);";
+      // $params = array(2,'Nie', 100.0, 600.0);
+      // $getResults= sqlsrv_query($conn, $addsql, $params);
+      // $rowsAffected = sqlsrv_rows_affected($getResults);
+      // if ($getResults == FALSE or $rowsAffected == FALSE)
+      //     die(FormatErrors(sqlsrv_errors()));
+      // echo ($rowsAffected. " row(s) inserted: " . PHP_EOL);
+      // sqlsrv_free_stmt($getResults);
 
       //Display table
       $sql="SELECT * FROM Platnosci_SZNOH";
