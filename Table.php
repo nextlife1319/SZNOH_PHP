@@ -31,11 +31,17 @@
       $sql = "SELECT * FROM Platnosci_SZNOH";
       $stmt = sqlsrv_prepare( $conn, $sql );
 
+      // foreach( sqlsrv_field_metadata( $stmt ) as $fieldMetadata ) {
+      //     foreach( $fieldMetadata as $name => $value) {
+      //        echo "$name: $value<br />";
+      //     }
+      //       echo "<br />";
+      // }
+
       foreach( sqlsrv_field_metadata( $stmt ) as $fieldMetadata ) {
-          foreach( $fieldMetadata as $name => $value) {
-             echo "$name: $value<br />";
-          }
-            echo "<br />";
+        $nazwaKolumny=$fieldMetadata[0]=> $value;
+            echo "$nazwaKolumny <br />";
+
       }
 
       ////Add row to Database
