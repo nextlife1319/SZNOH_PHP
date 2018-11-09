@@ -44,35 +44,6 @@
       //       echo "<br />";
       // }
 
-      $nazwaTabeli="Platnosci_SZNOH";
-      $sql="SELECT * FROM $nazwaTabeli";
-      $stmt = sqlsrv_query( $conn, $sql );
-
-        ?>
-        <table class="table table-hover">
-          <thead>
-            <tr>
-              <?php foreach( sqlsrv_field_metadata( $stmt ) as $fieldMetadata ) {
-                      $col=$fieldMetadata["Name"];
-                      echo "<th>".$col."</th>";
-                    }?>
-                    <th>Edit</th>
-            </tr>
-          </thead>
-          <?php while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC) ) { ?>
-          <tbody>
-
-            <tr><?php foreach($row as $element){
-            echo  "<td>".$element."</td>";} ?>
-            <td><a href="update-single.php?id=<?php echo $row[0]; ?>">Edit</a></td>
-            </tr>
-          </tbody><?php } ?>
-        </table>
-
-
-
-<?php
-
       ////Add row to Database
 
       // echo ("Inserting a new row into table" . PHP_EOL);
