@@ -65,7 +65,7 @@
 
 
 <?php
-      display_table($nazwaTabeli)
+      //display_table($nazwaTabeli)
       ////Add row to Database
 
       // echo ("Inserting a new row into table" . PHP_EOL);
