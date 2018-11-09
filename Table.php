@@ -11,10 +11,9 @@
     <div class="container">
       <h1>Pierwsza Tabela</h1>
       <?php
-      echo __DIR__;
-      include(__DIR__.'/../functions.php');
       require_once('functions.php');
-      $var=display_table();
+      $nazwaTabeli="Platnosci_SZNOH";
+      $var=display_table($nazwaTabeli);
       echo $var;
       //$nazwaTabeli="Platnosci_SZNOH";
       //echo display_table($nazwaTabeli);

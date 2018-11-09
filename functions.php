@@ -2,7 +2,7 @@
 <?php
 
 
-function display_table(){
+function display_table($nazwaTabeli){
 $var="dziala";
 return $var;
 }
