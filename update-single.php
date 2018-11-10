@@ -47,7 +47,7 @@ echo "<div class='input-group mb-3'><form method='post'>";
 $i=0;
 foreach($col as $element){
   if ($element==$col[0]){
-    $_POST[0]=$_GET['id'];
+    echo "<input type='hidden' name='".$element."' value='".$row[$i]."'><br>";
   }else{
     echo $element.":<br>";
     echo "<input type='text' name='".$element."' value='".$row[$i]."'><br>";
