@@ -36,6 +36,7 @@ require_once('functions.php');
 
 $row=find_row_by_id($_GET['id'], $conn);
 ?>
+<div class="input-group mb-3">
 <form method="post">
   IDPlatnosci:<br>
   <input type="text" name="ID" value="<?php echo $row[0]; ?>"><br>
@@ -46,6 +47,7 @@ $row=find_row_by_id($_GET['id'], $conn);
   CalaKwota:<br>
   <input type="text" name="Cal" value="<?php echo $row[3]; ?>"><br><br>
   <input type="submit" value="Wprowadź">
-  <a class="btn btn-dark" href="/Table.php">Home</a>
+  <button type="btn btn-dark" href="/Table.php">Wróć</>
 </form>
+</div>
 </html>
