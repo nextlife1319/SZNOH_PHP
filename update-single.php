@@ -15,6 +15,7 @@
  $conn = sqlsrv_connect($serverName, $connectionInfo);
 
  $row=find_row_by_id($_GET['id'], $conn);
+ print_r($row);
  $nazwaTabeli="Klienci";
  $col=get_col_names($nazwaTabeli, $conn);
 
