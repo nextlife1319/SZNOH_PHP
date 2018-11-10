@@ -46,7 +46,7 @@
   <script>
   function newSite(string) {
 
-      document.getElementById('myFrame').src ='/Table.php';
+      document.getElementById('myFrame').src =string;
   }
   </script>
 
