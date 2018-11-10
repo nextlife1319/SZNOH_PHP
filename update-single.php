@@ -21,7 +21,7 @@
 
 
  if (isset($_POST[$col[0]])) {
- 
+
    $rowToUpdate = $_POST[$col[0]];
    $tsql= "UPDATE Platnosci_SZNOH SET ";
    $ii=0;
@@ -32,7 +32,7 @@
    }
    $params[]=$rowToUpdate;
    rtrim($tsql, ",");
-   $tsql.=" WHERE ".$col[0] . " = ?"
+   $tsql.=" WHERE ".$col[0] . " = ?";
 
    $getResults= sqlsrv_query($conn, $tsql, $params);
    $rowsAffected = sqlsrv_rows_affected($getResults);
