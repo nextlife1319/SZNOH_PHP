@@ -34,4 +34,14 @@ $stmt = sqlsrv_query( $conn, $sql );
    return $row;
  }
 
+ function get_col_names($nazwaTabeli, $conn){
+
+   $sql="SELECT * FROM $nazwaTabeli";
+   $stmt = sqlsrv_query( $conn, $sql );
+   foreach( sqlsrv_field_metadata( $stmt ) as $fieldMetadata ) {
+           $col[]=$fieldMetadata["Name"];
+         }
+   return $col;
+ }
+
 ?>
