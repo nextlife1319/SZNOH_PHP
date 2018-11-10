@@ -41,8 +41,12 @@ $row=find_row_by_id($_GET['id'], $conn);
 echo "<div class='input-group mb-3'><form method='post'>";
 $i=0;
 foreach($col as $element){
-  echo $element.":<br>";
-  echo "<input type='text' name='".$element."' value='".$row[$i]."'><br>";
+  if ($element==$col[0]){
+    $_POST[0]=$_GET['id'];
+  }else{
+    echo $element.":<br>";
+    echo "<input type='text' name='".$element."' value='".$row[$i]."'><br>";
+  }
   $i=$i+1;
 }
 echo "<input class='btn btn-primary' type='submit' value='Wprowadź'><a class='btn btn-primary' href='/Table.php'>Wróć</a></form></div></body></html>";
