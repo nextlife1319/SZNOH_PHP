@@ -23,7 +23,7 @@ require_once('functions.php');
  if (isset($_POST[$col[0]])) {
 
    $rowToUpdate = $_POST[$col[0]];
-   $tsql= "UPDATE Platnosci_SZNOH SET";
+   $tsql= "UPDATE Platnosci_SZNOH SET ";
    $ii=0;
    foreach($col as $element){
      $tsql.=$element."= ?,";
