@@ -20,7 +20,7 @@ $stmt = sqlsrv_query( $conn, $sql );
       foreach($row as $element){
         echo  "<td>".$element."</td>";
       }
-      echo "<td><a href=update-single.php?id=".$row[0].">Edit</a></td></tr></tbody>";
+      echo "<td><a href=update-single.php?id=".$row[0]."?conn=".$conn.">Edit</a></td></tr></tbody>";
       //echo "<td><a onclick='newSite(`/update-single.php?id=".$row[0]."`)'>Edit</a></td></tr></tbody>";
     }
   echo "</table>";
