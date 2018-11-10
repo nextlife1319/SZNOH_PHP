@@ -16,7 +16,6 @@
 
  $nazwaTabeli="Klienci";
  $row=find_row_by_id($_GET['id'], $conn, $nazwaTabeli);
- print_r($row);
  $col=get_col_names($nazwaTabeli, $conn);
 
  if (isset($_POST[$col[1]])) {
@@ -36,6 +35,7 @@
    $tsql.=" WHERE ".$col[0] . " = ?";
 
    echo $tsql;
+   print_r($params);
 
    $getResults= sqlsrv_query($conn, $tsql, $params);
    $rowsAffected = sqlsrv_rows_affected($getResults);
