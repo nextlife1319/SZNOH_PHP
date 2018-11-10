@@ -29,7 +29,7 @@
      }
      $ii=$ii+1;
    }
-   $addsql=rtrim($addsql, ",");
+   $addsql=rtrim($addsql, ", ");
    $addsql.=");";
 
    echo $addsql;
