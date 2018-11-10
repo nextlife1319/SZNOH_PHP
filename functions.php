@@ -13,7 +13,7 @@ $stmt = sqlsrv_query( $conn, $sql );
                 $col=$fieldMetadata["Name"];
                 echo "<th>".$col."</th>";
               }
-              echo "<th>Edit</th></tr></thead><tbody>";
+              echo "<th>Edit</th>";
               echo "<th>Usuń</th></tr></thead><tbody>";
     while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC) ) {
 
@@ -21,7 +21,7 @@ $stmt = sqlsrv_query( $conn, $sql );
       foreach($row as $element){
         echo  "<td>".$element."</td>";
       }
-      echo "<td><a href=update-single.php?id=".$row[0].">Edit</a></td></tr></tbody>";
+      echo "<td><a href=update-single.php?id=".$row[0].">Edit</a></td>";
       echo "<td><a href=delete-single.php?id=".$row[0].">Usuń</a></td></tr></tbody>";
     }
   echo "</table>";
