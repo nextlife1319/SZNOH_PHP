@@ -34,6 +34,9 @@ require_once('functions.php');
 $row=find_row_by_id($_GET['id'], $conn);
 $nazwaTabeli="Platnosci_SZNOH";
 $col[]=get_col_names($nazwaTabeli, $conn);
+echo $col[0];
+echo $col[1];
+echo $col[2];
 ?>
   <div class="input-group mb-3">
     <form method="post">
