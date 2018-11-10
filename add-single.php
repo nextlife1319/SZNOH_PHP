@@ -34,18 +34,19 @@
 
    echo $addsql;
    print_r($params);
-   // $getResults= sqlsrv_query($conn, $addsql, $params);
-   // $rowsAffected = sqlsrv_rows_affected($getResults);
-   // echo "Dodano wpis";
-   // sqlsrv_free_stmt($getResults);
+   $getResults= sqlsrv_query($conn, $addsql, $params);
+   $rowsAffected = sqlsrv_rows_affected($getResults);
+   echo "Dodano wpis";
+   sqlsrv_free_stmt($getResults);
  }
 
 echo "<div class='input-group mb-3'><form method='post'>";
-$i=0;
+
 foreach($col as $element){
-  echo $element.":<br>";
-  echo "<input type='text' name='".$element."' value='".$row[$i]."'><br>";
-  $i=$i+1;
+  if ($element!=$col[0]){
+    echo $element.":<br>";
+    echo "<input type='text' name='".$element."'><br>";
+  }
 }
 echo "<input class='btn btn-primary' type='submit' value='Wprowadź'><a class='btn btn-primary' href='/Table.php'>Wróć</a></form></div></body></html>";
 ?>
