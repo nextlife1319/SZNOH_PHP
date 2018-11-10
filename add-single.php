@@ -20,7 +20,7 @@
  if (isset($_POST[$col[1]])) {
 
    $addsql= "INSERT INTO ".$nazwaTabeli." (";
-   $val="VALUES (";
+   $val=" VALUES (";
    $ii=0;
    foreach($col as $element){
      if ($element!=$col[0]){
