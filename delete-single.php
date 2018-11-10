@@ -15,7 +15,7 @@
  $conn = sqlsrv_connect($serverName, $connectionInfo);
 
  $nazwaTabeli=$_GET['nazwaTabeli'];
- //$nazwaTabeli="Klienci";
+
  $col=get_col_names($nazwaTabeli, $conn);
 
    $delsql= "DELETE FROM $nazwaTabeli WHERE $col[0] = ?";

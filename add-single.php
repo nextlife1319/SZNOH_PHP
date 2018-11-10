@@ -15,7 +15,7 @@
  $conn = sqlsrv_connect($serverName, $connectionInfo);
 
  $nazwaTabeli=$_GET['nazwaTabeli'];
- //$nazwaTabeli="Klienci";
+
  $col=get_col_names($nazwaTabeli, $conn);
 
  if (isset($_POST[$col[1]])) {
@@ -36,8 +36,6 @@
    $val=rtrim($val, ", ");
    $addsql.=$val.");";
 
-   echo $addsql;
-   print_r($params);
    $getResults= sqlsrv_query($conn, $addsql, $params);
    $rowsAffected = sqlsrv_rows_affected($getResults);
    echo "Dodano wpis";
