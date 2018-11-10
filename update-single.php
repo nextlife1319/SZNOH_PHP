@@ -33,7 +33,7 @@ require_once('functions.php');
 
 $row=find_row_by_id($_GET['id'], $conn);
 $nazwaTabeli="Platnosci_SZNOH";
-print_r(get_col_names($nazwaTabeli, $conn));
+get_col_names($nazwaTabeli, $conn);
 ?>
   <div class="input-group mb-3">
     <form method="post">

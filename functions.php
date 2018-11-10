@@ -41,7 +41,7 @@ $stmt = sqlsrv_query( $conn, $sql );
    foreach( sqlsrv_field_metadata( $stmt ) as $fieldMetadata ) {
            $col[]=$fieldMetadata["Name"];
          }
-   return $col;
+   print_r($col);
  }
 
 ?>
