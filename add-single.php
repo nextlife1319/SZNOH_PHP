@@ -24,7 +24,7 @@
    foreach($col as $element){
      if ($element!=$col[0]){
        $addsql.=$element;
-       $addsql.="=?,";
+       $addsql.="=?, ";
        $params[]=$_POST[$col[$ii]];
      }
      $ii=$ii+1;
