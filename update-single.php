@@ -25,8 +25,10 @@
    $tsql= "UPDATE ".$nazwaTabeli." SET ";
    $ii=0;
    foreach($col as $element){
-     $tsql.=$element."= ?, ";
-     $params[]=$_POST[$col[$ii]];
+     if ($element!=$col[0]){
+       $tsql.=$element."= ?, ";
+       $params[]=$_POST[$col[$ii]];
+     }
      $ii=$ii+1;
    }
    $params[]=$rowToUpdate;
