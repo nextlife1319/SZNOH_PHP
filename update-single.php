@@ -20,9 +20,7 @@ require_once('functions.php');
 
    $getResults= sqlsrv_query($conn, $tsql, $params);
    $rowsAffected = sqlsrv_rows_affected($getResults);
-   if ($getResults == FALSE or $rowsAffected == FALSE)
-       die(FormatErrors(sqlsrv_errors()));
-   echo ($rowsAffected. " row(s) updated: " . PHP_EOL);
+   echo "Zmodyfikowano wpis";
    sqlsrv_free_stmt($getResults);
  }
 
