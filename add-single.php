@@ -14,7 +14,8 @@
  $serverName = "tcp:sznohfal.database.windows.net,1433";
  $conn = sqlsrv_connect($serverName, $connectionInfo);
 
- $nazwaTabeli="Klienci";
+ $nazwaTabeli=$_GET['nazwaTabeli'];
+ //$nazwaTabeli="Klienci";
  $col=get_col_names($nazwaTabeli, $conn);
 
  if (isset($_POST[$col[1]])) {

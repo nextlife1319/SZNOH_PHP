@@ -9,7 +9,8 @@
   </head>
   <body>
     <div class="container">
-      <h1>Pierwsza Tabela</h1>
+      <?php $nazwaTabeli="Klienci"; ?>
+      <h1><?php echo $nazwaTabeli; ?></h1>
       <?php
       require_once('functions.php');
 
@@ -17,9 +18,8 @@
       $serverName = "tcp:sznohfal.database.windows.net,1433";
       $conn = sqlsrv_connect($serverName, $connectionInfo);
 
-      $nazwaTabeli="Klienci";
       display_table($nazwaTabeli,$conn);
-      echo "<a class='btn btn-primary' href='/add-single.php'>Dodaj</a>";
+      echo "<a class='btn btn-primary' href='/add-single.php?nazwaTabeli='".$nazwaTabeli."'>Dodaj</a>";
 
 ?>
     </div>
