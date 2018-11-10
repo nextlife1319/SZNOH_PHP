@@ -31,10 +31,10 @@
      $ii=$ii+1;
    }
    $params[]=$rowToUpdate;
-   rtrim($tsql, ", ");
+   $tsql=rtrim($tsql, ",");
    $tsql.=" WHERE ".$col[0] . " = ?";
    echo $tsql;
-   echo $params;
+   echo $params[0];
    $getResults= sqlsrv_query($conn, $tsql, $params);
    $rowsAffected = sqlsrv_rows_affected($getResults);
    echo "Zmodyfikowano wpis";
