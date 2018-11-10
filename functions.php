@@ -30,9 +30,10 @@ $stmt = sqlsrv_query( $conn, $sql );
  }
 
 
- function find_row_by_id($id, $conn){
+ function find_row_by_id($id, $conn, $nazwaTabeli){
 
-   $sql="SELECT * FROM Platnosci_SZNOH WHERE IDPlatnosci = $id";
+   $where=get_col_names($nazwaTabeli, $conn)
+   $sql="SELECT * FROM $nazwaTabeli WHERE $where[0] = $id";
    $stmt = sqlsrv_query( $conn, $sql );
    $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC);
    return $row;

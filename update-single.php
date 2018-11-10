@@ -14,9 +14,9 @@
  $serverName = "tcp:sznohfal.database.windows.net,1433";
  $conn = sqlsrv_connect($serverName, $connectionInfo);
 
- $row=find_row_by_id($_GET['id'], $conn);
- print_r($row);
  $nazwaTabeli="Klienci";
+ $row=find_row_by_id($_GET['id'], $conn, $nazwaTabeli);
+ print_r($row);
  $col=get_col_names($nazwaTabeli, $conn);
 
  if (isset($_POST[$col[0]])) {
