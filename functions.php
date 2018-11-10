@@ -14,6 +14,7 @@ $stmt = sqlsrv_query( $conn, $sql );
                 echo "<th>".$col."</th>";
               }
               echo "<th>Edit</th></tr></thead><tbody>";
+              echo "<th>Usuń</th></tr></thead><tbody>";
     while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC) ) {
 
       echo "<tr>";
@@ -21,6 +22,7 @@ $stmt = sqlsrv_query( $conn, $sql );
         echo  "<td>".$element."</td>";
       }
       echo "<td><a href=update-single.php?id=".$row[0].">Edit</a></td></tr></tbody>";
+      echo "<td><a href=delete-single.php?id=".$row[0].">Usuń</a></td></tr></tbody>";
     }
   echo "</table>";
  }
