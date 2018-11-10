@@ -17,7 +17,7 @@
  $nazwaTabeli="Klienci";
  $col=get_col_names($nazwaTabeli, $conn);
 
- if (isset($_POST[$col[0]])) {
+ if (isset($_POST[$col[1]])) {
 
    $addsql= "INSERT INTO ".$nazwaTabeli." VALUES (";
    $ii=0;
