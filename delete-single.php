@@ -18,7 +18,8 @@
  $nazwaTabeli="Platnosci_SZNOH";
  $col=get_col_names($nazwaTabeli, $conn);
 
-   $delsql= "DELETE FROM $nazwaTabeli WHERE $col[0] = ?";
+   $delsql= "DELETE FROM $nazwaTabeli";
+   //WHERE $col[0] = ?
    $params=array($_GET["id"]);
    echo $_GET["id"];
    echo $delsql;
