@@ -15,11 +15,11 @@
 
       $connectionInfo = array("UID" => "SecureAdmin@sznohfal", "pwd" => "WCYwcy123", "Database" => "sznohphp", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
       $serverName = "tcp:sznohfal.database.windows.net,1433";
-      $conn = sqlsrv_connect($serverName, $connectionInfo)
-      echo "jestem";
+      $conn = sqlsrv_connect($serverName, $connectionInfo);
+
       $nazwaTabeli="Klienci";
-      // display_table($nazwaTabeli,$conn);
-      // echo "<a class='btn btn-primary' href='/add-single.php'>Dodaj</a>";
+      display_table($nazwaTabeli,$conn);
+      echo "<a class='btn btn-primary' href='/add-single.php'>Dodaj</a>";
 
 ?>
     </div>
