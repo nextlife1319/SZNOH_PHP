@@ -78,6 +78,7 @@
       <?php //<p><a href="#">Link</a></p> ?>
     </div>
     <div class="col-sm-8 text-left">
+      <?php echo getcwd(); ?>
       <iframe id="myFrame" src="/Home.html" style="height:1000px;width:100%" frameBorder="0"></iframe>
     </div>
     <div class="col-sm-2 sidenav">
