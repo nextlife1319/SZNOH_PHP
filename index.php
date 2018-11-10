@@ -63,7 +63,7 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li><a class="btn btn-dark" href="/index.php">Home</a></li>
-        <li><a class="btn btn-dark" onClick="newSite(`/Table.php`)">Tabela</a></li>
+        <li><a class="btn btn-dark" onClick="newSite(`/Klienci.php`)">Klienci</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
