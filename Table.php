@@ -11,7 +11,7 @@
     <div class="container">
       <h1>Pierwsza Tabela</h1>
       <?php
-      require_once('functions.php');
+      //require_once('functions.php');
 
       $connectionInfo = array("UID" => "SecureAdmin@sznohfal", "pwd" => "{WCYwcy123}", "Database" => "sznohphp", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
       $serverName = "tcp:sznohfal.database.windows.net,1433";
