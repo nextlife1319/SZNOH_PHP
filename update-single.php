@@ -35,6 +35,6 @@ $row=find_row_by_id($_GET['id'], $conn);
   Zaliczka:<br>
   <input type="text" name="Zal" value="<?php echo $row[2]; ?>"><br>
   CalaKwota:<br>
-  <input type="text" name="Cal" value="<?php echo $row[3]; ?>"><br>
-  <input type="submit" value="submit">
+  <input type="text" name="Cal" value="<?php echo $row[3]; ?>"><br><br>
+  <input type="submit" value="Wprowadź">
 </form>
