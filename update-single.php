@@ -48,6 +48,6 @@ $row=find_row_by_id($_GET['id'], $conn);
   <input type="text" name="Cal" value="<?php echo $row[3]; ?>"><br><br>
   <input type="submit" value="Wprowadź">
 </form>
-<a class="btn btn-dark" href="/Table.php">Wróć</a>
 </div>
+<a class="btn btn-dark" href="/Table.php">Wróć</a>
 </html>
