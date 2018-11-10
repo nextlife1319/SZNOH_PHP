@@ -30,7 +30,6 @@ require_once('functions.php');
    sqlsrv_free_stmt($getResults);
  }
 
-
 $row=find_row_by_id($_GET['id'], $conn);
 $nazwaTabeli="Platnosci_SZNOH";
 $col=get_col_names($nazwaTabeli, $conn);
@@ -44,19 +43,3 @@ foreach($col as $element){
 }
 echo "<input class='btn btn-primary' type='submit' value='Wprowadź'><a class='btn btn-primary' href='/Table.php'>Wróć</a></form></div></body></html>";
 ?>
-  <div class="input-group mb-3">
-    <form method="post">
-      IDPlatnosci:<br>
-      <input type="text" name="ID" value="<?php echo $row[0]; ?>"><br>
-      Zaplacono:<br>
-      <input type="text" name="Zap" value="<?php echo $row[1]; ?>"><br>
-      Zaliczka:<br>
-      <input type="text" name="Zal" value="<?php echo $row[2]; ?>"><br>
-      CalaKwota:<br>
-      <input type="text" name="Cal" value="<?php echo $row[3]; ?>"><br><br>
-      <input class="btn btn-primary" type="submit" value="Wprowadź">
-      <a class="btn btn-primary" href="/Table.php">Wróć</a>
-    </form>
-  </div>
-</body>
-</html>
