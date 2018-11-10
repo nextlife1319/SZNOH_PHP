@@ -3,7 +3,9 @@
 
 function display_table($nazwaTabeli, $conn){
 
-$sql="SELECT * FROM $nazwaTabeli";
+$order=get_col_names($nazwaTabeli, $conn);
+$by=$order[0];
+$sql="SELECT * FROM $nazwaTabeli ORDER BY $by";
 $stmt = sqlsrv_query( $conn, $sql );
 
    echo "<table class='table table-hover'>";
