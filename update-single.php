@@ -18,7 +18,7 @@
  $row=find_row_by_id($_GET['id'], $conn, $nazwaTabeli);
  $col=get_col_names($nazwaTabeli, $conn);
 
- if (isset($_POST[$col[1]])) {
+ if (isset($_POST[$col[0]])) {
 
    $rowToUpdate = $_POST[$col[0]];
    $tsql= "UPDATE ".$nazwaTabeli." SET ";
