@@ -34,7 +34,7 @@ require_once('functions.php');
 $row=find_row_by_id($_GET['id'], $conn);
 $nazwaTabeli="Platnosci_SZNOH";
 $col[]=get_col_names($nazwaTabeli, $conn);
-echo $col[0];
+print_r($col);
 echo $col[1];
 echo $col[2];
 ?>
