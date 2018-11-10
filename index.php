@@ -65,6 +65,7 @@
         <li><a class="btn btn-dark" href="/index.php">Home</a></li>
         <li><a class="btn btn-dark" onClick="newSite(`/Klienci.php`)">Klienci</a></li>
         <li><a class="btn btn-dark" onClick="newSite(`/Pracownicy.php`)">Pracownicy</a></li>
+        <li><a class="btn btn-dark" onClick="newSite(`/Płatności.php`)">Płatności</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
