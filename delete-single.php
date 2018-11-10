@@ -20,9 +20,7 @@
 
    $delsql= "DELETE FROM $nazwaTabeli WHERE $col[0] = ?";
    $params=array($_GET["id"]);
-   echo $_GET["id"];
-   echo $delsql;
-   print_r($params);
+
    $getResults= sqlsrv_query($conn, $delsql, $params);
    $rowsAffected = sqlsrv_rows_affected($getResults);
    sqlsrv_free_stmt($getResults);
