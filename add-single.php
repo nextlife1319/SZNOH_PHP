@@ -29,7 +29,7 @@
    }
    $addsql=rtrim($addsql, ",");
    $addsql.=");";
-   
+
    $getResults= sqlsrv_query($conn, $addsql, $params);
    $rowsAffected = sqlsrv_rows_affected($getResults);
    echo "Dodano wpis";

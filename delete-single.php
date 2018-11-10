@@ -19,8 +19,9 @@
  $col=get_col_names($nazwaTabeli, $conn);
 
    $delsql= "DELETE FROM $nazwaTabeli WHERE $col[0] = ?";
-   $params=array($_GET['id']);
-
+   $params=array($_GET["id"]);
+   echo $delsql;
+   print_r($params);
    $getResults= sqlsrv_query($conn, $addsql, $params);
    $rowsAffected = sqlsrv_rows_affected($getResults);
    sqlsrv_free_stmt($getResults);
