@@ -19,7 +19,7 @@
  print_r($row);
  $col=get_col_names($nazwaTabeli, $conn);
 
- if (isset($_POST[$col[0]])) {
+ if (isset($_POST[$col[1]])) {
 
    $rowToUpdate = $_POST[$col[0]];
    $tsql= "UPDATE ".$nazwaTabeli." SET ";
