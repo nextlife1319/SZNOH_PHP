@@ -22,6 +22,8 @@ require_once('functions.php');
    sqlsrv_free_stmt($getResults);
  }
 
+echo $_GET['conn'];
+echo $_GET['id'];
 $row=find_row_by_id($_GET['id'], $_GET['conn']);
 ?>
 <form method="post">
