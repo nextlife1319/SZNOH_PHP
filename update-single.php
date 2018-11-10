@@ -7,6 +7,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="/iframe.js"></script>
   </head>
+  <body>
 <?php
 
 /**
@@ -47,8 +48,8 @@ $row=find_row_by_id($_GET['id'], $conn);
   CalaKwota:<br>
   <input type="text" name="Cal" value="<?php echo $row[3]; ?>"><br><br>
   <input type="submit" value="Wprowadź">
-  <a href="/Table.php">Wróć</a>
 </form>
 </div>
-<a href="/Table.php">Wróć</a>
+<a class="btn btn-dark" href="/Table.php">Wróć</a>
+</body>
 </html>
