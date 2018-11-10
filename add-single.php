@@ -27,7 +27,7 @@
      $params[]=$_POST[$col[$ii]];
      $ii=$ii+1;
    }
-   $addsql=rtrim($tsql, ",");
+   $addsql=rtrim($addsql, ",");
    $addsql.=");";
 
    echo $addsql;
