@@ -46,6 +46,6 @@ $row=find_row_by_id($_GET['id'], $conn);
   CalaKwota:<br>
   <input type="text" name="Cal" value="<?php echo $row[3]; ?>"><br><br>
   <input type="submit" value="Wprowadź">
-  <input type="submit" <a href="/Table.php">"Back"</a>
+  <a class="btn btn-dark" href="/Table.php">Home</a>
 </form>
 </html>
