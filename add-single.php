@@ -19,18 +19,21 @@
 
  if (isset($_POST[$col[1]])) {
 
-   $addsql= "INSERT INTO ".$nazwaTabeli." VALUES (";
+   $addsql= "INSERT INTO ".$nazwaTabeli." (";
+   $val="VALUES (";
    $ii=0;
    foreach($col as $element){
      if ($element!=$col[0]){
        $addsql.=$element;
-       $addsql.="=?, ";
+       $addsql.=", ";
        $params[]=$_POST[$col[$ii]];
+       $val.="?, ";
      }
      $ii=$ii+1;
    }
    $addsql=rtrim($addsql, ", ");
-   $addsql.=");";
+   $val=rtrim($valsql, ", ");
+   $addsql.=$val.");";
 
    echo $addsql;
    print_r($params);
