@@ -12,7 +12,7 @@
  require_once('functions.php');
  $connectionInfo = array("UID" => "SecureAdmin@sznohfal", "pwd" => "WCYwcy123", "Database" => "sznohphp", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
  $serverName = "tcp:sznohfal.database.windows.net,1433";
- $conn = sqlsrv_connect($serverName, $connectionInfo)
+ $conn = sqlsrv_connect($serverName, $connectionInfo);
 
  $nazwaTabeli="Klienci";
  $col=get_col_names($nazwaTabeli, $conn);
