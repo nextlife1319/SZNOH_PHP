@@ -33,7 +33,8 @@
    $params[]=$rowToUpdate;
    rtrim($tsql, ",");
    $tsql.=" WHERE ".$col[0] . " = ?";
-
+   echo $tsql;
+   echo $params;
    $getResults= sqlsrv_query($conn, $tsql, $params);
    $rowsAffected = sqlsrv_rows_affected($getResults);
    echo "Zmodyfikowano wpis";
