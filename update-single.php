@@ -14,25 +14,31 @@
  $serverName = "tcp:sznoh.database.windows.net,1433";
  $conn = sqlsrv_connect($serverName, $connectionInfo);
 
+ $row=find_row_by_id($_GET['id'], $conn);
+ $nazwaTabeli="Platnosci_SZNOH";
+ $col=get_col_names($nazwaTabeli, $conn);
 
 require_once('functions.php');
 
- if (isset($_POST['ID'])) {
+ if (isset($_POST[$col[0]])) {
 
-
-   $rowToUpdate = $_POST['ID'];
-   $tsql= "UPDATE Platnosci_SZNOH SET IDPlatnosci = ?, Zaplacono = ?, Zaliczka = ?, CalaKwota = ?  WHERE IDPlatnosci = ?";
-   $params = array($_POST['ID'], $_POST['Zap'], $_POST['Zal'], $_POST['Cal'], $rowToUpdate);
+   $rowToUpdate = $_POST[$col[0]];
+   $tsql= "UPDATE Platnosci_SZNOH SET";
+   $ii=0;
+   foreach($col as $element){
+     $tsql.=$element."= ?,";
+     $params[]=$_POST[$col[i]];
+     $ii=$ii+1;
+   }
+   $params[]=$rowToUpdate;
+   rtrim($tsql, ",");
+   $tsql.=" WHERE ".$col[0] . " = ?"
 
    $getResults= sqlsrv_query($conn, $tsql, $params);
    $rowsAffected = sqlsrv_rows_affected($getResults);
    echo "Zmodyfikowano wpis";
    sqlsrv_free_stmt($getResults);
  }
-
-$row=find_row_by_id($_GET['id'], $conn);
-$nazwaTabeli="Platnosci_SZNOH";
-$col=get_col_names($nazwaTabeli, $conn);
 
 echo "<div class='input-group mb-3'><form method='post'>";
 $i=0;
