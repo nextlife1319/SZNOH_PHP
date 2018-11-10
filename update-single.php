@@ -34,9 +34,15 @@ require_once('functions.php');
 $row=find_row_by_id($_GET['id'], $conn);
 $nazwaTabeli="Platnosci_SZNOH";
 $col=get_col_names($nazwaTabeli, $conn);
-print_r($col);
-echo $col[1];
-echo $col[2];
+
+echo "<div class='input-group mb-3'><form method='post'>";
+$i=0;
+foreach($col as $element){
+  echo $element.":<br>";
+  echo "<input type='text' name='".$element."' value='".$row[$i]."'><br>";
+  $i=$i+1;
+}
+echo "<input class='btn btn-primary' type='submit' value='Wprowadź'><a class='btn btn-primary' href='/Table.php'>Wróć</a></form></div></body></html>";
 ?>
   <div class="input-group mb-3">
     <form method="post">
