@@ -50,6 +50,6 @@ $row=find_row_by_id($_GET['id'], $conn);
   <input type="submit" value="Wprowadź">
 </form>
 </div>
-<a class="btn btn-dark" href="/Table.php">Wróć</a>
+<a class="btn btn-primary" href="/Table.php">Wróć</a>
 </body>
 </html>
