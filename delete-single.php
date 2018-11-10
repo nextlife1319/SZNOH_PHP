@@ -8,7 +8,7 @@
     <script src="/iframe.js"></script>
   </head>
   <body>
-    <h1>Dodaj wpis</h1>
+    <h1>Usunięto wpis</h1>
 <?php
  require_once('functions.php');
  $connectionInfo = array("UID" => "ServerAdmin@sznoh", "pwd" => "WCYwcy123", "Database" => "SZNOH_DB", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
@@ -18,30 +18,12 @@
  $nazwaTabeli="Platnosci_SZNOH";
  $col=get_col_names($nazwaTabeli, $conn);
 
- if (isset($_POST[$col[0]])) {
+   $delsql= "DELETE FROM $nazwaTabeli WHERE $col[0] = ?";
+   $params=array($_GET['id']);
 
-   $addsql= "INSERT INTO ".$nazwaTabeli." VALUES (";
-   $ii=0;
-   foreach($col as $element){
-     $addsql.="?,";
-     $params[]=$_POST[$col[$ii]];
-     $ii=$ii+1;
-   }
-   $addsql=rtrim($addsql, ",");
-   $addsql.=");";
-   
    $getResults= sqlsrv_query($conn, $addsql, $params);
    $rowsAffected = sqlsrv_rows_affected($getResults);
-   echo "Dodano wpis";
    sqlsrv_free_stmt($getResults);
- }
+   echo "<a class='btn btn-primary' href='/Table.php'>Wróć</a>";
 
-echo "<div class='input-group mb-3'><form method='post'>";
-$i=0;
-foreach($col as $element){
-  echo $element.":<br>";
-  echo "<input type='text' name='".$element."' value='".$row[$i]."'><br>";
-  $i=$i+1;
-}
-echo "<input class='btn btn-primary' type='submit' value='Wprowadź'><a class='btn btn-primary' href='/Table.php'>Wróć</a></form></div></body></html>";
 ?>
