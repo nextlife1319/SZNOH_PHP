@@ -26,12 +26,12 @@
    $tsql= "UPDATE Platnosci_SZNOH SET ";
    $ii=0;
    foreach($col as $element){
-     $tsql.=$element."= ?,";
+     $tsql.=$element."= ?, ";
      $params[]=$_POST[$col[i]];
      $ii=$ii+1;
    }
    $params[]=$rowToUpdate;
-   $tsql=rtrim($tsql, ",");
+   $tsql=rtrim($tsql, ", ");
    $tsql.=" WHERE ".$col[0] . " = ?";
    echo $tsql;
    print_r($params);
