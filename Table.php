@@ -18,7 +18,7 @@
       $serverName = "tcp:sznohfal.database.windows.net,1433";
       $conn = sqlsrv_connect($serverName, $connectionInfo)
 
-      $nazwaTabeli="Platnosci_SZNOH";
+      $nazwaTabeli="Klienci";
       display_table($nazwaTabeli,$conn);
       echo "<a class='btn btn-primary' href='/add-single.php'>Dodaj</a>";
 

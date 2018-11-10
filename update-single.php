@@ -16,7 +16,7 @@
  $conn = sqlsrv_connect($serverName, $connectionInfo)
 
  $row=find_row_by_id($_GET['id'], $conn);
- $nazwaTabeli="Platnosci_SZNOH";
+ $nazwaTabeli="Klienci";
  $col=get_col_names($nazwaTabeli, $conn);
 
  if (isset($_POST[$col[0]])) {
