@@ -5,6 +5,10 @@
  * users table.
  *
  */
+ $connectionInfo = array("UID" => "ServerAdmin@sznoh", "pwd" => "WCYwcy123", "Database" => "SZNOH_DB", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+ $serverName = "tcp:sznoh.database.windows.net,1433";
+ $conn = sqlsrv_connect($serverName, $connectionInfo);
+
 
 require_once('functions.php');
 
@@ -22,9 +26,8 @@ require_once('functions.php');
    sqlsrv_free_stmt($getResults);
  }
 
-echo $_GET['conn'];
-echo $_GET['id'];
-$row=find_row_by_id($_GET['id'], $_GET['conn']);
+
+$row=find_row_by_id($_GET['id'], $conn);
 ?>
 <form method="post">
   IDPlatnosci:<br>
