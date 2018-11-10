@@ -27,10 +27,10 @@
  if (isset($_POST[$col[0]])) {
    echo "dupa";
 
-   echo $POST_[$col[0]];
-   echo $POST_[$col[1]];
-   echo $POST_[$col[2]];
-   echo $POST_[$col[3]];
+   echo $_POST[$col[0]];
+   echo $_POST[$col[1]];
+   echo $_POST[$col[2]];
+   echo $_POST[$col[3]];
 
    $rowToUpdate = $_POST[$col[0]];
    $tsql= "UPDATE Platnosci_SZNOH SET ";
