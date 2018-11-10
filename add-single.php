@@ -32,7 +32,7 @@
      $ii=$ii+1;
    }
    $addsql=rtrim($addsql, ", ");
-   $val=rtrim($valsql, ", ");
+   $val=rtrim($val, ", ");
    $addsql.=$val.");";
 
    echo $addsql;
