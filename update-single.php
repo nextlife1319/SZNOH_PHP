@@ -17,7 +17,14 @@
  $row=find_row_by_id($_GET['id'], $conn);
  $nazwaTabeli="Platnosci_SZNOH";
  $col=get_col_names($nazwaTabeli, $conn);
-
+ echo $col[0];
+ echo $col[1];
+ echo $col[2];
+ echo $col[3];
+ echo $POST_[$col[0]];
+ echo $POST_[$col[1]];
+ echo $POST_[$col[2]];
+ echo $POST_[$col[3]];
 
 
  if (isset($_POST[$col[0]])) {
