@@ -22,14 +22,18 @@
    $addsql= "INSERT INTO ".$nazwaTabeli." VALUES (";
    $ii=0;
    foreach($col as $element){
-     $addsql.="?,";
-     $params[]=$_POST[$col[$ii]];
+     if ($element!=$col[0]){
+       $addsql.=$element;
+       $addsql.="=?,";
+       $params[]=$_POST[$col[$ii]];
+     }
      $ii=$ii+1;
    }
    $addsql=rtrim($addsql, ",");
    $addsql.=");";
 
    echo $addsql;
+   print_r($params);
    // $getResults= sqlsrv_query($conn, $addsql, $params);
    // $rowsAffected = sqlsrv_rows_affected($getResults);
    // echo "Dodano wpis";
