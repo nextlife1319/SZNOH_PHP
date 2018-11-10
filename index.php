@@ -58,8 +58,6 @@
       <ul class="nav navbar-nav">
         <li><a class="btn btn-dark" href="/index.php">Home</a></li>
         <li><a class="btn btn-dark" onClick="newSite(`/Table.php`)">Tabela</a></li>
-        <li><a class="btn btn-dark" onClick="newSite(`/Table.php`)">Tabela2</a></li>
-        <li><a class="btn btn-dark" onClick="newSite(`/Table.php`)">Tabela3</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
@@ -71,9 +69,7 @@
 <div class="container-fluid text-center">
   <div class="row content">
     <div class="col-sm-2 sidenav">
-      <p><a href="#">Link</a></p>
-      <p><a href="#">Link</a></p>
-      <p><a href="#">Link</a></p>
+      <?php //<p><a href="#">Link</a></p> ?>
     </div>
     <div class="col-sm-8 text-left">
       <iframe id="myFrame" src="/Home.html" style="height:1000px;width:100%" frameBorder="0"></iframe>
