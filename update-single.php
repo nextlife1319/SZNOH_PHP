@@ -20,25 +20,25 @@
 
 require_once('functions.php');
 
- if (isset($_POST[$col[0]])) {
-
-   $rowToUpdate = $_POST[$col[0]];
-   $tsql= "UPDATE Platnosci_SZNOH SET ";
-   $ii=0;
-   foreach($col as $element){
-     $tsql.=$element."= ?,";
-     $params[]=$_POST[$col[i]];
-     $ii=$ii+1;
-   }
-   $params[]=$rowToUpdate;
-   rtrim($tsql, ",");
-   $tsql.=" WHERE ".$col[0] . " = ?"
-
-   $getResults= sqlsrv_query($conn, $tsql, $params);
-   $rowsAffected = sqlsrv_rows_affected($getResults);
-   echo "Zmodyfikowano wpis";
-   sqlsrv_free_stmt($getResults);
- }
+ // if (isset($_POST[$col[0]])) {
+ //
+ //   $rowToUpdate = $_POST[$col[0]];
+ //   $tsql= "UPDATE Platnosci_SZNOH SET ";
+ //   $ii=0;
+ //   foreach($col as $element){
+ //     $tsql.=$element."= ?,";
+ //     $params[]=$_POST[$col[i]];
+ //     $ii=$ii+1;
+ //   }
+ //   $params[]=$rowToUpdate;
+ //   rtrim($tsql, ",");
+ //   $tsql.=" WHERE ".$col[0] . " = ?"
+ //
+ //   $getResults= sqlsrv_query($conn, $tsql, $params);
+ //   $rowsAffected = sqlsrv_rows_affected($getResults);
+ //   echo "Zmodyfikowano wpis";
+ //   sqlsrv_free_stmt($getResults);
+ // }
 
 echo "<div class='input-group mb-3'><form method='post'>";
 $i=0;
