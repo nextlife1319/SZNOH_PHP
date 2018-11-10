@@ -31,7 +31,7 @@
      $ii=$ii+1;
    }
    $params[]=$rowToUpdate;
-   rtrim($tsql, ",");
+   rtrim($tsql, ", ");
    $tsql.=" WHERE ".$col[0] . " = ?";
    echo $tsql;
    echo $params;
