@@ -20,6 +20,7 @@
 
       $nazwaTabeli="Platnosci_SZNOH";
       display_table($nazwaTabeli,$conn);
+      echo "<a class='btn btn-primary' href='/add-single.php'>Dodaj</a>";
 
       //Display metadata of the chosen table
 

@@ -8,34 +8,31 @@
     <script src="/iframe.js"></script>
   </head>
   <body>
-    <h1>Edytuj wpis</h1>
+    <h1>Dodaj wpis</h1>
 <?php
  require_once('functions.php');
  $connectionInfo = array("UID" => "ServerAdmin@sznoh", "pwd" => "WCYwcy123", "Database" => "SZNOH_DB", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
  $serverName = "tcp:sznoh.database.windows.net,1433";
  $conn = sqlsrv_connect($serverName, $connectionInfo);
 
- $row=find_row_by_id($_GET['id'], $conn);
  $nazwaTabeli="Platnosci_SZNOH";
  $col=get_col_names($nazwaTabeli, $conn);
 
  if (isset($_POST[$col[0]])) {
 
-   $rowToUpdate = $_POST[$col[0]];
-   $tsql= "UPDATE ".$nazwaTabeli." SET ";
+   $addsql= "INSERT INTO ".$nazwaTabeli." VALUES (";
    $ii=0;
    foreach($col as $element){
-     $tsql.=$element."= ?, ";
+     $addsql.="?,";
      $params[]=$_POST[$col[$ii]];
      $ii=$ii+1;
    }
-   $params[]=$rowToUpdate;
-   $tsql=rtrim($tsql, ", ");
-   $tsql.=" WHERE ".$col[0] . " = ?";
+   $addsql=rtrim($tsql, ",");
+   $addsql.=");";
 
-   $getResults= sqlsrv_query($conn, $tsql, $params);
+   $getResults= sqlsrv_query($conn, $addsql, $params);
    $rowsAffected = sqlsrv_rows_affected($getResults);
-   echo "Zmodyfikowano wpis";
+   echo "Dodano wpis";
    sqlsrv_free_stmt($getResults);
  }
 
