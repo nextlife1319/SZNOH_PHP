@@ -22,17 +22,6 @@
       display_table($nazwaTabeli,$conn);
       echo "<a class='btn btn-primary' href='/add-single.php'>Dodaj</a>";
 
-      //Display metadata of the chosen table
-
-      // $sql = "SELECT * FROM Platnosci_SZNOH";
-      // $stmt = sqlsrv_prepare( $conn, $sql );
-      // foreach( sqlsrv_field_metadata( $stmt ) as $fieldMetadata ) {
-      //     foreach( $fieldMetadata as $name => $value) {
-      //        echo "$name: $value<br />";
-      //     }
-      //       echo "<br />";
-      // }
-
 ?>
     </div>
   </body>
