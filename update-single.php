@@ -45,10 +45,10 @@
    $tsql.=" WHERE ".$col[0] . " = ?";
    echo $tsql;
    print_r($params);
-   // $getResults= sqlsrv_query($conn, $tsql, $params);
-   // $rowsAffected = sqlsrv_rows_affected($getResults);
-   // echo "Zmodyfikowano wpis";
-   // sqlsrv_free_stmt($getResults);
+   $getResults= sqlsrv_query($conn, $tsql, $params);
+   $rowsAffected = sqlsrv_rows_affected($getResults);
+   echo "Zmodyfikowano wpis";
+   sqlsrv_free_stmt($getResults);
  }
 
 echo "<div class='input-group mb-3'><form method='post'>";
