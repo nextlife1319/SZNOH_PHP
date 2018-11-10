@@ -29,10 +29,11 @@
    $addsql=rtrim($addsql, ",");
    $addsql.=");";
 
-   $getResults= sqlsrv_query($conn, $addsql, $params);
-   $rowsAffected = sqlsrv_rows_affected($getResults);
-   echo "Dodano wpis";
-   sqlsrv_free_stmt($getResults);
+   echo $addsql;
+   // $getResults= sqlsrv_query($conn, $addsql, $params);
+   // $rowsAffected = sqlsrv_rows_affected($getResults);
+   // echo "Dodano wpis";
+   // sqlsrv_free_stmt($getResults);
  }
 
 echo "<div class='input-group mb-3'><form method='post'>";
