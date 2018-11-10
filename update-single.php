@@ -38,7 +38,7 @@
    echo "Zmodyfikowano wpis";
    sqlsrv_free_stmt($getResults);
  }
-
+$row=find_row_by_id($_GET['id'], $conn);
 echo "<div class='input-group mb-3'><form method='post'>";
 $i=0;
 foreach($col as $element){
