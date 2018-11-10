@@ -37,7 +37,7 @@
    $ii=0;
    foreach($col as $element){
      $tsql.=$element."= ?, ";
-     $params[]=$_POST[$col[i]];
+     $params[]=$_POST[$col[$ii]];
      $ii=$ii+1;
    }
    $params[]=$rowToUpdate;
