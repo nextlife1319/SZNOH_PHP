@@ -33,18 +33,6 @@
       //       echo "<br />";
       // }
 
-      $userToDelete = 'Jared';
-$tsql= "DELETE FROM TestSchema.Employees WHERE Name = ?";
-$params = array($userToDelete);
-$getResults= sqlsrv_query($conn, $tsql, $params);
-echo("Deleting user " . $userToDelete . PHP_EOL);
-$rowsAffected = sqlsrv_rows_affected($getResults);
-if ($getResults == FALSE or $rowsAffected == FALSE)
-    die(FormatErrors(sqlsrv_errors()));
-echo ($rowsAffected. " row(s) deleted: " . PHP_EOL);
-sqlsrv_free_stmt($getResults);
-
-
 ?>
     </div>
   </body>
