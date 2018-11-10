@@ -34,9 +34,6 @@
    $tsql=rtrim($tsql, ", ");
    $tsql.=" WHERE ".$col[0] . " = ?";
 
-   echo $tsql;
-   print_r($params);
-
    $getResults= sqlsrv_query($conn, $tsql, $params);
    $rowsAffected = sqlsrv_rows_affected($getResults);
    echo "Zmodyfikowano wpis";
