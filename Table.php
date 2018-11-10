@@ -20,7 +20,7 @@
 
       display_table($nazwaTabeli,$conn);
       echo $nazwaTabeli;
-      echo "<a class='btn btn-primary' href='/add-single.php?nazwaTabeli=".$nazwaTabeli."'>Dodaj</a>";
+      echo "<a class='btn btn-primary' href=/add-single.php?nazwaTabeli=".$nazwaTabeli.">Dodaj</a>";
 
 ?>
     </div>
