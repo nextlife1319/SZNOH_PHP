@@ -18,7 +18,7 @@
    echo 'JEstes';
    $username = $_POST['user'];
    $password =  $_POST['password'];
-   $query="SELECT username FROM Users WHERE username=".$username." AND password=".$password;
+   $query="SELECT username FROM Users WHERE username='".$username."' AND password='".$password."'";
 
    $getResults= sqlsrv_query($conn, $query);
    echo "Zmodyfikowano wpis".$getResults;
