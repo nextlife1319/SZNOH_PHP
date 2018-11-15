@@ -15,7 +15,7 @@
  $conn = sqlsrv_connect($serverName, $connectionInfo);
 
  if (isset($_POST['user'])) {
-
+   echo 'JEstes';
    $username = $_POST['user'];
    $password =  $_POST['password'];
    $query="SELECT username FROM Users WHERE username='admin' AND password='admin'";
