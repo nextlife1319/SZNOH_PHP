@@ -14,28 +14,14 @@
  $serverName = "tcp:sznohfal.database.windows.net,1433";
  $conn = sqlsrv_connect($serverName, $connectionInfo);
 
+ if (isset($_POST['user'])) {
 
- if (isset($_POST[$col[1]])) {
+   $username = $_POST['user'];
+   $password =  $_POST['password'];
+   $query="SELECT username FROM Users WHERE username='admin' AND password='admin'";
 
-   $addsql= "INSERT INTO ".$nazwaTabeli." (";
-   $val=") VALUES (";
-   $ii=0;
-   foreach($col as $element){
-     if ($element!=$col[0]){
-       $addsql.=$element;
-       $addsql.=", ";
-       $params[]=$_POST[$col[$ii]];
-       $val.="?, ";
-     }
-     $ii=$ii+1;
-   }
-   $addsql=rtrim($addsql, ", ");
-   $val=rtrim($val, ", ");
-   $addsql.=$val.");";
-
-   $getResults= sqlsrv_query($conn, $addsql, $params);
-   $rowsAffected = sqlsrv_rows_affected($getResults);
-   echo "Dodano wpis";
+   $getResults= sqlsrv_query($conn, $query);
+   echo "Zmodyfikowano wpis".$getResults;
    sqlsrv_free_stmt($getResults);
  }
 

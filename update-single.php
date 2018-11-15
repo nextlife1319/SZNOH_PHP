@@ -19,14 +19,25 @@
  $row=find_row_by_id($_GET['id'], $conn, $nazwaTabeli);
  $col=get_col_names($nazwaTabeli, $conn);
 
- if (isset($_POST['user'])) {
+ if (isset($_POST[$col[0]])) {
 
-   $username = $_POST['user'];
-   $password =  $_POST['password'];
-   $query="SELECT username FROM Users WHERE username='admin' AND password='admin'";
+   $rowToUpdate = $_POST[$col[0]];
+   $tsql= "UPDATE ".$nazwaTabeli." SET ";
+   $ii=0;
+   foreach($col as $element){
+     if ($element!=$col[0]){
+       $tsql.=$element."= ?, ";
+       $params[]=$_POST[$col[$ii]];
+     }
+     $ii=$ii+1;
+   }
+   $params[]=$rowToUpdate;
+   $tsql=rtrim($tsql, ", ");
+   $tsql.=" WHERE ".$col[0] . " = ?";
 
-   $getResults= sqlsrv_query($conn, $query);
-   echo "Zmodyfikowano wpis".$getResults;
+   $getResults= sqlsrv_query($conn, $tsql, $params);
+   $rowsAffected = sqlsrv_rows_affected($getResults);
+   echo "Zmodyfikowano wpis";
    sqlsrv_free_stmt($getResults);
  }
 $row=find_row_by_id($_GET['id'], $conn, $nazwaTabeli);
