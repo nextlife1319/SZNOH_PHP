@@ -40,9 +40,9 @@
  }
 
 echo "<div class='input-group mb-3'><form method='post'>";
-echo 'username'.":<br>";
+echo 'Nazwa użytkownika'.":<br>";
 echo "<input type='text' name='user'><br>";
-echo "Password:<br>";
+echo "Hasło:<br>";
 echo "<input type='text' name='password'><br>";
 echo "<input class='btn btn-primary' type='submit' value='Wprowadź'><a class='btn btn-primary' href='/login.php'>Wróć</a></form></div></body></html>";
 ?>
