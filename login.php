@@ -21,6 +21,7 @@
    $query="SELECT username FROM Users WHERE username='".$username."' AND password='".$password."'";
 
    $getResults= sqlsrv_query($conn, $query);
+   print_r($getResults);
    echo "Zmodyfikowano wpis".$getResults;
    sqlsrv_free_stmt($getResults);
  }
