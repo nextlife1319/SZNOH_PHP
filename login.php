@@ -29,7 +29,7 @@ if(isset($_COOKIE['admin'])) {
     $getResults= sqlsrv_query($conn, $query);
     $row = sqlsrv_fetch_array( $getResults, SQLSRV_FETCH_NUMERIC);
    if($row){
-     echo "zalogowano";
+     echo "Zalogowano";
      $cookie_name = "admin";
      $cookie_value = "True"; //TODO Wyczytac z bazy
      setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
@@ -39,13 +39,12 @@ if(isset($_COOKIE['admin'])) {
    }
     sqlsrv_free_stmt($getResults);
   }
+  echo "<div class='input-group mb-3'><form method='post'>";
+  echo 'Nazwa użytkownika'.":<br>";
+  echo "<input type='text' name='user'><br>";
+  echo "Hasło:<br>";
+  echo "<input type='text' name='password'><br>";
+  echo "<input class='btn btn-primary' type='submit' value='Wprowadź'><a class='btn btn-primary' href='/login.php'>Wróć</a></form></div></body></html>";
 }
 
-
-echo "<div class='input-group mb-3'><form method='post'>";
-echo 'Nazwa użytkownika'.":<br>";
-echo "<input type='text' name='user'><br>";
-echo "Hasło:<br>";
-echo "<input type='text' name='password'><br>";
-echo "<input class='btn btn-primary' type='submit' value='Wprowadź'><a class='btn btn-primary' href='/login.php'>Wróć</a></form></div></body></html>";
 ?>
