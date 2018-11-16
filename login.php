@@ -19,8 +19,8 @@
 
 
 if(isset($_COOKIE['admin'])) {
-    echo "Witaj " ;
-    echo "<a class='btn btn-primary' href='/Home.php'>Wróć</a>";
+    echo "<h1> Witaj </h1>" ;
+    echo "<a class='btn btn-primary' href='/Home.html'>Wróć</a>";
 } else {
   if (isset($_POST['user'])) {
     $username = $_POST['user'];
