@@ -7,7 +7,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
   <body>
-    <h1>Zaloguj</h1>
 <?php
  require_once('functions.php');
  $connectionInfo = array("UID" => "SecureAdmin@sznohfal", "pwd" => "WCYwcy123", "Database" => "sznohphp", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
@@ -22,6 +21,7 @@ if(isset($_COOKIE['admin'])) {
     echo "<h1> Witaj </h1>" ;
     echo "<a class='btn btn-primary' href='/Home.html'>Wróć</a>";
 } else {
+  echo "<h1>Zaloguj</h1>";
   if (isset($_POST['user'])) {
     $username = $_POST['user'];
     $password =  $_POST['password'];
