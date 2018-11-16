@@ -24,9 +24,10 @@ if(isset($_COOKIE['admin'])) {
   if (isset($_POST['user'])) {
     $username = $_POST['user'];
     $password =  $_POST['password'];
-    $query="SELECT username FROM Users WHERE username='".$username."' AND password='".$password."'";
+    $query="SELECT username FROM Users WHERE username=? AND password=?";
 
-    $getResults= sqlsrv_query($conn, $query);
+    $params=array($username,$password);
+    $getResults= sqlsrv_query($conn, $query, $params);
     $row = sqlsrv_fetch_array( $getResults, SQLSRV_FETCH_NUMERIC);
    if($row){
      echo "Zalogowano";
