@@ -18,7 +18,7 @@
 
 
 
-if(!isset($_COOKIE['admin'])) {
+if(isset($_COOKIE['admin'])) {
     echo "Witaj " ;
 } else {
   if (isset($_POST['user'])) {
@@ -31,7 +31,7 @@ if(!isset($_COOKIE['admin'])) {
    if($row){
      echo "zalogowano";
      $cookie_name = "admin";
-     $cookie_value = "True";
+     $cookie_value = "True"; //TODO Wyczytac z bazy
      setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
    }
    else{
