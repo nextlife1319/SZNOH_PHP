@@ -20,6 +20,7 @@
 
 if(isset($_COOKIE['admin'])) {
     echo "Witaj " ;
+    echo "<input class='btn btn-primary' type='submit' value='Wprowadź'><a class='btn btn-primary' href='/index.php'>Wróć</a>";
 } else {
   if (isset($_POST['user'])) {
     $username = $_POST['user'];
@@ -45,7 +46,7 @@ if(isset($_COOKIE['admin'])) {
   echo "<input type='text' name='user'><br>";
   echo "Hasło:<br>";
   echo "<input type='text' name='password'><br>";
-  echo "<input class='btn btn-primary' type='submit' value='Wprowadź'><a class='btn btn-primary' href='/login.php'>Wróć</a></form></div></body></html>";
+  echo "<input class='btn btn-primary' type='submit' value='Wprowadź'><a class='btn btn-primary' href='/index.php'>Wróć</a></form></div></body></html>";
 }
 
 ?>
