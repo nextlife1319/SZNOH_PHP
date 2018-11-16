@@ -14,33 +14,32 @@
  $serverName = "tcp:sznohfal.database.windows.net,1433";
  $conn = sqlsrv_connect($serverName, $connectionInfo);
 
- if (isset($_POST['user'])) {
-   $username = $_POST['user'];
-   $password =  $_POST['password'];
-   $query="SELECT username FROM Users WHERE username='".$username."' AND password='".$password."'";
 
-   $getResults= sqlsrv_query($conn, $query);
-   $row = sqlsrv_fetch_array( $getResults, SQLSRV_FETCH_NUMERIC);
-  if($row){
-    echo "zalogowano";
-    $cookie_name = "admin";
-    $cookie_value = "True";
-    setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
+
+
+
+if(!isset($_COOKIE['admin'])) {
+    echo "Witaj " ;
+} else {
+  if (isset($_POST['user'])) {
+    $username = $_POST['user'];
+    $password =  $_POST['password'];
+    $query="SELECT username FROM Users WHERE username='".$username."' AND password='".$password."'";
+
+    $getResults= sqlsrv_query($conn, $query);
+    $row = sqlsrv_fetch_array( $getResults, SQLSRV_FETCH_NUMERIC);
+   if($row){
+     echo "zalogowano";
+     $cookie_name = "admin";
+     $cookie_value = "True";
+     setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
+   }
+   else{
+     echo "Bledny login lub haslo";
+   }
+    sqlsrv_free_stmt($getResults);
   }
-  else{
-    echo "Bledny login lub haslo";
-  }
-   sqlsrv_free_stmt($getResults);
- }
-
-
-
-// if(!isset($_COOKIE[$cookie_name])) {
-//     echo "Cookie named '" . $cookie_name . "' is not set!";
-// } else {
-//     echo "Cookie '" . $cookie_name . "' is set!<br>";
-//     echo "Value is: " . $_COOKIE[$cookie_name];
-// }
+}
 
 
 echo "<div class='input-group mb-3'><form method='post'>";
