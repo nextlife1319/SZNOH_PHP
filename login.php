@@ -20,7 +20,7 @@
 
 if(isset($_COOKIE['admin'])) {
     echo "Witaj " ;
-    echo "<a class='btn btn-primary' href='/index.php'>Wróć</a>";
+    echo "<a class='btn btn-primary' href='/Home.php'>Wróć</a>";
 } else {
   if (isset($_POST['user'])) {
     $username = $_POST['user'];
