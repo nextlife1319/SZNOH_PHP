@@ -73,7 +73,7 @@
         <!--<li><a class="btn btn-dark" onClick="newSite(`/users.php`)">Uzytkownicy</a></li>-->
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a class="btn btn-dark" onClick="newSite(`/users.php`)"><span class="glyphicon glyphicon-log-in"></span> Rejestruj</a></li>
+        <li><a class="btn btn-dark" onClick="newSite(`/users.php`)"><span class="glyphicon glyphicon-user"></span> Rejestruj</a></li>
         <li><a class="btn btn-dark" onClick="newSite(`/login.php`)"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
       </ul>
     </div>
