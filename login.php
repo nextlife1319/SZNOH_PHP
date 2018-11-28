@@ -45,7 +45,7 @@ if(isset($_COOKIE['admin'])) {
   echo 'Nazwa użytkownika'.":<br>";
   echo "<input type='text' name='user'><br>";
   echo "Hasło:<br>";
-  echo "<input type='text' name='password'><br>";
+  echo "<input type='password' name='password'><br>";
   echo "<input class='btn btn-primary' type='submit' value='Wprowadź'><a class='btn btn-primary' href='/index.php'>Wróć</a></form></div></body></html>";
 }
 
