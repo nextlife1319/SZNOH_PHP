@@ -70,9 +70,10 @@
         <li><a class="btn btn-dark" onClick="newSite(`/Wyposazenie.php`)">Wyposazenie</a></li>
         <li><a class="btn btn-dark" onClick="newSite(`/Spis_wyposazenia.php`)">Spis wyposazenia</a></li>
         <li><a class="btn btn-dark" onClick="newSite(`/Wiadomosci.php`)">Wiadomosci</a></li>
-        <li><a class="btn btn-dark" onClick="newSite(`/users.php`)">Uzytkownicy</a></li>
+        <!--<li><a class="btn btn-dark" onClick="newSite(`/users.php`)">Uzytkownicy</a></li>-->
       </ul>
       <ul class="nav navbar-nav navbar-right">
+        <li><a class="btn btn-dark" onClick="newSite(`/users.php`)"><span class="glyphicon glyphicon-log-in"></span> Rejestruj</a></li>
         <li><a class="btn btn-dark" onClick="newSite(`/login.php`)"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
       </ul>
     </div>
