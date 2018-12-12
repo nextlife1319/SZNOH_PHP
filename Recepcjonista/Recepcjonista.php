@@ -21,7 +21,7 @@
 
       $col=get_col_names($nazwaTabeli, $conn);
       echo "kupa";
-      echo $_COOKIE('name');
+      echo $_COOKIE('admin');
       $name=explode(" ", $_COOKIE('name'));
       print_r($name);
 
