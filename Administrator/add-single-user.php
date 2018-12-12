@@ -28,7 +28,7 @@
      if ($element!=$col[0]){
        $addsql.=$element;
        $addsql.=", ";
-       $params[]=str_replace("+", " ", $_POST[$col[$ii]]);
+       $params[]=str_replace("*", " ", $_POST[$col[$ii]]);
        $val.="?, ";
      }
      $ii=$ii+1;
@@ -55,7 +55,7 @@ foreach($col as $element){
       foreach($username as $row)
       {
         $tmparr=explode("|",$row);
-        echo "<option value=".$tmparr[1].">".str_replace("+", " ", $tmparr[1])."</option>";
+        echo "<option value=".$tmparr[1].">".str_replace("*", " ", $tmparr[1])."</option>";
       }
       echo "</select><br>";
     }
