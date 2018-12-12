@@ -19,9 +19,7 @@
 
 
 if(isset($_COOKIE['admin'])) {
-  echo '<script type="text/javascript">',
-   'reloadParent();',
-   '</script>';
+
     echo "<h1> Witaj </h1>" ;
     echo "<a class='btn btn-primary' href='/Home.html'>Wróć</a>";
 } else {
@@ -42,6 +40,9 @@ if(isset($_COOKIE['admin'])) {
      if($row[1] == 1)  $cookie_value = "True";
      else $cookie_value="False"; //TODO Wyczytac z bazy
      setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
+     echo '<script type="text/javascript">',
+      'reloadParent();',
+      '</script>';
 
    }
    else{
