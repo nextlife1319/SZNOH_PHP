@@ -20,23 +20,16 @@
       $conn = sqlsrv_connect($serverName, $connectionInfo);
 
       $col=get_col_names($nazwaTabeli, $conn);
-      echo "Nazwa uzytkownika to ".$_COOKIE['name'];
       $name=explode(" ", $_COOKIE['name']);
-      print_r($name);
-      echo $name[0];
-      echo $name[1];
+
 
       $sql="SELECT * FROM $nazwaTabeli WHERE imie="."'"."$name[0]"."'"." AND nazwisko="."'"."$name[1]"."'"."";
-      echo "<br>";
-      echo $sql;
       $stmt = sqlsrv_query( $conn, $sql );
 
       $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC);
-      print_r($row);
-        // echo "<tr>";
         $i=0;
         foreach($row as $element){
-          echo  $col[$i].": ".$element."<br>";
+          echo  $col[$i].": \t\t\t".$element."<br>";
           $i=$i+1;
         }
 
