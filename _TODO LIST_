@@ -2,7 +2,8 @@ TODO
 System wysylania Wiadomosci (skrzynka odbiorcza itd.)
 Strony zarzadzania administratora i recepcjonisty (zbior fukncjonalnosci dostepny na jednej stronie)
 Przeedtytowac tabele tak aby zawieraly poprawne nazwy kolumn (duze litery+polskie znaki) oraz zawieraly wiecej informacji (np. o pracownikach)
-
+W bazie hasla przechowywane w postaci hashy (salted)
 
 DONE
 Profil uzytkownika (po kliknieciu ikonki wyswietla dane uzytkownika)
+Dodawania uzytkownikow przez administratora poprzez uzycie dropdownlisty przy wyborze username (tylko z pracownikow)
