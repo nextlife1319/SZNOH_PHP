@@ -17,7 +17,7 @@
       <?php
       require_once('functions.php');
 
-      $clients = getClients();
+      $clients = getClients();    #Client dropdown
       echo '<select name="client">';
       foreach($clients as $row)
       {
@@ -26,7 +26,7 @@
       }
       echo "</select>";
 
-      $rooms = getRooms();
+      $rooms = getRooms();        #Room dropdown
       echo '<select name="client">';
       foreach($rooms as $row)
       {
@@ -35,6 +35,8 @@
       }
       echo "</select>";
 
+      $name=$_COOKIE['name'];   #obtaining name
+      echo "<br".$name;
 ?>
     </div>
   </body>

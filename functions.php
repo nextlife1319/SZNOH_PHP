@@ -77,7 +77,7 @@ $stmt = sqlsrv_query( $conn, $sql );
     $rooms=array();
 
     while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC) ) {
-      $tmp=$row[0]."|"."Pokoj nr:".$row[1]."\t".$row[2]."zl";
+      $tmp=$row[0]."|"."Pokoj nr:".$row[1]."     ".$row[2]."zl";
       $rooms[]=$tmp;
     }
     #print_r($clients);
