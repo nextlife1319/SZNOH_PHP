@@ -12,6 +12,8 @@
       <?php $nazwaTabeli="users"; ?>
       <h1><?php echo $nazwaTabeli; ?></h1>
       <?php
+      $root = realpath($_SERVER["DOCUMENT_ROOT"]);
+      echo $root;
       require_once('functions.php');
 
       $connectionInfo = array("UID" => "SecureAdmin@sznohfal", "pwd" => "WCYwcy123", "Database" => "sznohphp", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
