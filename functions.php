@@ -53,13 +53,13 @@ $stmt = sqlsrv_query( $conn, $sql );
    $connectionInfo = array("UID" => "SecureAdmin@sznohfal", "pwd" => "WCYwcy123", "Database" => "sznohphp", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
    $serverName = "tcp:sznohfal.database.windows.net,1433";
    $conn = sqlsrv_connect($serverName, $connectionInfo);
-   $sql="SELECT imie,nazwisko FROM Klienci";
+   $sql="SELECT id,imie,nazwisko FROM Klienci";
    $stmt = sqlsrv_query( $conn, $sql );
 
    $clients=array();
 
    while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC) ) {
-     $tmp=$row[0]." ".$row[1];
+     $tmp=$row[0]."|".$row[1]." ".$row[2];
      $clients[]=$tmp;
    }
    print_r($clients);

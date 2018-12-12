@@ -11,11 +11,23 @@
     <div class="container">
       <?php $nazwaTabeli="Rezerwacje"; ?>
       <h1><?php echo $nazwaTabeli; ?></h1>
+
+
+
       <?php
       require_once('functions.php');
 
       $clients = getClients();
-      print_r($clients);
+      #print_r($clients);
+      echo "<select name="client">";
+      foreach($clients as $row)
+      {
+        $tmparr=split("|",$row);
+        echo "<option value=".$tmparr[0].">".$tmparr[1]."</option>";
+      }
+
+
+      echo "</select>";
 ?>
     </div>
   </body>
