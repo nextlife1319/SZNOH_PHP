@@ -21,14 +21,18 @@
 
       $col=get_col_names($nazwaTabeli, $conn);
 
-      echo "<div class='input-group mb-3'>";
+      $name=explode(" ", $_COOKIE('name'));
 
-      foreach($col as $element){
-        if ($element!=$col[0]){
-          echo $element."<br>";
-        }
-      }
-      echo "<form method='post'><input class='btn btn-primary' type='submit' value='Wprowadź'><a class='btn btn-primary' href='/".$nazwaTabeli.".php'>Wróć</a></form></div></body></html>";
+      $sql="SELECT * FROM $nazwaTabeli where imie=$name[0] and nazwisko=$name[1]";
+      $stmt = sqlsrv_query( $conn, $sql );
+
+      $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC)
+      print_r($row);
+        // echo "<tr>";
+        // foreach($row as $element){
+        //   echo  "<td>".$element."</td>";
+        // }
+
       ?>
     </div>
   </body>
