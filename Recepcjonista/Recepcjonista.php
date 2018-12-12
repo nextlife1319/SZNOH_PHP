@@ -26,8 +26,8 @@
       $sql="SELECT * FROM $nazwaTabeli where imie=$name[0] and nazwisko=$name[1]";
       $stmt = sqlsrv_query( $conn, $sql );
 
-      $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC)
-      print_r($row);
+      // $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC)
+      // print_r($row);
         // echo "<tr>";
         // foreach($row as $element){
         //   echo  "<td>".$element."</td>";
