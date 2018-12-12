@@ -29,7 +29,7 @@ if(isset($_COOKIE['admin'])) {
   if (isset($_POST['user'])) {
     $username = $_POST['user'];
     $password =  $_POST['password'];
-    $query="SELECT username FROM Users WHERE username=? AND password=?";
+    $query="SELECT username,permissions FROM Users WHERE username=? AND password=?";
 
     $params=array($username,$password);
     $getResults= sqlsrv_query($conn, $query, $params);
@@ -39,7 +39,7 @@ if(isset($_COOKIE['admin'])) {
      $cookie_name = "admin";
      echo $row;
      print_r($row);
-     if($row[3] == 1)  $cookie_value = "True";
+     if($row[1] == 1)  $cookie_value = "True";
      else $cookie_value="False"; //TODO Wyczytac z bazy
      setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
 
