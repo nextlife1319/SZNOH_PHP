@@ -41,7 +41,7 @@ if(isset($_COOKIE['admin'])) {
      if($row['permissions'] == 1)  $cookie_value = "True";
      else $cookie_value="False"; //TODO Wyczytac z bazy
      setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
-     echo "<meta http-equiv='refresh' content='0'>";
+     
    }
    else{
      echo "Bledny login lub haslo";
