@@ -37,11 +37,11 @@ if(isset($_COOKIE['admin'])) {
    if($row){
      echo "Zalogowano";
      $cookie_name = "admin";
-     echo $row['permissions'];
-     if($row['permissions'] == 1)  $cookie_value = "True";
+     echo $row[3];
+     if($row[3] == 1)  $cookie_value = "True";
      else $cookie_value="False"; //TODO Wyczytac z bazy
      setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
-     
+
    }
    else{
      echo "Bledny login lub haslo";
