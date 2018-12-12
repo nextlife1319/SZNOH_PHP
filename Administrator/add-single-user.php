@@ -49,13 +49,14 @@ foreach($col as $element){
   if ($element!=$col[0]){
     if($element==$col[1]){
       $staff = getStaff();    #Client dropdown
+      echo "Username: <br>"
       echo '<select name="staff">';
       foreach($staff as $row)
       {
         $tmparr=explode("|",$row);
-        echo "<option value=".$tmparr[0].">".$tmparr[1]."</option>";
+        echo "<option value=".$tmparr[1].">".$tmparr[1]."</option>";
       }
-      echo "</select>";
+      echo "</select><br>";
     }
     else{
       echo $element.":<br>";
