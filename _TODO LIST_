@@ -1,3 +1,8 @@
-1. System wysylania Wiadomosci (skrzynka odbiorcza itd.)
-2. Profil uzytkownika ( po kliknieciu ikonki wyswietla dane uzytkownika)
-3. Strony zarzadzania administratora i recepcjonisty (zbior fukncjonalnosci dostepny na jednej stronie)
+TODO
+System wysylania Wiadomosci (skrzynka odbiorcza itd.)
+Strony zarzadzania administratora i recepcjonisty (zbior fukncjonalnosci dostepny na jednej stronie)
+Przeedtytowac tabele tak aby zawieraly poprawne nazwy kolumn (duze litery+polskie znaki) oraz zawieraly wiecej informacji (np. o pracownikach)
+
+
+DONE
+Profil uzytkownika (po kliknieciu ikonki wyswietla dane uzytkownika)

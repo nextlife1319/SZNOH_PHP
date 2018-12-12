@@ -30,7 +30,7 @@
       <?php
       require_once('functions.php');
 
-      $clients = getClients();    #Client dropdown
+      $clients = getStaff();    #Client dropdown
       echo '<select name="client">';
       foreach($clients as $row)
       {

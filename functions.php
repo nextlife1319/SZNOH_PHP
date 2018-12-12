@@ -66,6 +66,23 @@ $stmt = sqlsrv_query( $conn, $sql );
    return $clients;
  }
 
+ function getStaff(){
+   $connectionInfo = array("UID" => "SecureAdmin@sznohfal", "pwd" => "WCYwcy123", "Database" => "sznohphp", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+   $serverName = "tcp:sznohfal.database.windows.net,1433";
+   $conn = sqlsrv_connect($serverName, $connectionInfo);
+   $sql="SELECT id,imie,nazwisko FROM Pracownicy";
+   $stmt = sqlsrv_query( $conn, $sql );
+
+   $staff=array();
+
+   while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC) ) {
+     $tmp=$row[0]."|".$row[1]." ".$row[2];
+     $staff[]=$tmp;
+   }
+   #print_r($clients);
+   return $staff;
+ }
+
 
   function getRooms(){
     $connectionInfo = array("UID" => "SecureAdmin@sznohfal", "pwd" => "WCYwcy123", "Database" => "sznohphp", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
