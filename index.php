@@ -7,7 +7,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <?php //<script src="/iframe.js"></script> ?>
+  <?php //<script src="/iframe.js"></script>
+        $root = realpath($_SERVER["DOCUMENT_ROOT"]);?>
   <style>
     /* Remove the navbar's default margin-bottom and rounded borders */
     .navbar {
@@ -87,7 +88,7 @@ EOD;
 
         $var='<li><a class="btn btn-dark" onClick="newSite(`/users.php`)"><span class="glyphicon glyphicon-user"></span> Dodaj uzytkownika</a></li>';
         if(isset($_COOKIE['admin']) && $_COOKIE['admin'] == 'True') echo $var;
-        else echo '<li><a class="btn btn-dark"><span class="glyphicon glyphicon-user"></span>'.$_COOKIE['name'].'</a></li>';
+        else echo '<li><a class="btn btn-dark"onClick="newSite(`/Recepcjonista/Profil.php`)"><span class="glyphicon glyphicon-user"></span>'.$_COOKIE['name'].'</a></li>';
         $notloggedin ='<li><a class="btn btn-dark" onClick="newSite(`/login.php`)"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>';
         $loggedin='<li><a class="btn btn-dark" onClick="newSite(`/logout.php`)"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>';
         if(isset($_COOKIE['admin'])) {echo $loggedin;}
