@@ -49,7 +49,7 @@ foreach($col as $element){
   if ($element!=$col[0]){
     if($element==$col[1]){
       $staff = getStaff();    #Client dropdown
-      echo "Username: <br>"
+      echo "Username: <br>";
       echo '<select name="staff">';
       foreach($staff as $row)
       {
