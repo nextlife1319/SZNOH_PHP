@@ -86,7 +86,7 @@ EOD;
         <?php
 
         $var='<li><a class="btn btn-dark" onClick="newSite(`/users.php`)"><span class="glyphicon glyphicon-user"></span> Dodaj uzytkownika</a></li>';
-        if(isset($_COOKIE['admin']) && $_COOKIE['admin'] == True) echo $var;
+        if(isset($_COOKIE['admin']) && $_COOKIE['admin'] == 'True') echo $var;
         $notloggedin ='<li><a class="btn btn-dark" onClick="newSite(`/login.php`)"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>';
         $loggedin='<li><a class="btn btn-dark" onClick="newSite(`/logout.php`)"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>';
         if(isset($_COOKIE['admin'])) {echo $loggedin;}
