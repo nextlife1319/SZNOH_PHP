@@ -22,8 +22,9 @@
       $col=get_col_names($nazwaTabeli, $conn);
 
       $name=explode(" ", $_COOKIE('name'));
+      print_r($name);
 
-      $sql="SELECT * FROM $nazwaTabeli where imie=$name[0] and nazwisko=$name[1]";
+      $sql="SELECT * FROM $nazwaTabeli WHERE imie=$name[0] AND nazwisko=$name[1]";
       $stmt = sqlsrv_query( $conn, $sql );
 
       // $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC)
