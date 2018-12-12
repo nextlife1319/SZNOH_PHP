@@ -13,12 +13,12 @@ $stmt = sqlsrv_query( $conn, $sql );
       echo "<tr>";
         foreach( sqlsrv_field_metadata( $stmt ) as $fieldMetadata ) {
                 $col=$fieldMetadata["Name"];
-                echo "<th>".$col."</th>";
+                echo "<th>".$col."</th>";     #nazwy kolumn
               }
               echo "<th>Edit</th>";
               echo "<th>Usuń</th></tr></thead><tbody>";
     while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC) ) {
-
+      print_r($row);
       echo "<tr>";
       foreach($row as $element){
         echo  "<td>".$element."</td>";
