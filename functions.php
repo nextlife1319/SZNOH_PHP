@@ -62,8 +62,26 @@ $stmt = sqlsrv_query( $conn, $sql );
      $tmp=$row[0]."|".$row[1]." ".$row[2];
      $clients[]=$tmp;
    }
-   print_r($clients);
+   #print_r($clients);
    return $clients;
  }
+
+
+  function getRooms(){
+    $connectionInfo = array("UID" => "SecureAdmin@sznohfal", "pwd" => "WCYwcy123", "Database" => "sznohphp", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+    $serverName = "tcp:sznohfal.database.windows.net,1433";
+    $conn = sqlsrv_connect($serverName, $connectionInfo);
+    $sql="SELECT id,nr_pokoju,cena FROM Pokoje";
+    $stmt = sqlsrv_query( $conn, $sql );
+
+    $rooms=array();
+
+    while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC) ) {
+      $tmp=$row[0]."|"."Pokoj nr:".$row[1]."\t".$row[2]."zl";
+      $rooms[]=$tmp;
+    }
+    #print_r($clients);
+    return $rooms;
+  }
 
 ?>

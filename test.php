@@ -18,17 +18,23 @@
       require_once('functions.php');
 
       $clients = getClients();
-      #$clients=array("1|Ktos Cos","2|Cos Ktos");
-      #print_r($clients);
       echo '<select name="client">';
       foreach($clients as $row)
       {
         $tmparr=explode("|",$row);
         echo "<option value=".$tmparr[0].">".$tmparr[1]."</option>";
       }
-
-
       echo "</select>";
+
+      $rooms = getRooms();
+      echo '<select name="client">';
+      foreach($rooms as $row)
+      {
+        $tmparr=explode("|",$row);
+        echo "<option value=".$tmparr[0].">".$tmparr[1]."</option>";
+      }
+      echo "</select>";
+
 ?>
     </div>
   </body>
