@@ -29,10 +29,11 @@
       $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC);
         $i=0;
         foreach($row as $element){
-          echo  $col[$i].": \t\t\t".$element."<br>";
-          $i=$i+1;
+          if($i!=0){
+            echo  $col[$i].": ".$element."<br>";
+            $i=$i+1;
+          }
         }
-
       ?>
     </div>
   </body>
