@@ -50,7 +50,7 @@ foreach($col as $element){
     if($element==$col[1]){
       $username = getStaff();    #Client dropdown
       echo "Username: <br>";
-      echo '<select name="staff">';
+      echo '<select name="username">';
       foreach($username as $row)
       {
         $tmparr=explode("|",$row);
