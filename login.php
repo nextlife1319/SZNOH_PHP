@@ -38,7 +38,7 @@ if(isset($_COOKIE['admin'])) {
      echo "Zalogowano";
      $cookie_name = "admin";
      echo $row;
-     echo $row[3];
+     print_t $row[3];
      if($row[3] == 1)  $cookie_value = "True";
      else $cookie_value="False"; //TODO Wyczytac z bazy
      setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
