@@ -33,7 +33,7 @@ if(isset($_COOKIE['admin'])) {
    if($row){
      echo "Zalogowano";
      $cookie_name = "admin";
-     if($row['permissions'] == '1')  $cookie_value = "True";
+     if($row['permissions'] == 1)  $cookie_value = "True";
      else $cookie_value="False"; //TODO Wyczytac z bazy
      setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
    }
@@ -47,7 +47,8 @@ if(isset($_COOKIE['admin'])) {
   echo "<input type='text' name='user'><br>";
   echo "Hasło:<br>";
   echo "<input type='password' name='password'><br>";
-  echo "<input class='btn btn-primary' type='submit' value='Wprowadź'><a class='btn btn-primary' href='/index.php'>Wróć</a></form></div></body></html>";
+  echo "<input class='btn btn-primary' type='submit' value='Wprowadź'><a class='btn btn-primary' href='/home.html'>Wróć</a></form></div></body></html>";
+  echo "<meta http-equiv='refresh' content='0'>";
 }
 
 ?>
