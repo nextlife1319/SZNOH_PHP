@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/iframe.js"></script>
   </head>
   <body>
 <?php
@@ -18,6 +19,9 @@
 
 
 if(isset($_COOKIE['admin'])) {
+  echo '<script type="text/javascript">',
+   'reloadParent();',
+   '</script>';
     echo "<h1> Witaj </h1>" ;
     echo "<a class='btn btn-primary' href='/Home.html'>Wróć</a>";
 } else {
