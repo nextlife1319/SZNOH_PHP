@@ -10,7 +10,7 @@
   <body>
     <div class="container">
       <?php $nazwaTabeli="Pracownicy"; ?>
-      <h1><?php echo $nazwaTabeli; ?></h1>
+      <h1><?php echo $_COOKIE['name']; ?></h1>
       <?php
       $root = realpath($_SERVER["DOCUMENT_ROOT"]);
       require_once($root.'/functions.php');
