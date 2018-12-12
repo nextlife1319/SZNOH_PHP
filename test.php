@@ -36,7 +36,7 @@
       echo "</select>";
 
       $name=$_COOKIE['name'];   #obtaining name
-      echo "<br".$name;
+      echo "<br>".$name;
 ?>
     </div>
   </body>
