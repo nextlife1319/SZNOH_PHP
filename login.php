@@ -19,9 +19,9 @@
 
 
 if(isset($_COOKIE['admin'])) {
-  echo '<script type="text/javascript">',
-   'reloadParent();',
-   '</script>';
+  #echo '<script type="text/javascript">',
+  # 'reloadParent();',
+   #'</script>';
     echo "<h1> Witaj </h1>" ;
     echo "<a class='btn btn-primary' href='/Home.html'>Wróć</a>";
 } else {

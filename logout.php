@@ -1,5 +1,8 @@
+<script src="/iframe.js"></script>
 <?php
+
   unset($_COOKIE['admin']);
-  header("Location: http://example.com/myOtherPage.php");
-  die();
+  echo '<script type="text/javascript">',
+   'reloadParent();',
+   '</script>';
 ?>
