@@ -48,10 +48,10 @@ echo "<div class='input-group mb-3'><form method='post'>";
 foreach($col as $element){
   if ($element!=$col[0]){
     if($element==$col[1]){
-      $staff = getStaff();    #Client dropdown
+      $username = getStaff();    #Client dropdown
       echo "Username: <br>";
       echo '<select name="staff">';
-      foreach($staff as $row)
+      foreach($username as $row)
       {
         $tmparr=explode("|",$row);
         echo "<option value=".$tmparr[1].">".$tmparr[1]."</option>";
