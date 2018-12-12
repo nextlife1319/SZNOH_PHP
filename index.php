@@ -91,6 +91,7 @@ EOD;
         $loggedin='<li><a class="btn btn-dark" onClick="newSite(`/logout.php`)"><span class="glyphicon glyphicon-log-out"></span> Login</a></li>';
         if(isset($_COOKIE['admin'])) {echo $loggedin;}
         else echo $notloggedin;
+        ?>
       </ul>
     </div>
   </div>
