@@ -29,10 +29,10 @@
        $sql="SELECT * FROM $nazwaTabeli WHERE imie="."'"."$name[0]"."'"." AND nazwisko="."'"."$name[1]"."'"."";
        echo "\n";
        echo $sql;
-      // $stmt = sqlsrv_query( $conn, $sql );
-      //
-      // $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC)
-      // print_r($row);
+      $stmt = sqlsrv_query( $conn, $sql );
+
+      $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC)
+      print_r($row);
         // echo "<tr>";
         // foreach($row as $element){
         //   echo  "<td>".$element."</td>";
