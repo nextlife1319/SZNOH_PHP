@@ -66,7 +66,7 @@
         <li><a class="btn btn-dark" href="/index.php">Home</a></li>
         <?php
               if(isset($_COOKIE['admin'])) {
-                echo """
+                $var= <<<'EOD'
         <li><a class="btn btn-dark" onClick="newSite(`/Pokoje.php`)">Pokoje</a></li>
         <li><a class="btn btn-dark" onClick="newSite(`/Pracownicy.php`)">Pracownicy</a></li>
         <li><a class="btn btn-dark" onClick="newSite(`/Klienci.php`)">Klienci</a></li>
@@ -74,7 +74,10 @@
         <li><a class="btn btn-dark" onClick="newSite(`/Wyposazenie.php`)">Wyposazenie</a></li>
         <li><a class="btn btn-dark" onClick="newSite(`/Spis_wyposazenia.php`)">Spis wyposazenia</a></li>
         <li><a class="btn btn-dark" onClick="newSite(`/Wiadomosci.php`)">Wiadomosc</a></li>
-        """
+EOD;
+
+        echo $var;
+        }
         ?>
         <!--<li><a class="btn btn-dark" onClick="newSite(`/users.php`)">Uzytkownicy</a></li>-->
       </ul>
