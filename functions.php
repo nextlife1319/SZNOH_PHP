@@ -76,7 +76,7 @@ $stmt = sqlsrv_query( $conn, $sql );
    $staff=array();
 
    while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC) ) {
-     $tmp=$row[0]."|".$row[1]." ".$row[2];
+     $tmp=$row[0]."|".$row[1].$row[2];
      $staff[]=$tmp;
    }
    #print_r($clients);
