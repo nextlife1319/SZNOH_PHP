@@ -31,8 +31,8 @@
         foreach($row as $element){
           if($i!=0){
             echo  $col[$i].": ".$element."<br>";
-            $i=$i+1;
           }
+          $i=$i+1;
         }
       ?>
     </div>
