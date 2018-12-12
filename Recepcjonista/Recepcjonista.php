@@ -27,7 +27,7 @@
       echo $name[1];
 
       $sql="SELECT * FROM $nazwaTabeli WHERE imie="."'"."$name[0]"."'"." AND nazwisko="."'"."$name[1]"."'"."";
-      echo "/n";
+      echo "\r\n";
       echo $sql;
       $stmt = sqlsrv_query( $conn, $sql );
 
@@ -36,7 +36,7 @@
         // echo "<tr>";
         $i=0;
         foreach($row as $element){
-          echo  $col[$i].": ".$element."/n";
+          echo  $col[$i].": ".$element."\r\n";
           $i=$i+1;
         }
 
