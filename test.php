@@ -14,7 +14,8 @@
       <?php
       require_once('functions.php');
 
-      getClients();
+      $clients = getClients();
+      print_r($clients);
 ?>
     </div>
   </body>
