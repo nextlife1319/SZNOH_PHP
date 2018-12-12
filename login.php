@@ -19,9 +19,9 @@
 
 
 if(isset($_COOKIE['admin'])) {
-  #echo '<script type="text/javascript">',
-  # 'reloadParent();',
-   #'</script>';
+  echo '<script type="text/javascript">',
+   'reloadParent();',
+   '</script>';
     echo "<h1> Witaj </h1>" ;
     echo "<a class='btn btn-primary' href='/Home.html'>Wróć</a>";
 } else {
@@ -35,10 +35,10 @@ if(isset($_COOKIE['admin'])) {
     $getResults= sqlsrv_query($conn, $query, $params);
     $row = sqlsrv_fetch_array( $getResults, SQLSRV_FETCH_NUMERIC);
    if($row){
-     echo "Zalogowano";
+     #echo "Zalogowano";
      $cookie_name = "admin";
-     echo $row;
-     print_r($row);
+     #echo $row;
+     #print_r($row);
      if($row[1] == 1)  $cookie_value = "True";
      else $cookie_value="False"; //TODO Wyczytac z bazy
      setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
