@@ -9,7 +9,8 @@
   <body>
     <h1>Dodaj wpis</h1>
 <?php
- require_once('functions.php');
+ $root = realpath($_SERVER["DOCUMENT_ROOT"]);
+ require_once($root.'/functions.php');
  $connectionInfo = array("UID" => "SecureAdmin@sznohfal", "pwd" => "WCYwcy123", "Database" => "sznohphp", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
  $serverName = "tcp:sznohfal.database.windows.net,1433";
  $conn = sqlsrv_connect($serverName, $connectionInfo);
@@ -46,8 +47,21 @@ echo "<div class='input-group mb-3'><form method='post'>";
 
 foreach($col as $element){
   if ($element!=$col[0]){
-    echo $element.":<br>";
-    echo "<input type='text' name='".$element."'><br>";
+    if($element==$col[1]){
+      $staff = getStaff();    #Client dropdown
+      echo '<select name="staff">';
+      foreach($staff as $row)
+      {
+        $tmparr=explode("|",$row);
+        echo "<option value=".$tmparr[0].">".$tmparr[1]."</option>";
+      }
+      echo "</select>";
+    }
+    else{
+      echo $element.":<br>";
+      echo "<input type='text' name='".$element."'><br>";
+    }
+
   }
 }
 echo "<input class='btn btn-primary' type='submit' value='Wprowadź'><a class='btn btn-primary' href='/".$nazwaTabeli.".php'>Wróć</a></form></div></body></html>";
