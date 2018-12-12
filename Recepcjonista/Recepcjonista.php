@@ -34,9 +34,11 @@
       $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC);
       print_r($row);
         // echo "<tr>";
-        // foreach($row as $element){
-        //   echo  "<td>".$element."</td>";
-        // }
+        $i=0;
+        foreach($row as $element){
+          echo  $col[$i].": ".$element;
+          $i=$i+1;
+        }
 
       ?>
     </div>
