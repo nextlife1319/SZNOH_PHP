@@ -36,7 +36,7 @@
         // echo "<tr>";
         $i=0;
         foreach($row as $element){
-          echo  $col[$i].": ".$element;
+          echo  $col[$i].": ".$element."\n";
           $i=$i+1;
         }
 
