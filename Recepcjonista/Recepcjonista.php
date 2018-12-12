@@ -10,7 +10,7 @@
   <body>
     <div class="container">
       <?php $nazwaTabeli="Pracownicy"; ?>
-      <h1><?php echo $_COOKIE['name']; ?></h1>
+      <h1><?php echo "Twój profil"; ?></h1>
       <?php
       $root = realpath($_SERVER["DOCUMENT_ROOT"]);
       require_once($root.'/functions.php');
@@ -21,15 +21,14 @@
 
       $col=get_col_names($nazwaTabeli, $conn);
 
-      echo "<div class='input-group mb-3'><form method='post'>";
+      echo "<div class='input-group mb-3'>";
 
       foreach($col as $element){
         if ($element!=$col[0]){
-          echo $element.":<br>";
-          echo "<input type='text' name='".$element."'><br>";
+          echo $element."<br>";
         }
       }
-      echo "<input class='btn btn-primary' type='submit' value='Wprowadź'><a class='btn btn-primary' href='/".$nazwaTabeli.".php'>Wróć</a></form></div></body></html>";
+      echo "<form method='post'><input class='btn btn-primary' type='submit' value='Wprowadź'><a class='btn btn-primary' href='/".$nazwaTabeli.".php'>Wróć</a></form></div></body></html>";
       ?>
     </div>
   </body>
