@@ -18,7 +18,7 @@ $stmt = sqlsrv_query( $conn, $sql );
               echo "<th>Edit</th>";
               echo "<th>Usuń</th></tr></thead><tbody>";
     while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC) ) {
-      print_r($row);
+      //print_r($row);
       echo "<tr>";
       foreach($row as $element){
         echo  "<td>".$element."</td>";
