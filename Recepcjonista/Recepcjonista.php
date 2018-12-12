@@ -20,7 +20,7 @@
       $conn = sqlsrv_connect($serverName, $connectionInfo);
 
       $col=get_col_names($nazwaTabeli, $conn);
-
+      echo $_COOKIE('name');
       $name=explode(" ", $_COOKIE('name'));
       print_r($name);
 
