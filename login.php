@@ -40,7 +40,7 @@ if(isset($_COOKIE['admin'])) {
      if($row[1] == 1)  $cookie_value = "True";
      else $cookie_value="False"; //TODO Wyczytac z bazy
      setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
-     setcookie("name",$row[0],time() + (86400 * 30), "/");
+     setcookie("name",' '.$row[0],time() + (86400 * 30), "/");
      /*echo '<script type="text/javascript">',
       'reloadParent();',
       '</script>';*/
