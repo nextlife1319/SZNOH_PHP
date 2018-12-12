@@ -23,8 +23,10 @@
       echo "Nazwa uzytkownika to ".$_COOKIE['name'];
       $name=explode(" ", $_COOKIE['name']);
       print_r($name);
+      echo $name[0];
+      echo $name[1];
 
-      // $sql="SELECT * FROM $nazwaTabeli WHERE imie=$name[0] AND nazwisko=$name[1]";
+       $sql="SELECT * FROM $nazwaTabeli WHERE imie=$name[0] AND nazwisko=$name[1]";
       // $stmt = sqlsrv_query( $conn, $sql );
       //
       // $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC)
