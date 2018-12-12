@@ -20,9 +20,8 @@
       $conn = sqlsrv_connect($serverName, $connectionInfo);
 
       $col=get_col_names($nazwaTabeli, $conn);
-      echo "kupa";
       echo "Nazwa uzytkownika to ".$_COOKIE['name'];
-      $name=explode(" ", $_COOKIE('name'));
+      $name=explode(" ", $_COOKIE['name']);
       print_r($name);
 
       $sql="SELECT * FROM $nazwaTabeli WHERE imie=$name[0] AND nazwisko=$name[1]";
