@@ -2,7 +2,7 @@
 <?php
 
 function display_table($nazwaTabeli, $conn){
-
+mysql_query("SET NAMES utf8");
 $order=get_col_names($nazwaTabeli, $conn);
 $by=$order[0];
 $sql="SELECT * FROM $nazwaTabeli ORDER BY $by";
