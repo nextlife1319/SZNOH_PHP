@@ -26,7 +26,7 @@
       echo $name[0];
       echo $name[1];
 
-       $sql="SELECT * FROM $nazwaTabeli WHERE imie=$name[0] AND nazwisko=$name[1]";
+       $sql="SELECT * FROM $nazwaTabeli WHERE imie="."'"."$name[0]"."'"." AND nazwisko="."'"."$name[1]"."'"."";
        echo "\n";
        echo $sql;
       // $stmt = sqlsrv_query( $conn, $sql );
