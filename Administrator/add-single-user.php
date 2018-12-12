@@ -49,6 +49,7 @@ foreach($col as $element){
   if ($element!=$col[0]){
     if($element==$col[1]){
       $username = getStaff();    #Client dropdown
+      print_r($username);
       echo "Username: <br>";
       echo '<select name="username">';
       foreach($username as $row)
