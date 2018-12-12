@@ -24,11 +24,11 @@
       $name=explode(" ", $_COOKIE['name']);
       print_r($name);
 
-      $sql="SELECT * FROM $nazwaTabeli WHERE imie=$name[1] AND nazwisko=$name[2]";
+      $sql="SELECT * FROM $nazwaTabeli WHERE imie=$name[0] AND nazwisko=$name[1]";
       $stmt = sqlsrv_query( $conn, $sql );
 
-      // $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC)
-      // print_r($row);
+      $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC)
+      print_r($row);
         // echo "<tr>";
         // foreach($row as $element){
         //   echo  "<td>".$element."</td>";
