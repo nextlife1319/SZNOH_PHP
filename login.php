@@ -36,6 +36,7 @@ if(isset($_COOKIE['admin'])) {
      if($row['permissions'] == 1)  $cookie_value = "True";
      else $cookie_value="False"; //TODO Wyczytac z bazy
      setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
+     echo "<meta http-equiv='refresh' content='0'>";
    }
    else{
      echo "Bledny login lub haslo";
@@ -48,7 +49,6 @@ if(isset($_COOKIE['admin'])) {
   echo "Hasło:<br>";
   echo "<input type='password' name='password'><br>";
   echo "<input class='btn btn-primary' type='submit' value='Wprowadź'><a class='btn btn-primary' href='/home.html'>Wróć</a></form></div></body></html>";
-  echo "<meta http-equiv='refresh' content='0'>";
 }
 
 ?>
