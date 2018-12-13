@@ -86,13 +86,19 @@ EOD;
       <ul class="nav navbar-nav navbar-right">
         <?php
 
+        ### USERS ONLY FOR ADMIN ###
         $var='<li><a class="btn btn-dark" onClick="newSite(`/users.php`)"><span class="glyphicon glyphicon-user"></span> Dodaj uzytkownika</a></li>';
         if(isset($_COOKIE['admin']) && $_COOKIE['admin'] == 'True') echo $var;
-        else echo '<li><a class="btn btn-dark" onClick="newSite(`/Recepcjonista/Profil.php`)"><span class="glyphicon glyphicon-user"></span>'.$_COOKIE['name'].'</a></li>';
+
+        ### ACCOUNT DETAILS FOR NONADMINS ###
+        #else echo '<li><a class="btn btn-dark" onClick="newSite(`/Recepcjonista/Profil.php`)"><span class="glyphicon glyphicon-user"></span>'.$_COOKIE['name'].'</a></li>';
+
+        ### LOGIN/LOGOUT ###
         $notloggedin ='<li><a class="btn btn-dark" onClick="newSite(`/login.php`)"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>';
         $loggedin='<li><a class="btn btn-dark" onClick="newSite(`/logout.php`)"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>';
         if(isset($_COOKIE['admin'])) {echo $loggedin;}
         else echo $notloggedin;
+
         ?>
       </ul>
     </div>
@@ -105,7 +111,18 @@ EOD;
       <?php //<p><a href="#">Link</a></p> ?>
     </div>
     <div class="col-sm-8 text-left">
-      <iframe id="myFrame" src="/Home.html" style="height:1000px;width:100%" frameBorder="0"></iframe>
+      <?php
+      ### IFRAME SOURCE DEPENDING ON ACCOUNT ###
+      $source='';
+      if(!isset($_COOKIE['admin'])) $source="/Home.html";
+      else{
+        if($_COOKIE['admin']=='True') $source="/test.php";
+        else $source="/Recepcjonista/menu.php";
+      }
+
+      echo '<iframe id="myFrame" src="'.$source.'" style="height:1000px;width:100%" frameBorder="0"></iframe>';
+
+      ?>
     </div>
     <div class="col-sm-2 sidenav">
       <div class="well">

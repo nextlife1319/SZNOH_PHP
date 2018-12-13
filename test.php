@@ -53,7 +53,10 @@
 ?>
 <br>
 <p>Date: <input type="text" id="datepicker"></p>
-
+<br>
+<button type="button" class="btn btn-primary btn-lg btn-block">Dodaj klienta</button>
+<button type="button" class="btn btn-secondary btn-lg btn-block">Wprowadź nowa rezerwacje</button>
+<button type="button" class="btn btn-primary btn-lg btn-block">Sprawdz rozmieszczenie klientow</button>
     </div>
   </body>
 </html>
