@@ -18,7 +18,7 @@
     $( "#datepicker" ).datepicker();
   } );
   </script>
-
+    <!-- END FOR CALENDAR -->
   </head>
   <body>
     <div class="container">
@@ -57,6 +57,14 @@
 <button type="button" class="btn btn-primary btn-lg btn-block">Dodaj klienta</button>
 <button type="button" class="btn btn-secondary btn-lg btn-block">Wprowadź nowa rezerwacje</button>
 <button type="button" class="btn btn-primary btn-lg btn-block">Sprawdz rozmieszczenie klientow</button>
+
+
+
+<?php
+#ID FORM NAME (COOKIE)
+    echo "$_COOKIE[name]";
+    echo getIdFromName($_COOKIE['name']);
+?>
     </div>
   </body>
 </html>

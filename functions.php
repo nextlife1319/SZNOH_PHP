@@ -66,7 +66,8 @@ $stmt = sqlsrv_query( $conn, $sql );
    return $clients;
  }
 
- function getStaff(){
+ function getStaff()
+ {
    $connectionInfo = array("UID" => "SecureAdmin@sznohfal", "pwd" => "WCYwcy123", "Database" => "sznohphp", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
    $serverName = "tcp:sznohfal.database.windows.net,1433";
    $conn = sqlsrv_connect($serverName, $connectionInfo);
@@ -84,7 +85,8 @@ $stmt = sqlsrv_query( $conn, $sql );
  }
 
 
-  function getRooms(){
+  function getRooms()
+  {
     $connectionInfo = array("UID" => "SecureAdmin@sznohfal", "pwd" => "WCYwcy123", "Database" => "sznohphp", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
     $serverName = "tcp:sznohfal.database.windows.net,1433";
     $conn = sqlsrv_connect($serverName, $connectionInfo);
@@ -99,6 +101,26 @@ $stmt = sqlsrv_query( $conn, $sql );
     }
     #print_r($clients);
     return $rooms;
+  }
+
+  function getIdFromName($name)
+  {
+    $connectionInfo = array("UID" => "SecureAdmin@sznohfal", "pwd" => "WCYwcy123", "Database" => "sznohphp", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+    $serverName = "tcp:sznohfal.database.windows.net,1433";
+    $conn = sqlsrv_connect($serverName, $connectionInfo);
+
+
+    $arr=explode(" ",$name);
+    $query="SELECT id from Pracownicy WHERE imie='$arr[0]' AND nazwisko='$arr[1]'";
+    #print_r($arr);
+    #echo "$query";
+
+    $stmt = sqlsrv_query( $conn, $query );
+    $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC);
+    #echo "ID:".$row[0];
+
+    return $row[0];
+
   }
 
 ?>
