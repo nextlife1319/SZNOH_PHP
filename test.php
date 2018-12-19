@@ -22,49 +22,12 @@
   </head>
   <body>
     <div class="container">
-      <?php $nazwaTabeli="Rezerwacje"; ?>
-      <h1><?php echo $nazwaTabeli; ?></h1>
+
+<button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='/users.php" >Zarzadzaj kontami</button>
 
 
 
-      <?php
-      require_once('functions.php');
 
-      $clients = getClients();    #Client dropdown
-      echo '<select name="client">';
-      foreach($clients as $row)
-      {
-        $tmparr=explode("|",$row);
-        echo "<option value=".$tmparr[0].">".$tmparr[1]."</option>";
-      }
-      echo "</select>";
-
-      $rooms = getRooms();        #Room dropdown
-      echo '<select name="client">';
-      foreach($rooms as $row)
-      {
-        $tmparr=explode("|",$row);
-        echo "<option value=".$tmparr[0].">".$tmparr[1]."</option>";
-      }
-      echo "</select>";
-
-      $name=$_COOKIE['name'];   #obtaining name
-      echo "<br>".$name;
-?>
-<br>
-<p>Date: <input type="text" id="datepicker"></p>
-<br>
-<button type="button" class="btn btn-primary btn-lg btn-block">Dodaj klienta</button>
-<button type="button" class="btn btn-secondary btn-lg btn-block">Wprowadź nowa rezerwacje</button>
-<button type="button" class="btn btn-primary btn-lg btn-block">Sprawdz rozmieszczenie klientow</button>
-
-
-
-<?php
-#ID FORM NAME (COOKIE)
-    echo "$_COOKIE[name]";
-    echo getIdFromName($_COOKIE['name']);
-?>
     </div>
   </body>
 </html>
