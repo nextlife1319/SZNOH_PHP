@@ -13,6 +13,6 @@
     <button type="button" class="btn btn-secondary btn-lg btn-block" onclick="location.href='/Recepcjonista/add-reservation.php '">Wprowadź nowa rezerwacje</button>
     <button type="button" class="btn btn-primary btn-lg btn-block">Sprawdz rozmieszczenie klientow</button>
 
-echo "<a class='btn btn-primary' href=/add-single.php?nazwaTabeli=".$nazwaTabeli.">Dodaj</a>";
+
 
   </body>
