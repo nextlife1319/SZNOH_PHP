@@ -2,33 +2,68 @@
 <?php
 
 function display_table($nazwaTabeli, $conn){
-sqlsrv_query($conn,"SET NAMES utf8");
-$order=get_col_names($nazwaTabeli, $conn);
-$by=$order[0];
-$sql="SELECT * FROM $nazwaTabeli ORDER BY $by";
-$stmt = sqlsrv_query( $conn, $sql );
+  sqlsrv_query($conn,"SET NAMES utf8");
+  $order=get_col_names($nazwaTabeli, $conn);
+  $by=$order[0];
+  $sql="SELECT * FROM $nazwaTabeli ORDER BY $by";
+  $stmt = sqlsrv_query( $conn, $sql );
 
-   echo "<table class='table table-hover'>";
-     echo "<thead>";
-      echo "<tr>";
-        foreach( sqlsrv_field_metadata( $stmt ) as $fieldMetadata ) {
-                $col=$fieldMetadata["Name"];
-                echo "<th>".$col."</th>";     #nazwy kolumn
-              }
-              echo "<th>Edit</th>";
-              echo "<th>Usuń</th></tr></thead><tbody>";
-    while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC) ) {
-      //print_r($row);
-      echo "<tr>";
-      foreach($row as $element){
-        echo  "<td>".$element."</td>";
+     echo "<table class='table table-hover'>";
+       echo "<thead>";
+        echo "<tr>";
+          foreach( sqlsrv_field_metadata( $stmt ) as $fieldMetadata ) {
+                  $col=$fieldMetadata["Name"];
+                  echo "<th>".$col."</th>";     #nazwy kolumn
+                }
+                echo "<th>Edit</th>";
+                echo "<th>Usuń</th></tr></thead><tbody>";
+      while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC) ) {
+        //print_r($row);
+        echo "<tr>";
+        foreach($row as $element){
+          echo  "<td>".$element."</td>";
+        }
+        echo "<td><a href=update-single.php?id=".$row[0]."&nazwaTabeli=".$nazwaTabeli.">Edit</a></td>";
+        echo "<td><a href=delete-single.php?id=".$row[0]."&nazwaTabeli=".$nazwaTabeli.">Usuń</a></td></tr></tbody>";
       }
-      echo "<td><a href=update-single.php?id=".$row[0]."&nazwaTabeli=".$nazwaTabeli.">Edit</a></td>";
-      echo "<td><a href=delete-single.php?id=".$row[0]."&nazwaTabeli=".$nazwaTabeli.">Usuń</a></td></tr></tbody>";
-    }
-  echo "</table>";
+    echo "</table>";
  }
 
+
+
+ function display_messages_by_id($nazwaTabeli, $conn){
+   sqlsrv_query($conn,"SET NAMES utf8");
+   $order=get_col_names($nazwaTabeli, $conn);
+   $by=$order[0];
+   $sql="SELECT * FROM $nazwaTabeli ORDER BY $by";
+   $stmt = sqlsrv_query( $conn, $sql );
+
+      echo "<table class='table table-hover'>";
+        echo "<thead>";
+         echo "<tr>";
+           foreach( sqlsrv_field_metadata( $stmt ) as $fieldMetadata ) {
+                   $col=$fieldMetadata["Name"];
+                   echo "<th>".$col."</th>";     #nazwy kolumn
+                 }
+                 echo "<th>Edit</th>";
+                 echo "<th>Usuń</th></tr></thead><tbody>";
+       while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC) ) {
+         //print_r($row);
+         $id = getIdFromName($_COOKIE['name']);
+         if($id==$row[3])
+         {
+           echo "<tr>";
+
+           foreach($row as $element){
+              echo  "<td>".$element."</td>";
+
+           }
+           echo "<td><a href=update-single.php?id=".$row[0]."&nazwaTabeli=".$nazwaTabeli.">Edit</a></td>";
+           echo "<td><a href=delete-single.php?id=".$row[0]."&nazwaTabeli=".$nazwaTabeli.">Usuń</a></td></tr></tbody>";
+         }
+       }
+     echo "</table>";
+  }
 
  function find_row_by_id($id, $conn, $nazwaTabeli){
 
@@ -80,7 +115,7 @@ $stmt = sqlsrv_query( $conn, $sql );
      $tmp=$row[0]."|".$row[1]."*".$row[2];
      $staff[]=$tmp;
    }
-   #print_r($clients);
+   #print_r($staff);
    return $staff;
  }
 
@@ -123,4 +158,24 @@ $stmt = sqlsrv_query( $conn, $sql );
 
   }
 
+
+    function getUserIdFromName($name)
+    {
+      $connectionInfo = array("UID" => "SecureAdmin@sznohfal", "pwd" => "WCYwcy123", "Database" => "sznohphp", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+      $serverName = "tcp:sznohfal.database.windows.net,1433";
+      $conn = sqlsrv_connect($serverName, $connectionInfo);
+
+
+      $arr=explode(" ",$name);
+      $query="SELECT id from users WHERE username='$name'";
+      #print_r($arr);
+      #echo "$query";
+
+      $stmt = sqlsrv_query( $conn, $query );
+      $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC);
+      #echo "ID:".$row[0];
+
+      return $row[0];
+
+    }
 ?>

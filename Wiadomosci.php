@@ -18,9 +18,17 @@
       $serverName = "tcp:sznohfal.database.windows.net,1433";
       $conn = sqlsrv_connect($serverName, $connectionInfo);
 
-      display_table($nazwaTabeli,$conn);
-      echo "<a class='btn btn-primary' href=/add-single.php?nazwaTabeli=".$nazwaTabeli.">Dodaj</a>";
+      if($_COOKIE['admin']=="True")
+      {
+        display_table($nazwaTabeli,$conn);
+        echo "<a class='btn btn-primary' href=/add-single.php?nazwaTabeli=".$nazwaTabeli.">Dodaj</a>";
 
+      }
+      else
+      {
+        display_messages_by_id($nazwaTabeli,$conn);
+        echo "<a class='btn btn-primary' href=/Recepcjonista/send-message.php?nazwaTabeli=".$nazwaTabeli.">Dodaj</a>";
+      }
 ?>
     </div>
   </body>
