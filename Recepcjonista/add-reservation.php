@@ -56,12 +56,13 @@
     }
     echo "</select>";
 
+    echo '<input type="hidden" id="ID_Prac" value='.getIdFromName($_COOKIE['name']).'>'
+
     echo "<br>Data przyjazdu<br>";
     echo '<input type="text" id="datepicker">';
 
     echo "<br>Data wyjazdu<br>";
     echo '<input type="text" id="datepicker2">';
-
 
 
     #echo "<input type='text' name='".$element."'><br>";
