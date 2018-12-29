@@ -45,7 +45,7 @@
       echo "<option value=".$tmparr[0].">".$tmparr[1]."</option>";
     }
     echo "</select>";
-
+echo a
     echo "<br>Pokój<br>";
     $rooms = getRooms();        #Room dropdown
     echo '<select name="client">';
