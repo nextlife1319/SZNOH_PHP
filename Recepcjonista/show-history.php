@@ -29,5 +29,5 @@
    echo "<option value=".$tmparr[0].">".$tmparr[1]."</option>";
  }
  echo "</select>";
- echo "<input class='btn btn-primary' type='submit' value='Sprawdź'></form></div>;
+ echo "<input class='btn btn-primary' type='submit' value='Wprowadź'><a class='btn btn-primary' href='/".$nazwaTabeli.".php'>Wróć</a></form></div></body></html>";
  ?>
