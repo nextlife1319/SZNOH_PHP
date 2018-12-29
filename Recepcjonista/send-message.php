@@ -47,16 +47,17 @@ require_once(__ROOT__.'/functions.php');
 echo "<div class='input-group mb-3'><form method='post'>";
 
     echo "Tresc wiadomosci".":<br>";
-    echo "<input type='text' name='wiadomosc'><br>";
+    echo "<input type='text' name='tresc'><br>";
     echo "Wyslij do".":<br>";
     $clients = getStaff();    #Staff dropdown
-    echo '<select name="client">';
+    echo '<select name="id_odbiorcy">';
     foreach($clients as $row)
     {
       $tmparr=explode("|",$row);
       $tmparr[1]=str_replace("*"," ",$tmparr[1]);
       echo "<option value=".$tmparr[0].">".$tmparr[1]."</option>";
     }
+    echo '<input type="hidden" name="id_nadawcy" value="1">';
     echo "</select><br>";
 
 echo "<input class='btn btn-primary' type='submit' value='Wprowadź'><a class='btn btn-primary' href='/".$nazwaTabeli.".php'>Wróć</a></form></div></body></html>";
