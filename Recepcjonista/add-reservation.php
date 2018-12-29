@@ -58,7 +58,7 @@
 
     echo getIdFromName($_COOKIE['name']);
 
-    echo '<input type="hidden" id="ID_Prac" value='.getIdFromName($_COOKIE['name']).'>';
+    #echo '<input type="hidden" id="ID_Prac" value='.getIdFromName($_COOKIE['name']).'>';
 
     echo "<br>Data przyjazdu<br>";
     echo '<input type="text" id="datepicker">';
