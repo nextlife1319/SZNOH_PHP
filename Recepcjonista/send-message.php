@@ -54,7 +54,7 @@ echo "<div class='input-group mb-3'><form method='post'>";
     foreach($clients as $row)
     {
       $tmparr=explode("|",$row);
-      #$tmparr[1]=str_replace("*"," ",$tmparr[1]);
+      $tmparr[1]=str_replace("*"," ",$tmparr[1]);
       echo "<option value=".$tmparr[0].">".$tmparr[1]."</option>";
     }
     echo "</select><br>";
