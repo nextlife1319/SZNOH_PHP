@@ -19,6 +19,7 @@
  $nazwaTabeli='Rezerwacje';
  $col=get_col_names($nazwaTabeli, $conn);
 
+ echo "<div class='input-group mb-3'><form method='post'>";
  $Staff = getStaff();    #Staff dropdown
  echo '<select name="client">';
  foreach($Staff as $row)
@@ -28,4 +29,5 @@
    echo "<option value=".$tmparr[0].">".$tmparr[1]."</option>";
  }
  echo "</select>";
+ echo "<input class='btn btn-primary' type='submit' value='Sprawdź'>;
  ?>
