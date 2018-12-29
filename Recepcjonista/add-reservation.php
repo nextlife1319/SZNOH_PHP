@@ -38,7 +38,7 @@
 
     echo "<br>Klient<br>";
     $clients = getClients();    #Client dropdown
-    echo '<select name="client">';
+    echo '<select name="ID_client">';
     foreach($clients as $row)
     {
       $tmparr=explode("|",$row);
@@ -48,7 +48,7 @@
 
     echo "<br>Pokój<br>";
     $rooms = getRooms();        #Room dropdown
-    echo '<select name="room">';
+    echo '<select name="ID_room">';
     foreach($rooms as $row)
     {
       $tmparr=explode("|",$row);
@@ -58,13 +58,13 @@
 
     echo getIdFromName($_COOKIE['name']);
 
-    #echo '<input type="hidden" id="ID_Prac" value='.getIdFromName($_COOKIE['name']).'>';
+    echo '<input type="hidden" name="ID_prac" value='.getIdFromName($_COOKIE['name']).'>';
 
     echo "<br>Data przyjazdu<br>";
-    echo '<input type="text" id="datepicker">';
+    echo '<input type="text" id="datepicker" name="data_przyjazdu">';
 
     echo "<br>Data wyjazdu<br>";
-    echo '<input type="text" id="datepicker2">';
+    echo '<input type="text" id="datepicker2" name="data_wyjazdu">';
 
 
     #echo "<input type='text' name='".$element."'><br>";
