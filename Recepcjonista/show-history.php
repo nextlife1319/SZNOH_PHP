@@ -29,5 +29,5 @@
    echo "<option value=".$tmparr[0].">".$tmparr[1]."</option>";
  }
  echo "</select>";
- echo "<input class='btn btn-primary' type='submit' value='Sprawdź'>;
+ echo "<input class='btn btn-primary' type='submit' value='Sprawdź'></form></div>;
  ?>
