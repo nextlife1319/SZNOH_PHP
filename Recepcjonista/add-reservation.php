@@ -48,7 +48,7 @@
 
     echo "<br>Pokój<br>";
     $rooms = getRooms();        #Room dropdown
-    echo '<select name="client">';
+    echo '<select name="room">';
     foreach($rooms as $row)
     {
       $tmparr=explode("|",$row);
