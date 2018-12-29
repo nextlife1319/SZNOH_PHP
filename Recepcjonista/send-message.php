@@ -57,7 +57,8 @@ echo "<div class='input-group mb-3'><form method='post'>";
       $tmparr[1]=str_replace("*"," ",$tmparr[1]);
       echo "<option value=".$tmparr[0].">".$tmparr[1]."</option>";
     }
-    echo '<input type="hidden" name="id_nadawcy" value="1">';
+    $id=getIdFromName($_COOKIE['name']);
+    echo '<input type="hidden" name="id_nadawcy" value="'.$id.'">';
     echo "</select><br>";
 
 echo "<input class='btn btn-primary' type='submit' value='Wprowadź'><a class='btn btn-primary' href='/".$nazwaTabeli.".php'>Wróć</a></form></div></body></html>";
