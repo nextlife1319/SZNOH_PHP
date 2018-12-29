@@ -22,26 +22,26 @@ require_once(__ROOT__.'/functions.php');
 
  if (isset($_POST[$col[1]])) {
 
-   // $addsql= "INSERT INTO ".$nazwaTabeli." (";
-   // $val=") VALUES (";
-   // $ii=0;
-   // foreach($col as $element){
-   //   if ($element!=$col[0]){
-   //     $addsql.=$element;
-   //     $addsql.=", ";
-   //     $params[]=$_POST[$col[$ii]];
-   //     $val.="?, ";
-   //   }
-   //   $ii=$ii+1;
-   // }
-   // $addsql=rtrim($addsql, ", ");
-   // $val=rtrim($val, ", ");
-   // $addsql.=$val.");";
-   //
-   // $getResults= sqlsrv_query($conn, $addsql, $params);
-   // $rowsAffected = sqlsrv_rows_affected($getResults);
-   // echo "Dodano wpis";
-   // sqlsrv_free_stmt($getResults);
+   $addsql= "INSERT INTO ".$nazwaTabeli." (";
+   $val=") VALUES (";
+   $ii=0;
+   foreach($col as $element){
+     if ($element!=$col[0]){
+       $addsql.=$element;
+       $addsql.=", ";
+       $params[]=$_POST[$col[$ii]];
+       $val.="?, ";
+     }
+     $ii=$ii+1;
+   }
+   $addsql=rtrim($addsql, ", ");
+   $val=rtrim($val, ", ");
+   $addsql.=$val.");";
+
+   $getResults= sqlsrv_query($conn, $addsql, $params);
+   $rowsAffected = sqlsrv_rows_affected($getResults);
+   echo "Dodano wpis";
+   sqlsrv_free_stmt($getResults);
  }
 
 echo "<div class='input-group mb-3'><form method='post'>";
