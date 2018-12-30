@@ -65,5 +65,5 @@ foreach($col as $element){
 
   }
 }
-echo "<input class='btn btn-primary' type='submit' value='Wprowadź'><a class='btn btn-primary' href='/Tabele/".$nazwaTabeli.".php'>Wróć</a></form></div></body></html>";
+echo "<input class='btn btn-primary' type='submit' value='Wprowadź'><a class='btn btn-primary' href='/Tabele/Uzytkownicy.php'>Wróć</a></form></div></body></html>";
 ?>
