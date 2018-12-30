@@ -33,9 +33,8 @@
     </div>
     <div class="container">
       <br>
-      <h2>Treść wiadomości:</h2>
+      <h4>Treść wiadomości:</h4>
       <br>
-      <?//<p id="field2">Nacisnij wiadmość aby wyświetlić jej treść</p>?>
       <textarea id="field2" rows="8" cols="80">
       </textarea>
       <p id="field2">Nacisnij wiadmość aby wyświetlić jej treść</p>
