@@ -1,4 +1,4 @@
-Uzytkownicy<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <title>SZNOH System zarzadzania nowoczesnym obiektem hotelowym</title>
