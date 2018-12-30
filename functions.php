@@ -58,8 +58,8 @@ function display_table($nazwaTabeli, $conn){
               echo  "<td>".$element."</td>";
 
            }
-           echo "<td><a href=update-single.php?id=".$row[0]."&nazwaTabeli=".$nazwaTabeli.">Edit</a></td>";
-           echo "<td><a href=delete-single.php?id=".$row[0]."&nazwaTabeli=".$nazwaTabeli.">Usuń</a></td></tr></tbody>";
+           echo "<td><a href=/update-single.php?id=".$row[0]."&nazwaTabeli=".$nazwaTabeli.">Edit</a></td>";
+           echo "<td><a href=/delete-single.php?id=".$row[0]."&nazwaTabeli=".$nazwaTabeli.">Usuń</a></td></tr></tbody>";
          }
        }
      echo "</table>";
