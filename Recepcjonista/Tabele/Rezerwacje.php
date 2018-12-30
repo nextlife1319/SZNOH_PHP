@@ -12,10 +12,7 @@
       <?php $nazwaTabeli="Rezerwacje"; ?>
       <h1><?php echo $nazwaTabeli; ?></h1>
       <?php
-      $val=dirname(dirname(__FILE__);
-      echo $val;
-      define('__ROOT__', dirname(dirname(__FILE__)));
-      require_once(__ROOT__.'/functions.php');
+      require_once('/functions.php');
 
       $connectionInfo = array("UID" => "SecureAdmin@sznohfal", "pwd" => "WCYwcy123", "Database" => "sznohphp", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
       $serverName = "tcp:sznohfal.database.windows.net,1433";
