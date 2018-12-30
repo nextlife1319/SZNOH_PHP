@@ -63,11 +63,11 @@ function display_table($nazwaTabeli, $conn){
            //    echo  "<td>".$element."</td>";
            //
            // }
-           echo  "<td>".$row[1]."</td>";
-           echo  "<td>".$row[2]."</td>";
-           echo  "<td>".$row[3]."</td>";
-           echo  "<td>".$row[5]."</td>";
-           echo "<td><a href=/delete-single.php?id=".$row[0]."&nazwaTabeli=".$nazwaTabeli.">Usuń</a></td></tr></tbody>";
+           echo  "<td height='100'>".$row[1]."</td>";
+           echo  "<td height='100'>".$row[2]."</td>";
+           echo  "<td height='100'>".$row[3]."</td>";
+           echo  "<td height='100'>".$row[5]."</td>";
+           echo "<td height='100'><a href=/delete-single.php?id=".$row[0]."&nazwaTabeli=".$nazwaTabeli.">Usuń</a></td></tr></tbody>";
          }
        }
      echo "</table>";
