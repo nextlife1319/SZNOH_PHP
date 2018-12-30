@@ -46,6 +46,8 @@ require_once(__ROOT__.'/functions.php');
 
 echo "<div class='input-group mb-3'><form method='post'>";
 
+    echo "Temat wiadomosci".":<br>";
+    echo "<input type='text' name='temat'><br>";
     echo "Tresc wiadomosci".":<br>";
     echo "<input type='text' name='tresc'><br>";
     echo "Wyslij do".":<br>";
@@ -60,6 +62,8 @@ echo "<div class='input-group mb-3'><form method='post'>";
     $id=getIdFromName($_COOKIE['name']);
     echo '<input type="hidden" name="id_nadawcy" value="'.$id.'">';
     echo "</select><br>";
+    echo '<input type="hidden" name="data" value="'.date('l jS F Y H:i:s ').'">';
+
 
 echo "<input class='btn btn-primary' type='submit' value='Wprowadź'><a class='btn btn-primary' href='/Tabele/".$nazwaTabeli.".php'>Wróć</a></form></div></body></html>";
 
