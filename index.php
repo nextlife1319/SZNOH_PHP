@@ -101,8 +101,8 @@ EOD;
 
         ### ACCOUNT DETAILS FOR NONADMINS ###
         elseif(isset($_COOKIE['name'])){
-          echo '<li><a class="btn btn-dark" onClick="newSite(`/Tabele/Wiadomosci.php`)"><span class="glyphicon glyphicon-envelope"></span>Wiadomości</a></li>';
-          echo '<li><a class="btn btn-dark" onClick="newSite(`/Recepcjonista/Profil.php`)"><span class="glyphicon glyphicon-user"></span>'.$_COOKIE['name'].'</a></li>';
+          echo '<li><a class="btn btn-dark" onClick="newSite(`/Tabele/Wiadomosci.php`)"><span class="glyphicon glyphicon-envelope"></span> Wiadomości</a></li>';
+          echo '<li><a class="btn btn-dark" onClick="newSite(`/Recepcjonista/Profil.php`)"><span class="glyphicon glyphicon-user"></span> '.$_COOKIE['name'].'</a></li>';
         }
 
         ### LOGIN/LOGOUT ###
@@ -121,7 +121,7 @@ EOD;
   <div class="row content">
     <div class="col-sm-2 sidenav">
       <p> Uwaga, nie tworzyć rezerwacji między 12.12.2018 a 31.12.2018 </p>
-      <p> Za trzy dni upłynie termina ważności hasła. Proszę o zmiane. </p> 
+      <p> Za trzy dni upłynie termina ważności hasła. Proszę o zmiane. </p>
       <?php //<p><a href="#">Link</a></p> ?>
     </div>
     <div class="col-sm-8 text-left">
