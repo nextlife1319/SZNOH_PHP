@@ -65,7 +65,7 @@ echo "<div class='input-group mb-3'><form method='post'>";
     echo '<input type="hidden" name="data" value="'.date('l jS F Y H:i:s ').'">';
 
 
-echo "<input class='btn btn-primary' type='submit' value='Wprowadź'><a class='btn btn-primary' href='/Tabele/".$nazwaTabeli.".php'>Wróć</a></form></div></body></html>";
+echo "<input class='btn btn-primary' type='submit' value='Wyślij'><a class='btn btn-primary' href='/Tabele/".$nazwaTabeli.".php'>Wróć</a></form></div></body></html>";
 
 
 

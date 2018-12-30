@@ -27,7 +27,7 @@
       else
       {
         display_messages_by_id($nazwaTabeli,$conn);
-        echo "<a class='btn btn-primary' href=/Recepcjonista/send-message.php?nazwaTabeli=".$nazwaTabeli.">Dodaj</a>";
+        echo "<a class='btn btn-primary' href=/Recepcjonista/send-message.php?nazwaTabeli=".$nazwaTabeli.">Nowa wiadomość</a>";
       }
 ?>
     </div>
