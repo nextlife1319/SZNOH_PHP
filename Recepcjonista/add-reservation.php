@@ -29,10 +29,10 @@
   <body>
     <?php
 
-    // $connectionInfo = array("UID" => "SecureAdmin@sznohfal", "pwd" => "WCYwcy123", "Database" => "sznohphp", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
-    // $serverName = "tcp:sznohfal.database.windows.net,1433";
-    // $conn = sqlsrv_connect($serverName, $connectionInfo);
-    //
+    $connectionInfo = array("UID" => "SecureAdmin@sznohfal", "pwd" => "WCYwcy123", "Database" => "sznohphp", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+    $serverName = "tcp:sznohfal.database.windows.net,1433";
+    $conn = sqlsrv_connect($serverName, $connectionInfo);
+
     // if (isset($_POST["id_pracownika"])) {
     //
     //   $addsql= 'INSERT INTO Rezerwacje (id_pokoju, id_klienta, id_pracownika, data_przyjazdu, data_wyjazdu, czy_zameldowany) VALUES ';
