@@ -23,7 +23,7 @@
     .sidenav {
       padding-top: 20px;
       background-color: #f1f1f1;
-      height: 100%;
+      min-height: 90vh;
     }
 
     img {
