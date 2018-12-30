@@ -47,6 +47,8 @@
     }
     </script>
     <div class="container">
+      <br>
+      Treść wiadmości
       <input type="text" id="field2">
     </div>
   </body>
