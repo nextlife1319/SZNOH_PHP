@@ -7,7 +7,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
   <body>
-    <h1>Dodaj wpis</h1>
+    <h1>Utwórz wiadomość</h1>
 <?php
 define('__ROOT__', dirname(dirname(__FILE__)));
 require_once(__ROOT__.'/functions.php');
@@ -40,7 +40,7 @@ require_once(__ROOT__.'/functions.php');
 
    $getResults= sqlsrv_query($conn, $addsql, $params);
    $rowsAffected = sqlsrv_rows_affected($getResults);
-   echo "Dodano wpis";
+   echo "Wysłano";
    sqlsrv_free_stmt($getResults);
  }
 
