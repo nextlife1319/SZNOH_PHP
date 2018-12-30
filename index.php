@@ -66,7 +66,7 @@
 
         <li><a class="btn btn-dark" href="/index.php">Home</a></li>
         <?php
-              if(isset($_COOKIE['admin'])) {
+              if(isset($_COOKIE['admin']) && $_COOKIE['admin'] == 'True') {
                 $var= <<<'EOD'
         <li><a class="btn btn-dark" onClick="newSite(`/Pokoje.php`)">Pokoje</a></li>
         <li><a class="btn btn-dark" onClick="newSite(`/Pracownicy.php`)">Pracownicy</a></li>
