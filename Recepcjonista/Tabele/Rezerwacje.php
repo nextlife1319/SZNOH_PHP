@@ -12,7 +12,8 @@
       <?php $nazwaTabeli="Rezerwacje"; ?>
       <h1><?php echo $nazwaTabeli; ?></h1>
       <?php
-      echo dirname(dirname(__FILE__);
+      $val=dirname(dirname(__FILE__);
+      echo $val;
       define('__ROOT__', dirname(dirname(__FILE__)));
       require_once(__ROOT__.'/functions.php');
 
