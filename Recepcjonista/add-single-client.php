@@ -50,18 +50,5 @@ foreach($col as $element){
     echo "<input type='text' name='".$element."'><br>";
   }
 }
-echo "<input class='btn btn-primary' type='submit' value='Wprowadź'><a class='btn btn-primary' href='/".$nazwaTabeli.".php'>Wróć</a></form></div></body></html>";
-
-
-
-####
-echo "<div class='input-group mb-3'><form method='post'>";
-
-foreach($col as $element){
-  if ($element!=$col[0]){
-    echo $element.":<br>";
-    echo "<input type='text' name='".$element."'><br>";
-  }
-}
-echo "<input class='btn btn-primary' type='submit' value='Wprowadź'><a class='btn btn-primary' href='/".$nazwaTabeli.".php'>Wróć</a></form></div></body></html>";
+echo "<input class='btn btn-primary' type='submit' value='Wprowadź'><a class='btn btn-primary' href='/Recepcjonista/menu.php'>Wróć</a></form></div></body></html>";
 ?>
