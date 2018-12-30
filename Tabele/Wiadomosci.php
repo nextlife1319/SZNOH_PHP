@@ -31,6 +31,12 @@
       }
 ?>
     </div>
+    <div class="container">
+      <br>
+      <h2>Treść wiadomości:</h2>
+      <br>
+      <p id="field2">Nacisnij wiadmość aby wyświetlić jej treść</p>
+    </div>
     <script>
     var table = document.getElementById("tableID");
     if (table != null) {
@@ -45,11 +51,5 @@
         document.getElementById("field2").value = tableCell.childNodes[1].innerHTML;
     }
     </script>
-    <div class="container">
-      <br>
-      <h2>Treść wiadomości:</h2>
-      <br>
-      <p id="field2">Nacisnij wiadmość aby wyświetlić jej treść</p> 
-    </div>
   </body>
 </html>
