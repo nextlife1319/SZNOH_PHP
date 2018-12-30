@@ -141,6 +141,7 @@ EOD;
     <div class="col-sm-2 sidenav">
       <div class="well">
         <img src="sznoh_logo.PNG"/>
+        <img src="plakat.png"/>
       </div>
     </div>
   </div>
