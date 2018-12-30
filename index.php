@@ -120,6 +120,7 @@ EOD;
 <div class="container-fluid text-center">
   <div class="row content">
     <div class="col-sm-2 sidenav">
+      <h1>Powiadomienia:</h1>
       <p> Uwaga, nie tworzyć rezerwacji między 12.12.2018 a 31.12.2018 </p>
       <p> Za trzy dni upłynie termina ważności hasła. Proszę o zmiane. </p>
       <?php //<p><a href="#">Link</a></p> ?>
@@ -141,7 +142,6 @@ EOD;
     <div class="col-sm-2 sidenav">
       <div class="well">
         <img src="sznoh_logo.PNG"/>
-        <img src="plakat.png"/>
       </div>
     </div>
   </div>
