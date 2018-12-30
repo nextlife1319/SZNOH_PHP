@@ -9,9 +9,8 @@
   <body>
     <h1>Dodaj wpis</h1>
 <?php
- define('__ROOT__', dirname(dirname(__FILE__)));
- require_once(__ROOT__.'/functions.php');
- 
+ require_once($_SERVER['DOCUMENT_ROOT'].'/functions.php');
+
  $connectionInfo = array("UID" => "SecureAdmin@sznohfal", "pwd" => "WCYwcy123", "Database" => "sznohphp", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
  $serverName = "tcp:sznohfal.database.windows.net,1433";
  $conn = sqlsrv_connect($serverName, $connectionInfo);
