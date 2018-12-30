@@ -45,7 +45,6 @@ function display_table($nazwaTabeli, $conn){
                    $col=$fieldMetadata["Name"];
                    echo "<th>".$col."</th>";     #nazwy kolumn
                  }
-                 echo "<th>Edit</th>";
                  echo "<th>Usuń</th></tr></thead><tbody>";
        while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC) ) {
          //print_r($row);
@@ -58,7 +57,6 @@ function display_table($nazwaTabeli, $conn){
               echo  "<td>".$element."</td>";
 
            }
-           echo "<td><a href=/update-single.php?id=".$row[0]."&nazwaTabeli=".$nazwaTabeli.">Edit</a></td>";
            echo "<td><a href=/delete-single.php?id=".$row[0]."&nazwaTabeli=".$nazwaTabeli.">Usuń</a></td></tr></tbody>";
          }
        }
