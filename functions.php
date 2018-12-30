@@ -48,7 +48,7 @@ function display_table($nazwaTabeli, $conn){
            //         echo "<th>".$col."</th>";     #nazwy kolumn
            //       }
            echo "<th>Temat</th>";
-           echo "<th>Treść</th>";
+           echo "<th style='display:none;'>Treść</th>";
            echo "<th>Nadawca</th>";
            echo "<th>Data</th>";
                  echo "<th>Usuń</th></tr></thead><tbody>";
