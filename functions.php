@@ -64,7 +64,7 @@ function display_table($nazwaTabeli, $conn){
            //
            // }
            echo  "<td>".$row[1]."</td>";
-           echo  "<td <td style='display:none;'>".$row[2]."</td>";
+           echo  "<td style='display:none;'>".$row[2]."</td>";
            echo  "<td>".$row[3]."</td>";
            echo  "<td>".$row[5]."</td>";
            echo "<td><a href=/delete-single.php?id=".$row[0]."&nazwaTabeli=".$nazwaTabeli.">Usuń</a></td></tr></tbody>";
