@@ -34,18 +34,17 @@
     $conn = sqlsrv_connect($serverName, $connectionInfo);
 
     if (isset($_POST["id_pracownika"])) {
-      echo "kupa";
 
       $addsql='INSERT INTO Rezerwacje (id_pokoju, id_klienta, id_pracownika, data_przyjazdu, data_wyjazdu, czy_zameldowany) VALUES ';
-      $val='('.$_POST["id_pokoju"].', '.$_POST["id_klienta"].', '.$_POST["id_pracownika"].', '.$_POST["data_przyjazdu"].', '.$_POST["data_wyjazdu"].', 1);';
+      $val='('.$_POST["id_pokoju"].', '.$_POST["id_klienta"].', '.$_POST["id_pracownika"].', "'.$_POST["data_przyjazdu"].'", "'.$_POST["data_wyjazdu"].'", 1);';
       echo $val;
       echo $addsql;
+
+      $getResults= sqlsrv_query($conn, $addsql);
+      $rowsAffected = sqlsrv_rows_affected($getResults);
+      echo "Dodano wpis";
+      sqlsrv_free_stmt($getResults);
     }
-    //   $getResults= sqlsrv_query($conn, $addsql);
-    //   $rowsAffected = sqlsrv_rows_affected($getResults);
-    //   echo "Dodano wpis";
-    //   sqlsrv_free_stmt($getResults);
-    // }
     ?>
 
 <div class='input-group mb-3'><form method='post'>
