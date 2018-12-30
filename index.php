@@ -91,7 +91,10 @@ EOD;
         if(isset($_COOKIE['admin']) && $_COOKIE['admin'] == 'True') echo $var;
 
         ### ACCOUNT DETAILS FOR NONADMINS ###
-        elseif(isset($_COOKIE['name'])) echo '<li><a class="btn btn-dark" onClick="newSite(`/Recepcjonista/Profil.php`)"><span class="glyphicon glyphicon-user"></span>'.$_COOKIE['name'].'</a></li>';
+        elseif(isset($_COOKIE['name'])){
+          echo '<li><a class="btn btn-dark" onClick="newSite(`/Wiadomosci.php`)"><span class="glyphicon glyphicon-envelope"></span>Wiadmości</a></li>';
+          echo '<li><a class="btn btn-dark" onClick="newSite(`/Recepcjonista/Profil.php`)"><span class="glyphicon glyphicon-user"></span>'.$_COOKIE['name'].'</a></li>';
+        }
 
         ### LOGIN/LOGOUT ###
         $notloggedin ='<li><a class="btn btn-dark" onClick="newSite(`/login.php`)"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>';
