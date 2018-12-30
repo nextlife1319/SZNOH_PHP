@@ -209,7 +209,7 @@ function display_table($nazwaTabeli, $conn){
       echo "<table class='table table-hover'>";
         echo "<thead>";
          echo "<tr>";
-           echo "<th text-align: center;>Powiadomienia</th></tr></thead><tbody>";
+           echo "<th>   Powiadomienia</th></tr></thead><tbody>";
       while($row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC)){
         echo "<tr><td>".$row[0]."</td></tr>";
       }
