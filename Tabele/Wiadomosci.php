@@ -36,13 +36,13 @@
     if (table != null) {
         for (var i = 0; i < table.rows.length; i++) {
             table.rows[i].onclick = function () {
-                tableText(table.rows[i].cell[1]);
+                tableText(this);
             };
         }
     }
 
     function tableText(tableCell) {
-        document.getElementById("field2").value = tableCell.innerHTML;
+        document.getElementById("field2").value = tableCell.childNodes[1].innerHTML;
     }
     </script>
     <div class="container">
