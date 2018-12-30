@@ -19,8 +19,15 @@
       $conn = sqlsrv_connect($serverName, $connectionInfo);
 
       display_table($nazwaTabeli,$conn);
-      echo "<a class='btn btn-primary' href=/add-single.php?nazwaTabeli=".$nazwaTabeli.">Dodaj</a>";
 
+      if($_COOKIE['admin']=="True")
+      {
+        echo "<a class='btn btn-primary' href=/add-single.php?nazwaTabeli=".$nazwaTabeli.">Dodaj</a>";
+      }
+      else
+      {
+        echo "<a class='btn btn-primary' href='/Recepcjonista/menu.php'>Wróć</a>";
+      }
 ?>
     </div>
   </body>
