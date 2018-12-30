@@ -121,7 +121,7 @@ EOD;
 <div class="container-fluid text-center">
   <div class="row content">
     <div class="col-sm-2 sidenav">
-      <?php echo getNotyfications(); ?>
+      <?php if(isset($_COOKIE['name'])) echo getNotyfications(); ?>
     </div>
     <div class="col-sm-8 text-left">
       <?php
