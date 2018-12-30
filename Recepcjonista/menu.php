@@ -10,6 +10,7 @@
   <body>
     <h1 align="center">Panel zarządzania</h1>
     <button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='/Recepcjonista/add-single-client.php?nazwaTabeli=Klienci'">Dodaj klienta</button>
+    <button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='/Tabele/Klienci.php '">Wyświetl liste klientów</button>
     <button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='/Recepcjonista/add-reservation.php '">Wprowadź nowa rezerwacje</button>
     <button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='/Tabele/Rezerwacje.php '">Wyświetl liste rezerwacji</button>
     <button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='/Recepcjonista/show-history.php '">Zobacz historie</button>
