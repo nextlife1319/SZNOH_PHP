@@ -36,10 +36,11 @@
     if (isset($_POST["id_pracownika"])) {
 
       $addsql='INSERT INTO Rezerwacje (id_pokoju, id_klienta, id_pracownika, data_przyjazdu, data_wyjazdu, czy_zameldowany) VALUES ';
-      $addsql+='('.$_POST["id_pokoju"].', '.$_POST["id_klienta"].', '.$_POST["id_pracownika"].', "'.$_POST["data_przyjazdu"].'", "'.$_POST["data_wyjazdu"].'", 1);';
-      echo $addsql;
+      $val='('.$_POST["id_pokoju"].', '.$_POST["id_klienta"].', '.$_POST["id_pracownika"].', "'.$_POST["data_przyjazdu"].'", "'.$_POST["data_wyjazdu"].'", 1);';
+      $sql=$addsql.$val;
+      echo $sql;
 
-      $getResults= sqlsrv_query($conn, $addsql);
+      $getResults= sqlsrv_query($conn, $sql);
       $rowsAffected = sqlsrv_rows_affected($getResults);
       echo "Dodano wpis";
       sqlsrv_free_stmt($getResults);
