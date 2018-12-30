@@ -26,11 +26,20 @@
       height: 100%;
     }
 
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
     /* Set black background color, white text and some padding */
     footer {
       background-color: #555;
       color: white;
-      padding: 15px;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
     }
 
     /* On small screens, set height to 'auto' for sidenav and grid */
