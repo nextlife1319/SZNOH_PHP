@@ -211,7 +211,7 @@ function display_table($nazwaTabeli, $conn){
       $stmt = sqlsrv_query( $conn, $query );
       $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC);
       #echo "ID:".$row[0];
-      echo $row;
+      print_r($row);
       return $row;
 
     }
