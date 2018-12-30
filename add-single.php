@@ -50,5 +50,5 @@ foreach($col as $element){
     echo "<input type='text' name='".$element."'><br>";
   }
 }
-echo "<input class='btn btn-primary' type='submit' value='Wprowadź'><a class='btn btn-primary' href='/".$nazwaTabeli.".php'>Wróć</a></form></div></body></html>";
+echo "<input class='btn btn-primary' type='submit' value='Wprowadź'><a class='btn btn-primary' href='/Tabele/".$nazwaTabeli.".php'>Wróć</a></form></div></body></html>";
 ?>

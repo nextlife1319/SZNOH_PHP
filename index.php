@@ -68,31 +68,31 @@
         <?php
               if(isset($_COOKIE['admin']) && $_COOKIE['admin'] == 'True') {
                 $var= <<<'EOD'
-        <li><a class="btn btn-dark" onClick="newSite(`/Pokoje.php`)">Pokoje</a></li>
-        <li><a class="btn btn-dark" onClick="newSite(`/Pracownicy.php`)">Pracownicy</a></li>
-        <li><a class="btn btn-dark" onClick="newSite(`/Klienci.php`)">Klienci</a></li>
-        <li><a class="btn btn-dark" onClick="newSite(`/Rezerwacje.php`)">Rezerwacje</a></li>
-        <li><a class="btn btn-dark" onClick="newSite(`/Wyposazenie.php`)">Wyposazenie</a></li>
-        <li><a class="btn btn-dark" onClick="newSite(`/Spis_wyposazenia.php`)">Spis wyposazenia</a></li>
-        <li><a class="btn btn-dark" onClick="newSite(`/Wiadomosci.php`)">Wiadomosc</a></li>
+        <li><a class="btn btn-dark" onClick="newSite(`/Tabele/Pokoje.php`)">Pokoje</a></li>
+        <li><a class="btn btn-dark" onClick="newSite(`/Tabele/Pracownicy.php`)">Pracownicy</a></li>
+        <li><a class="btn btn-dark" onClick="newSite(`/Tabele/Klienci.php`)">Klienci</a></li>
+        <li><a class="btn btn-dark" onClick="newSite(`/Tabele/Rezerwacje.php`)">Rezerwacje</a></li>
+        <li><a class="btn btn-dark" onClick="newSite(`/Tabele/Wyposazenie.php`)">Wyposazenie</a></li>
+        <li><a class="btn btn-dark" onClick="newSite(`/Tabele/Spis_wyposazenia.php`)">Spis wyposazenia</a></li>
+        <li><a class="btn btn-dark" onClick="newSite(`/Tabele/Wiadomosci.php`)">Wiadomosc</a></li>
 EOD;
 
 
         echo $var;
         }
         ?>
-        <!--<li><a class="btn btn-dark" onClick="newSite(`/users.php`)">Uzytkownicy</a></li>-->
+        <!--<li><a class="btn btn-dark" onClick="newSite(`/Użytkownicy.php`)">Uzytkownicy</a></li>-->
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <?php
 
         ### USERS ONLY FOR ADMIN ###
-        $var='<li><a class="btn btn-dark" onClick="newSite(`/users.php`)"><span class="glyphicon glyphicon-user"></span> Dodaj uzytkownika</a></li>';
+        $var='<li><a class="btn btn-dark" onClick="newSite(`/Tabele/Użytkownicy.php`)"><span class="glyphicon glyphicon-user"></span> Dodaj uzytkownika</a></li>';
         if(isset($_COOKIE['admin']) && $_COOKIE['admin'] == 'True') echo $var;
 
         ### ACCOUNT DETAILS FOR NONADMINS ###
         elseif(isset($_COOKIE['name'])){
-          echo '<li><a class="btn btn-dark" onClick="newSite(`/Wiadomosci.php`)"><span class="glyphicon glyphicon-envelope"></span>Wiadomości</a></li>';
+          echo '<li><a class="btn btn-dark" onClick="newSite(`/Tabele/Wiadomosci.php`)"><span class="glyphicon glyphicon-envelope"></span>Wiadomości</a></li>';
           echo '<li><a class="btn btn-dark" onClick="newSite(`/Recepcjonista/Profil.php`)"><span class="glyphicon glyphicon-user"></span>'.$_COOKIE['name'].'</a></li>';
         }
 
