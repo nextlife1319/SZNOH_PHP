@@ -197,4 +197,24 @@ function display_table($nazwaTabeli, $conn){
       return $row[0];
 
     }
+
+    function getNotyfications()
+    {
+      $connectionInfo = array("UID" => "SecureAdmin@sznohfal", "pwd" => "WCYwcy123", "Database" => "sznohphp", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+      $serverName = "tcp:sznohfal.database.windows.net,1433";
+      $conn = sqlsrv_connect($serverName, $connectionInfo);
+
+      $query="SELECT tresc from Powiadomienia";
+      #print_r($arr);
+      #echo "$query";
+
+      $stmt = sqlsrv_query( $conn, $query );
+      $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC);
+      #echo "ID:".$row[0];
+      echo $row;
+      return $row;
+
+    }
+
+
 ?>
