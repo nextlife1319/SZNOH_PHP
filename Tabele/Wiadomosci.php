@@ -38,6 +38,7 @@
       <?//<p id="field2">Nacisnij wiadmość aby wyświetlić jej treść</p>?>
       <textarea id="field2" rows="8" cols="80">
       </textarea>
+      <br><br>
 
     </div>
     <script>
