@@ -63,30 +63,5 @@ EOD;
 echo $var;
     }
     ?>
-    <?
-    // <div class="container">
-    //   <br>
-    //   <h4>Treść wiadomości:</h4>
-    //   <br>
-    //   <textarea id="field2" rows="8" cols="80">
-    //   </textarea>
-    //   <p id="field2">Nacisnij wiadmość aby wyświetlić jej treść</p>
-    //   <br><br>
-    //
-    // </div>
-    // <script>
-    // var table = document.getElementById("tableID");
-    // if (table != null) {
-    //     for (var i = 0; i < table.rows.length; i++) {
-    //         table.rows[i].onclick = function () {
-    //             tableText(this);
-    //         };
-    //     }
-    // }
-    //
-    // function tableText(tableCell) {
-    //     document.getElementById("field2").value = tableCell.childNodes[1].innerHTML;
-    // }
-    // </script>?>
   </body>
 </html>
