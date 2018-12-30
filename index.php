@@ -48,7 +48,7 @@
         height: auto;
         padding: 15px;
       }
-      .row.content {height:auto;}
+      .row.content {height:100%;}
     }
   </style>
 </head>
