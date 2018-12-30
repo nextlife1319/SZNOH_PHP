@@ -39,6 +39,8 @@ function display_table($nazwaTabeli, $conn){
    $stmt = sqlsrv_query( $conn, $sql );
 
       echo "<table class='table table-hover' id='tableID'>";
+      echo "<col width='100'>";
+      echo "<col width='100'>";
         echo "<thead>";
          echo "<tr>";
            // foreach( sqlsrv_field_metadata( $stmt ) as $fieldMetadata ) {
