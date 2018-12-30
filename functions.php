@@ -56,7 +56,7 @@ function display_table($nazwaTabeli, $conn){
            echo "<tr>";
            echo  "<td>".$row[1]."</td>";
            echo  "<td style='display:none;'>".$row[2]."</td>";
-           echo  "<td>".$row[3]."</td>";
+           echo  "<td>".getUsernameFromId($row[3])."</td>";
            echo  "<td>".$row[5]."</td>";
            echo "<td><a href=/delete-single.php?id=".$row[0]."&nazwaTabeli=".$nazwaTabeli.">Usuń</a></td></tr></tbody>";
          }
@@ -157,7 +157,7 @@ function display_table($nazwaTabeli, $conn){
 
   }
 
-  function getNameFromId($name)
+  function getUsernameFromId($Id)
   {
     $connectionInfo = array("UID" => "SecureAdmin@sznohfal", "pwd" => "WCYwcy123", "Database" => "sznohphp", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
     $serverName = "tcp:sznohfal.database.windows.net,1433";
@@ -165,7 +165,7 @@ function display_table($nazwaTabeli, $conn){
 
 
     $arr=explode(" ",$name);
-    $query="SELECT imie, nazwisko from Pracownicy WHERE imie='$arr[0]' AND nazwisko='$arr[1]'";
+    $query="SELECT username from users WHERE id='$Id'";
     #print_r($arr);
     #echo "$query";
 
