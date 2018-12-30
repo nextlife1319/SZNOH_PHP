@@ -10,7 +10,7 @@
   <body>
     <div class="container">
       <?php $nazwaTabeli="users"; ?>
-      <h1><?php echo $nazwaTabeli; ?></h1>
+      <h1><?php echo "Uzytkownicy"; ?></h1>
       <?php
       require_once($_SERVER['DOCUMENT_ROOT'].'/functions.php');
 
