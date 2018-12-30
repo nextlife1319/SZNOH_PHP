@@ -10,8 +10,8 @@
   <body>
     <br><br><br>
     <button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='/add-single.php?nazwaTabeli=Klienci'">Dodaj klienta</button>
-    <button type="button" class="btn btn-secondary btn-lg btn-block" onclick="location.href='/Recepcjonista/add-reservation.php '">Wprowadź nowa rezerwacje</button>
-    <button type="button" class="btn btn-secondary btn-lg btn-block" onclick="location.href='/Recepcjonista/show-history.php '">Zobacz historie</button>
+    <button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='/Recepcjonista/add-reservation.php '">Wprowadź nowa rezerwacje</button>
+    <button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='/Recepcjonista/show-history.php '">Zobacz historie</button>
     <button type="button" class="btn btn-primary btn-lg btn-block">Sprawdz rozmieszczenie klientow</button>
 
 
