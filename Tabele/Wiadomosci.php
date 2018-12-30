@@ -36,7 +36,9 @@
       <h2>Treść wiadomości:</h2>
       <br>
       <?//<p id="field2">Nacisnij wiadmość aby wyświetlić jej treść</p>?>
-      <input type="text" id="field2">
+      <textarea id="field2" rows="4" cols="50">
+      </textarea>
+      <input type="text" id="field3">
     </div>
     <script>
     var table = document.getElementById("tableID");
