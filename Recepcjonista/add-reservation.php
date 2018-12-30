@@ -29,20 +29,20 @@
   <body>
     <?php
 
-    $connectionInfo = array("UID" => "SecureAdmin@sznohfal", "pwd" => "WCYwcy123", "Database" => "sznohphp", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
-    $serverName = "tcp:sznohfal.database.windows.net,1433";
-    $conn = sqlsrv_connect($serverName, $connectionInfo);
-
-    if (isset($_POST["id_pracownika"])) {
-
-      $addsql= 'INSERT INTO Rezerwacje (id_pokoju, id_klienta, id_pracownika, data_przyjazdu, data_wyjazdu, czy_zameldowany) VALUES ';
-      $addsql+='('.$_POST["id_pokoju").', '.$_POST["id_klienta").', '.$_POST["id_pracownika").', '.$_POST["data_przyjazdu").', '.$_POST["data_wyjazdu").', 1);';
-
-      $getResults= sqlsrv_query($conn, $addsql);
-      $rowsAffected = sqlsrv_rows_affected($getResults);
-      echo "Dodano wpis";
-      sqlsrv_free_stmt($getResults);
-    }
+    // $connectionInfo = array("UID" => "SecureAdmin@sznohfal", "pwd" => "WCYwcy123", "Database" => "sznohphp", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+    // $serverName = "tcp:sznohfal.database.windows.net,1433";
+    // $conn = sqlsrv_connect($serverName, $connectionInfo);
+    //
+    // if (isset($_POST["id_pracownika"])) {
+    //
+    //   $addsql= 'INSERT INTO Rezerwacje (id_pokoju, id_klienta, id_pracownika, data_przyjazdu, data_wyjazdu, czy_zameldowany) VALUES ';
+    //   $addsql+='('.$_POST["id_pokoju").', '.$_POST["id_klienta").', '.$_POST["id_pracownika").', '.$_POST["data_przyjazdu").', '.$_POST["data_wyjazdu").', 1);';
+    //
+    //   $getResults= sqlsrv_query($conn, $addsql);
+    //   $rowsAffected = sqlsrv_rows_affected($getResults);
+    //   echo "Dodano wpis";
+    //   sqlsrv_free_stmt($getResults);
+    // }
     ?>
 
 <div class='input-group mb-3'><form method='post'>
