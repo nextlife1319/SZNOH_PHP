@@ -10,7 +10,7 @@
   <body>
     <div class="container">
       <?php $nazwaTabeli="Wiadomosci"; ?>
-      <h1><?php echo $nazwaTabeli; ?></h1>
+      <h1><?php echo "Wiadmości"; ?></h1>
       <?php
       require_once($_SERVER['DOCUMENT_ROOT'].'/functions.php');
 

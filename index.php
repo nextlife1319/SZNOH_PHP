@@ -72,9 +72,9 @@
         <li><a class="btn btn-dark" onClick="newSite(`/Tabele/Pracownicy.php`)">Pracownicy</a></li>
         <li><a class="btn btn-dark" onClick="newSite(`/Tabele/Klienci.php`)">Klienci</a></li>
         <li><a class="btn btn-dark" onClick="newSite(`/Tabele/Rezerwacje.php`)">Rezerwacje</a></li>
-        <li><a class="btn btn-dark" onClick="newSite(`/Tabele/Wyposazenie.php`)">Wyposazenie</a></li>
-        <li><a class="btn btn-dark" onClick="newSite(`/Tabele/Spis_wyposazenia.php`)">Spis wyposazenia</a></li>
-        <li><a class="btn btn-dark" onClick="newSite(`/Tabele/Wiadomosci.php`)">Wiadomosc</a></li>
+        <li><a class="btn btn-dark" onClick="newSite(`/Tabele/Wyposazenie.php`)">Wyposażenie</a></li>
+        <li><a class="btn btn-dark" onClick="newSite(`/Tabele/Spis_wyposazenia.php`)">Spis wyposażenia</a></li>
+        <li><a class="btn btn-dark" onClick="newSite(`/Tabele/Wiadomosci.php`)">Wiadomości</a></li>
 EOD;
 
 
