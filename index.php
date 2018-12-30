@@ -45,10 +45,10 @@
     /* On small screens, set height to 'auto' for sidenav and grid */
     @media screen and (max-width: 767px) {
       .sidenav {
-        height: auto;
+        min-height: 90vh;
         padding: 15px;
       }
-      .row.content {min-height:90vh;}
+      .row.content {min-height: 90vh;}
     }
   </style>
 </head>
