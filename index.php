@@ -73,7 +73,7 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
 
-        <li><a class="btn btn-dark" onClick="newSite(`/Home.php`)">Home</a></li>
+        <li><a class="btn btn-dark" onClick="newSite(`/Home.html`)">Home</a></li>
         <?php
               if(isset($_COOKIE['admin']) && $_COOKIE['admin'] == 'True') {
                 $var= <<<'EOD'
