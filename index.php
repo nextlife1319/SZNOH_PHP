@@ -134,7 +134,7 @@ EOD;
         else $source="/Recepcjonista/menu.php";
       }
 
-      echo '<iframe id="myFrame" src="'.$source.'" style="height:auto;width:100%" frameBorder="0"></iframe>';
+      echo '<iframe id="myFrame" src="'.$source.'" style="height:100%;width:100%" frameBorder="0"></iframe>';
 
       ?>
     </div>
