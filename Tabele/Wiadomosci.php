@@ -43,8 +43,11 @@
     }
 
     function tableText(tableCell) {
-        alert(tableCell.innerHTML);
+        document.getElementById("field2").value = tableCell.innerHTML;
     }
     </script>
+    <div class="container">
+      <input type="text" id="field2">
+    </div>
   </body>
 </html>
