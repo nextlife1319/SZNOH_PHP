@@ -205,9 +205,6 @@ function display_table($nazwaTabeli, $conn){
       $conn = sqlsrv_connect($serverName, $connectionInfo);
 
       $query="SELECT tresc from Powiadomienia";
-      #print_r($arr);
-      #echo "$query";
-
       $stmt = sqlsrv_query( $conn, $query );
       echo "<h4>Powiadomienia</h4><br><br>";
       echo "<ol>";
@@ -215,9 +212,6 @@ function display_table($nazwaTabeli, $conn){
         echo "<li>".$row[0]."</li>";
       }
       echo "</ol>";
-      #echo "ID:".$row[0];
-      // print_r($row);
-      // return $row[1];
 
     }
 
