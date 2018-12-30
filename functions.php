@@ -209,10 +209,13 @@ function display_table($nazwaTabeli, $conn){
       #echo "$query";
 
       $stmt = sqlsrv_query( $conn, $query );
-      $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC);
+      while($row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC)){
+        echo $row[0];
+      }
+      ;
       #echo "ID:".$row[0];
-      print_r($row);
-      return $row[1];
+      // print_r($row);
+      // return $row[1];
 
     }
 
