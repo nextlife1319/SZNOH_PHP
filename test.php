@@ -23,7 +23,7 @@
   <body>
     <div class="container">
 <br><br><br>
-<button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='/Tabele/Użytkownicy.php'" >Zarzadzaj kontami</button>
+<button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='/Tabele/Uzytkownicy.php'" >Zarzadzaj kontami</button>
 
 
 
@@ -31,3 +31,4 @@
     </div>
   </body>
 </html>
+Uzytkownicy

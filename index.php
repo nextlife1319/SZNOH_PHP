@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+Uzytkownicy<!DOCTYPE html>
 <html lang="en">
 <head>
   <title>SZNOH System zarzadzania nowoczesnym obiektem hotelowym</title>
@@ -81,13 +81,13 @@ EOD;
         echo $var;
         }
         ?>
-        <!--<li><a class="btn btn-dark" onClick="newSite(`/Użytkownicy.php`)">Uzytkownicy</a></li>-->
+        <!--<li><a class="btn btn-dark" onClick="newSite(`/Uzytkownicy.php`)">Uzytkownicy</a></li>-->
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <?php
 
         ### USERS ONLY FOR ADMIN ###
-        $var='<li><a class="btn btn-dark" onClick="newSite(`/Tabele/Użytkownicy.php`)"><span class="glyphicon glyphicon-user"></span> Dodaj uzytkownika</a></li>';
+        $var='<li><a class="btn btn-dark" onClick="newSite(`/Tabele/Uzytkownicy.php`)"><span class="glyphicon glyphicon-user"></span> Dodaj uzytkownika</a></li>';
         if(isset($_COOKIE['admin']) && $_COOKIE['admin'] == 'True') echo $var;
 
         ### ACCOUNT DETAILS FOR NONADMINS ###
