@@ -42,7 +42,7 @@
     }
 
     function tableText(tableCell) {
-        document.getElementById("field2").value = tableCell.childNodes[0].innerHTML;
+        document.getElementById("field2").value = tableCell.childNodes[1].innerHTML;
     }
     </script>
     <div class="container">
