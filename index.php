@@ -98,7 +98,7 @@ EOD;
         <?php
 
         ### USERS ONLY FOR ADMIN ###
-        $var='<li><a class="btn btn-dark" onClick="newSite(`/Tabele/Uzytkownicy.php`)"><span class="glyphicon glyphicon-user"></span> Dodaj uzytkownika</a></li>';
+        $var='<li><a class="btn btn-dark" onClick="newSite(`/Tabele/Uzytkownicy.php`)"><span class="glyphicon glyphicon-user"></span> Użytkownicy</a></li>';
         if(isset($_COOKIE['admin']) && $_COOKIE['admin'] == 'True') echo $var;
 
         ### ACCOUNT DETAILS FOR NONADMINS ###
