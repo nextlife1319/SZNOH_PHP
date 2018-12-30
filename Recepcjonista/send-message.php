@@ -46,9 +46,9 @@ require_once(__ROOT__.'/functions.php');
 
 echo "<div class='input-group mb-3'><form method='post'>";
 
-    echo "Temat wiadomosci".":<br>";
+    echo "Temat wiadomości".":<br>";
     echo "<input type='text' name='temat'><br>";
-    echo "Tresc wiadomosci".":<br>";
+    echo "Treść wiadomości".":<br>";
     echo "<textarea name='tresc' rows='8' cols='80'></textarea><br>";
     echo "Wyslij do".":<br>";
     $clients = getStaff();    #Staff dropdown
@@ -62,7 +62,7 @@ echo "<div class='input-group mb-3'><form method='post'>";
     $id=getIdFromName($_COOKIE['name']);
     echo '<input type="hidden" name="id_nadawcy" value="'.$id.'">';
     echo "</select><br>";
-    echo '<input type="hidden" name="data" value="'.date('l jS F Y H:i:s ').'">';
+    echo '<input type="hidden" name="data" value="'.date('l jS F Y H:i:s ').'"><br>';
 
 
 echo "<input class='btn btn-primary' type='submit' value='Wyślij'><a class='btn btn-primary' href='/Tabele/".$nazwaTabeli.".php'>Wróć</a></form></div></body></html>";
