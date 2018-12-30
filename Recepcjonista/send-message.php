@@ -49,7 +49,7 @@ echo "<div class='input-group mb-3'><form method='post'>";
     echo "Temat wiadomosci".":<br>";
     echo "<input type='text' name='temat'><br>";
     echo "Tresc wiadomosci".":<br>";
-    echo "<textarea name='tresc'></textarea>";
+    echo "<textarea name='tresc' rows='8' cols='80'></textarea><br>";
     echo "Wyslij do".":<br>";
     $clients = getStaff();    #Staff dropdown
     echo '<select name="id_odbiorcy">';
