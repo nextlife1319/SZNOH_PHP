@@ -61,7 +61,7 @@ echo "<div class='input-group mb-3'><form method='post'>";
     echo '<input type="hidden" name="id_nadawcy" value="'.$id.'">';
     echo "</select><br>";
 
-echo "<input class='btn btn-primary' type='submit' value='Wprowadź'><a class='btn btn-primary' href='/".$nazwaTabeli.".php'>Wróć</a></form></div></body></html>";
+echo "<input class='btn btn-primary' type='submit' value='Wprowadź'><a class='btn btn-primary' href='/Tabele/".$nazwaTabeli.".php'>Wróć</a></form></div></body></html>";
 
 
 
