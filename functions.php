@@ -55,7 +55,7 @@ function display_table($nazwaTabeli, $conn){
        while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC) ) {
          //print_r($row);
          $id = getIdFromName($_COOKIE['name']);
-         if($id==$row[3])
+         if($id==$row[4])
          {
            echo "<tr>";
 
