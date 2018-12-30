@@ -38,7 +38,7 @@ function display_table($nazwaTabeli, $conn){
    $sql="SELECT * FROM $nazwaTabeli ORDER BY $by";
    $stmt = sqlsrv_query( $conn, $sql );
 
-      echo "<table class='table table-hover'>";
+      echo "<table class='table table-hover' id='tableID'>";
         echo "<thead>";
          echo "<tr>";
            // foreach( sqlsrv_field_metadata( $stmt ) as $fieldMetadata ) {
