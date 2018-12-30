@@ -35,9 +35,8 @@
     var table = document.getElementById("tableID");
     if (table != null) {
         for (var i = 0; i < table.rows.length; i++) {
-            for (var j = 0; j < table.rows[i].cells.length; j++)
-            table.rows[i].cells[j].onclick = function () {
-                tableText(this);
+            table.rows[i].onclick = function () {
+                tableText(table.rows[i].cell[1]);
             };
         }
     }
@@ -48,7 +47,8 @@
     </script>
     <div class="container">
       <br>
-      Treść wiadmości
+      Treść wiadomości
+      <br>
       <input type="text" id="field2">
     </div>
   </body>
