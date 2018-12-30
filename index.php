@@ -17,7 +17,7 @@
     }
 
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-    .row.content {height: 100vh}
+    .row.content {min-height: 90vh;}
 
     /* Set gray background color and 100% height */
     .sidenav {
@@ -48,7 +48,7 @@
         height: auto;
         padding: 15px;
       }
-      .row.content {height:100vh;}
+      .row.content {min-height:90vh;}
     }
   </style>
 </head>
@@ -134,7 +134,7 @@ EOD;
         else $source="/Recepcjonista/menu.php";
       }
 
-      echo '<iframe id="myFrame" src="'.$source.'" style="height:100%;width:100%" frameBorder="0"></iframe>';
+      echo '<iframe id="myFrame" src="'.$source.'" style="min-height:90vh;width:100%" frameBorder="0"></iframe>';
 
       ?>
     </div>
