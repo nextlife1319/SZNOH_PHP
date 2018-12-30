@@ -121,7 +121,8 @@ EOD;
   <div class="row content">
     <div class="col-sm-2 sidenav">
       <p> Uwaga, nie tworzyć rezerwacji między 12.12.2018 a 31.12.2018 </p>
-      <?php echo '<iframe id="myFrameCol" src="/Tabele/Wiadomosci.php" style="height:90vh;width:100%" frameBorder="0"></iframe>'; ?>
+      <p> Za trzy dni upłynie termina ważności hasła. Proszę o zmiane. </p> 
+      <?php //<p><a href="#">Link</a></p> ?>
     </div>
     <div class="col-sm-8 text-left">
       <?php
