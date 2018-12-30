@@ -12,7 +12,7 @@
       <?php $nazwaTabeli="Wiadomosci"; ?>
       <h1><?php echo $nazwaTabeli; ?></h1>
       <?php
-      require_once('functions.php');
+      require_once($_SERVER['DOCUMENT_ROOT'].'/functions.php');
 
       $connectionInfo = array("UID" => "SecureAdmin@sznohfal", "pwd" => "WCYwcy123", "Database" => "sznohphp", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
       $serverName = "tcp:sznohfal.database.windows.net,1433";
