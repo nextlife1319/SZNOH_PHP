@@ -42,14 +42,14 @@
     }
 
     function tableText(tableCell) {
-        document.getElementById("field2").value = tableCell.childNodes[1].innerHTML;
+        document.getElementById("field2").value = tableCell.childNodes[0].innerHTML;
     }
     </script>
     <div class="container">
       <br>
-      Treść wiadomości
+      <h2>Treść wiadomości:</h2>
       <br>
-      <input type="text" id="field2">
+      <input type="text" id="field2" >
     </div>
   </body>
 </html>
