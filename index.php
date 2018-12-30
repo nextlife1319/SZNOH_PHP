@@ -8,6 +8,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <?php //<script src="/iframe.js"></script>
+  require_once($_SERVER['DOCUMENT_ROOT'].'/functions.php');
         $root = realpath($_SERVER["DOCUMENT_ROOT"]);?>
   <style>
     /* Remove the navbar's default margin-bottom and rounded borders */
