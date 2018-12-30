@@ -24,6 +24,7 @@
    $getResults= sqlsrv_query($conn, $delsql, $params);
    $rowsAffected = sqlsrv_rows_affected($getResults);
    sqlsrv_free_stmt($getResults);
+   if ($nazwaTabeli=='users') $nazwaTabeli='Uzytkownicy';
    echo "<a class='btn btn-primary' href='/Tabele/".$nazwaTabeli.".php'>Wróć</a>";
 
 ?>

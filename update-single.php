@@ -52,5 +52,6 @@ foreach($col as $element){
   }
   $i=$i+1;
 }
+if ($nazwaTabeli=='users') $nazwaTabeli='Uzytkownicy';
 echo "<input class='btn btn-primary' type='submit' value='Wprowadź'><a class='btn btn-primary' href='/Tabele/".$nazwaTabeli.".php'>Wróć</a></form></div></body></html>";
 ?>
