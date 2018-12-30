@@ -51,12 +51,12 @@ echo "<div class='input-group mb-3'><form method='post'>";
     echo "Treść wiadomości".":<br>";
     echo "<textarea name='tresc' rows='8' cols='80'></textarea><br>";
     echo "Wyslij do".":<br>";
-    $clients = getStaff();    #Staff dropdown
+    $clients = getUsers();    #Staff dropdown
     echo '<select name="id_odbiorcy">';
     foreach($clients as $row)
     {
       $tmparr=explode("|",$row);
-      $tmparr[1]=str_replace("*"," ",$tmparr[1]);
+      // $tmparr[1]=str_replace("*"," ",$tmparr[1]);
       echo "<option value=".$tmparr[0].">".$tmparr[1]."</option>";
     }
     $id=getIdFromName($_COOKIE['name']);

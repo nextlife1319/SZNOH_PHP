@@ -118,6 +118,24 @@ function display_table($nazwaTabeli, $conn){
    return $staff;
  }
 
+ function getUsers()
+ {
+   $connectionInfo = array("UID" => "SecureAdmin@sznohfal", "pwd" => "WCYwcy123", "Database" => "sznohphp", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+   $serverName = "tcp:sznohfal.database.windows.net,1433";
+   $conn = sqlsrv_connect($serverName, $connectionInfo);
+   $sql="SELECT id,username FROM users";
+   $stmt = sqlsrv_query( $conn, $sql );
+
+   $staff=array();
+
+   while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC) ) {
+     $tmp=$row[0]."|".$row[1];
+     $staff[]=$tmp;
+   }
+   #print_r($staff);
+   return $staff;
+ }
+
 
   function getRooms()
   {
