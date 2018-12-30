@@ -162,8 +162,9 @@ function display_table($nazwaTabeli, $conn){
     $conn = sqlsrv_connect($serverName, $connectionInfo);
 
 
-    $arr=explode(" ",$name);
-    $query="SELECT id from Pracownicy WHERE imie='$arr[0]' AND nazwisko='$arr[1]'";
+    //$arr=explode(" ",$name);
+    // $query="SELECT id from Pracownicy WHERE imie='$arr[0]' AND nazwisko='$arr[1]'";
+    $query="SELECT id from users WHERE username='$name'";
     #print_r($arr);
     #echo "$query";
 
