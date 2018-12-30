@@ -209,7 +209,7 @@ function display_table($nazwaTabeli, $conn){
       #echo "$query";
 
       $stmt = sqlsrv_query( $conn, $query );
-      echo "Powiadomienia:<br><br>";
+      echo "<h4>Powiadomienia</h4><br><br>";
       echo "<ol>";
       while($row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC)){
         echo "<li>".$row[0]."</li>";
