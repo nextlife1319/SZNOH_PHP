@@ -8,7 +8,7 @@ function display_table($nazwaTabeli, $conn){
   $sql="SELECT * FROM $nazwaTabeli ORDER BY $by";
   $stmt = sqlsrv_query( $conn, $sql );
 
-     echo "<table class='table table-hover'>";
+     echo "<table class='table table-hover' id='tableID'>";
        echo "<thead>";
         echo "<tr>";
           foreach( sqlsrv_field_metadata( $stmt ) as $fieldMetadata ) {
@@ -43,10 +43,6 @@ function display_table($nazwaTabeli, $conn){
       echo "<col width='100'>";
         echo "<thead>";
          echo "<tr>";
-           // foreach( sqlsrv_field_metadata( $stmt ) as $fieldMetadata ) {
-           //         $col=$fieldMetadata["Name"];
-           //         echo "<th>".$col."</th>";     #nazwy kolumn
-           //       }
            echo "<th>Temat</th>";
            echo "<th style='display:none;'>Treść</th>";
            echo "<th>Nadawca</th>";
@@ -58,11 +54,6 @@ function display_table($nazwaTabeli, $conn){
          if($id==$row[4])
          {
            echo "<tr>";
-
-           // foreach($row as $element){
-           //    echo  "<td>".$element."</td>";
-           //
-           // }
            echo  "<td>".$row[1]."</td>";
            echo  "<td style='display:none;'>".$row[2]."</td>";
            echo  "<td>".$row[3]."</td>";
@@ -155,6 +146,26 @@ function display_table($nazwaTabeli, $conn){
 
     $arr=explode(" ",$name);
     $query="SELECT id from Pracownicy WHERE imie='$arr[0]' AND nazwisko='$arr[1]'";
+    #print_r($arr);
+    #echo "$query";
+
+    $stmt = sqlsrv_query( $conn, $query );
+    $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC);
+    #echo "ID:".$row[0];
+
+    return $row[0];
+
+  }
+
+  function getNameFromId($name)
+  {
+    $connectionInfo = array("UID" => "SecureAdmin@sznohfal", "pwd" => "WCYwcy123", "Database" => "sznohphp", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+    $serverName = "tcp:sznohfal.database.windows.net,1433";
+    $conn = sqlsrv_connect($serverName, $connectionInfo);
+
+
+    $arr=explode(" ",$name);
+    $query="SELECT imie, nazwisko from Pracownicy WHERE imie='$arr[0]' AND nazwisko='$arr[1]'";
     #print_r($arr);
     #echo "$query";
 
