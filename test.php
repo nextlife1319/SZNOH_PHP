@@ -24,8 +24,8 @@
     <div class="container">
 <br><br><br>
 <button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='/Tabele/Uzytkownicy.php'" >Zarzadzaj kontami</button>
-
-
+<button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='/Tabele/Klienci.php'" >Zarzadzaj danymi klientów</button>
+<button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='/Tabele/Powiadomienia.php'" >Zarzadzaj powiadomieniami</button>
 
 
     </div>
