@@ -33,7 +33,7 @@
     $serverName = "tcp:sznohfal.database.windows.net,1433";
     $conn = sqlsrv_connect($serverName, $connectionInfo);
 
-    if (isset($_POST["id_pracownika")) {
+    if (isset($_POST["id_pracownika"])) {
 
       $addsql= 'INSERT INTO Rezerwacje (id_pokoju, id_klienta, id_pracownika, data_przyjazdu, data_wyjazdu, czy_zameldowany) VALUES ';
       $addsql+='('.$_POST["id_pokoju").', '.$_POST["id_klienta").', '.$_POST["id_pracownika").', '.$_POST["data_przyjazdu").', '.$_POST["data_wyjazdu").', 1);';
