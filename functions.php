@@ -41,10 +41,12 @@ function display_table($nazwaTabeli, $conn){
       echo "<table class='table table-hover'>";
         echo "<thead>";
          echo "<tr>";
-           foreach( sqlsrv_field_metadata( $stmt ) as $fieldMetadata ) {
-                   $col=$fieldMetadata["Name"];
-                   echo "<th>".$col."</th>";     #nazwy kolumn
-                 }
+           // foreach( sqlsrv_field_metadata( $stmt ) as $fieldMetadata ) {
+           //         $col=$fieldMetadata["Name"];
+           //         echo "<th>".$col."</th>";     #nazwy kolumn
+           //       }
+           echo "<th>Treść</th>";
+           echo "<th>Nadawca</th>";
                  echo "<th>Usuń</th></tr></thead><tbody>";
        while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC) ) {
          //print_r($row);
@@ -53,10 +55,12 @@ function display_table($nazwaTabeli, $conn){
          {
            echo "<tr>";
 
-           foreach($row as $element){
-              echo  "<td>".$element."</td>";
-
-           }
+           // foreach($row as $element){
+           //    echo  "<td>".$element."</td>";
+           //
+           // }
+           echo  "<td>".$row[1]."</td>";
+           echo  "<td>".$row[2]."</td>";
            echo "<td><a href=/delete-single.php?id=".$row[0]."&nazwaTabeli=".$nazwaTabeli.">Usuń</a></td></tr></tbody>";
          }
        }
