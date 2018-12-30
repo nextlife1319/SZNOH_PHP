@@ -206,12 +206,14 @@ function display_table($nazwaTabeli, $conn){
 
       $query="SELECT tresc from Powiadomienia";
       $stmt = sqlsrv_query( $conn, $query );
-      echo "<h4>Powiadomienia</h4><br><br>";
-      echo "<ol>";
+      echo "<table class='table table-hover'>";
+        echo "<thead>";
+         echo "<tr>";
+           echo "<th>Powiadomienia</th></tr></thead><tbody>";
       while($row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC)){
-        echo "<li>".$row[0]."</li>";
+        echo "<tr><td>".$row[0]."</td></tr>";
       }
-      echo "</ol>";
+      echo "</tbody></table>";
 
     }
 
