@@ -83,4 +83,4 @@
     #echo "<input type='text' name='".$element."'><br>";
     ?>
 
-<br><br><input class='btn btn-primary' type='submit' value='Wprowadź'><a class='btn btn-primary' href='/Rezerwacje.php'>Wróć</a></form></div></body></html>
+<br><br><input class='btn btn-primary' type='submit' value='Wprowadź'><a class='btn btn-primary' href='/Recepcjonista/menu.php'>Wróć</a></form></div></body></html>
