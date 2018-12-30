@@ -85,7 +85,7 @@
         <li><a class="btn btn-dark" onClick="newSite(`/Tabele/Wyposazenie.php`)">Wyposażenie</a></li>
         <li><a class="btn btn-dark" onClick="newSite(`/Tabele/Spis_wyposazenia.php`)">Spis wyposażenia</a></li>
         <li><a class="btn btn-dark" onClick="newSite(`/Tabele/Wiadomosci.php`)">Wiadomości</a></li>
-        <li><a class="btn btn-dark" onClick="newSite(`/Tabele/Powiadomienia.php`)">Wiadomości</a></li>
+        <li><a class="btn btn-dark" onClick="newSite(`/Tabele/Powiadomienia.php`)">Powiadomienia</a></li>
 EOD;
 
 
