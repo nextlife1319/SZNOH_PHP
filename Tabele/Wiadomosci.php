@@ -49,7 +49,7 @@
       <br>
       <h2>Treść wiadomości:</h2>
       <br>
-      <input type="text" id="field2" >
+      <p id="field2">Nacisnij wiadmość aby wyświetlić jej treść</p> 
     </div>
   </body>
 </html>
