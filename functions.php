@@ -206,7 +206,7 @@ function display_table($nazwaTabeli, $conn){
 
       $query="SELECT tresc from Powiadomienia";
       $stmt = sqlsrv_query( $conn, $query );
-      echo "<table class='table table-hover' style='width:100%' >";
+      echo "<table class='table table-hover' style='width:100%; text-align: center' >";
         echo "<thead>";
          echo "<tr>";
            echo "<th>Powiadomienia</th></tr></thead><tbody>";
