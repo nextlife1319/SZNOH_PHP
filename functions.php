@@ -46,6 +46,7 @@ function display_table($nazwaTabeli, $conn){
            //         echo "<th>".$col."</th>";     #nazwy kolumn
            //       }
            echo "<th>Temat</th>";
+           echo "<th>Treść</th>";
            echo "<th>Nadawca</th>";
            echo "<th>Data</th>";
                  echo "<th>Usuń</th></tr></thead><tbody>";
@@ -61,6 +62,7 @@ function display_table($nazwaTabeli, $conn){
            //
            // }
            echo  "<td>".$row[1]."</td>";
+           echo  "<td>".$row[2]."</td>";
            echo  "<td>".$row[3]."</td>";
            echo  "<td>".$row[5]."</td>";
            echo "<td><a href=/delete-single.php?id=".$row[0]."&nazwaTabeli=".$nazwaTabeli.">Usuń</a></td></tr></tbody>";

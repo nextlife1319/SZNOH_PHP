@@ -21,7 +21,6 @@ require_once(__ROOT__.'/functions.php');
  $col=get_col_names($nazwaTabeli, $conn);
 
  if (isset($_POST[$col[1]])) {
-   echo "jestem";
    $addsql= "INSERT INTO ".$nazwaTabeli." (";
    $val=") VALUES (";
    $ii=0;
@@ -38,7 +37,6 @@ require_once(__ROOT__.'/functions.php');
    $val=rtrim($val, ", ");
    $addsql.=$val.");";
 
-   echo $addsql;
 
    $getResults= sqlsrv_query($conn, $addsql, $params);
    $rowsAffected = sqlsrv_rows_affected($getResults);
